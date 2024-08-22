@@ -8,15 +8,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/site.css" />
-    <!-- Your main custom CSS -->
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- Chatbot specific CSS -->
-    <link rel="stylesheet" href="css/chatbot.css">
+   
 
-    <link rel="stylesheet" href="css/whatsapp.css">
+     <!-- Link to CSS files -->
+     <link rel="stylesheet" href="css/styles.css">
+     <link rel="stylesheet" href="css/base/site.css">
+     <link rel="stylesheet" href="css/components/whatsapp.css">
+     <link rel="stylesheet" href="css/components/menuicon.css">
+   
+     <link rel="stylesheet" href="css/utils/contact-cards.css">
+     <link rel="stylesheet" href="css/base/shedule.css">
+     <link rel="stylesheet" href="css/base/footerdropdown.css">
+     <link rel="stylesheet" href="css/base/headerdropdown.css">
+     <link rel="stylesheet" href="css/layout/header.css">
 
-    <link rel="stylesheet" href="css/contact-cards.css">
+
+
 
     
 
@@ -24,20 +31,76 @@
 <body>
     <!-- Your HTML content here -->
         <header>
+            <img src="image/sge-logo.png" alt="Company Logo" id="logo">
         <div class="container">
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#clients">Clients</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#schedule-meeting">Schedule a Meeting</a></li>
+                    <li class="dropdown-header">
+                        <a href="services.html" id="services-link-header">
+                            Services <span class="arrow-down">&#9660;</span>
+                        </a>
+                        <div class="dropdown-content-header">
+                            <div class="dropdown-content-footer">
+                            <a href="services/fire-fighting.html">Fire Fighting</a>
+                            <a href="services/fire-detection.html">Fire Detection</a>
+                            <a href="services/fire-extinguisher.html">Fire Extinguisher</a>
+                            <a href="services/architectural-service.html">Architectural Service</a>
+                            <a href="services/separation-system.html">Separation System</a>
+                            <a href="services/miscellaneous-equipment.html">Miscellaneous Equipment</a>
+                            <a href="services/fire-stop-accessories.html">Fire Stop Accessories</a>
+                            <a href="services/electricals.html">Electricals</a>
+                            <a href="services/plumbing.html">Plumbing</a>
+                            <a href="services/security-system.html">Security System</a>
+                            <a href="services/information-system.html">Information System</a>
+                            <a href="services/autocad-drawing.html">AutoCAD Drawing</a>
+                        </div>
+                    </li>
+                    
                 </ul>
             </nav>
+           
         </div>
-    </header>
+         <!-- Hamburger Menu -->
+    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    <nav id="slide-out-menu" class="menu">
+        <h3 class="menu-title">About Us</h3>
+        <ul>
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#team">Meet the Team</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+        </ul>
+        
+        <h3 class="menu-title">Services</h3>
+        <ul>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#projects">Our Projects</a></li>
+            <li><a href="#clients">Our Clients</a></li>
+        </ul>
+        
+        <h3 class="menu-title">Work</h3>
+        <ul>
+            <li><a href="PDF/Work Done.pdf" target="_blank">Work Done <i class="fas fa-file-pdf"></i></a></li>
+            <li><a href="PDF/Work in Progess.pdf" target="_blank">Work in Progress <i class="fas fa-file-pdf"></i></a></li>
+        </ul>
 
+        <h3 class="menu-title">Company profile</h3>
+        <ul>
+            <li><a href="pdf/COMPANY_PROFILE_SGE_01042024 (NEW).pdf" target="_blank">Shree Ganesh Enterprises <i class="fas fa-file-pdf"></i></a></li>
+            <li><a href="pdf/Company_profile_S.S._01042024 (NEW).pdf" target="_blank">S.S Engineers and and Consultants <i class="fas fa-file-pdf"></i></a></li>
+        </ul>
+        
+        <h3 class="menu-title">Contact</h3>
+        <ul>
+            <li><a href="#contact">Get in Touch</a></li>
+            <li><a href="#" target="_blank">FAQs</a></li>
+        </ul>
+
+    </nav>
+
+    </header>
+   
     <main>
         <section id="home" class="hero">
             <div class="hero-content">
@@ -214,7 +277,40 @@
     </div>
 </section>
 
-
+<section id="schedule-meeting">
+    <div class="container">
+        <h2 class="section-title">Schedule a Meeting</h2>
+        <form id="meeting-form" class="meeting-form" action="https://formspree.io/f/mjkbakna" method="POST">
+            <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="Full Name" required>
+            </div>
+            <div class="form-group">
+                <label for="contact-number">Contact Number</label>
+                <input type="tel" id="contact-number" name="Contact Number" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="Email" required>
+            </div>
+            <div class="form-group">
+                <label for="preferred-date">Preferred Date</label>
+                <input type="date" id="preferred-date" name="Preferred Date" required>
+            </div>
+            <div class="form-group">
+                <label for="preferred-time">Preferred Time</label>
+                <input type="time" id="preferred-time" name="Preferred Time" required>
+            </div>
+            <div class="form-group">
+                <label for="meeting-purpose">Purpose of Meeting</label>
+                <textarea id="meeting-purpose" name="Meeting Purpose" rows="4" required></textarea>
+            </div>
+            <input type="hidden" name="_subject" value="New Meeting Request">
+            <input type="hidden" name="_cc" value="shubham2808kumar@gmail.com">
+            <button type="submit" class="btn btn-primary">Schedule Meeting</button>
+        </form>
+    </div>
+</section>
 
     </main>
 
@@ -226,6 +322,11 @@
     <footer>
         <div class="container">
             <p>&copy; 2024 Shree Ganesh Enterprises. All rights reserved.</p>
+            
+            
+                </div>
+            </div>
+
         </div>
         <div class="social-media">
             <a href="https://facebook.com/your-page" target="_blank"><i class="fab fa-facebook"></i></a>
@@ -258,9 +359,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
-    <script src="js/whatsapp.js"></script>
-	
+   
+
+    <!-- Link to JavaScript files -->
     <script src="js/main.js"></script>
+    <script src="js/components/whatsapp.js"></script>
+    <script src="js/components/dropmenu.js"></script>
+    <script src="js/utils/curser.js"></script>
+    <script src="js/utils/3d tilt.js"></script>
+    <script src="js/utils/counter.js"></script>
+    <script src="js/basee/shedule.js"></script>
+    <script src="js/basee/dropdown.js"></script>
+
     
 
     <div id="whatsapp-icon">
@@ -276,3 +386,5 @@
     </div>
     </body>
 </html>
+
+
