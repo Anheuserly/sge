@@ -1,24 +1,167 @@
 /* Mobile Styles */
 @media (max-width: 767px) {
+    /* Header Styles */
     header {
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 10px;
+        background-color: #f8f8f8; /* Adjust background color as needed */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
+    /* Header Title */
     .header-title {
         font-size: 18px;
         text-align: center;
         margin-bottom: 10px;
+        color: #333; /* Adjust text color */
     }
 
+    /* Menu Styles */
     .menu {
+        display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 10px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
     }
 
+    /* Menu Items */
     .menu-item {
         font-size: 14px;
+        text-align: center;
+        padding: 10px 15px;
+        width: 100%; /* Ensure full width on mobile */
+        background-color: #ffffff; /* Background color for menu items */
+        color: #333; /* Text color */
+        border: 1px solid #ddd; /* Border for each item */
+        border-radius: 5px; /* Rounded corners */
+        text-decoration: none;
+    }
+
+    .menu-item:hover {
+        background-color: #f0f0f0; /* Background color on hover */
+        color: #000; /* Text color on hover */
+    }
+
+    /* Dropdown Menu */
+    .menu-item-dropdown {
+        position: relative;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #fff;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+        width: 100%; /* Full width on mobile */
+    }
+
+    .menu-item-dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown-content a {
+        padding: 10px;
+        display: block;
+        text-align: left;
+        text-decoration: none;
+        color: #333;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .dropdown-content a:last-child {
+        border-bottom: none;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #f0f0f0;
+        color: #000;
+    }
+
+    /* Footer Styles */
+    footer {
+        background-color: #cc0000; /* Footer background color */
+        color: #fff;
+        text-align: center;
+        padding: 15px 10px;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .footer-links a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    .footer-links a:hover {
+        text-decoration: underline;
+    }
+
+    /* Services Dropdown in Footer */
+    .footer-services {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-services-dropdown {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .footer-services:hover .footer-services-dropdown {
+        display: flex;
+    }
+
+    .footer-services-dropdown a {
+        font-size: 13px;
+        padding: 5px 0;
+    }
+
+    /* Adjustments for Schedule a Meeting Section */
+    .schedule-meeting {
+        padding: 15px;
+        text-align: center;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+
+    .schedule-meeting input,
+    .schedule-meeting button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        font-size: 14px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    .schedule-meeting button {
+        background-color: #cc0000;
+        color: #fff;
+        border: none;
+    }
+
+    .schedule-meeting button:hover {
+        background-color: #a30000;
     }
 }
