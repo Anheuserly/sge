@@ -1,0 +1,37 @@
+/* Dropdown styles */
+.dropdown-header {
+    position: relative;
+}
+
+.dropdown-content-header {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white; /* Adjust as needed */
+    border: 1px solid #ddd; /* Adjust as needed */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 200px; /* Adjust width as needed */
+}
+
+.dropdown-content-header a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black; /* Or another color of your choice */
+}
+
+.dropdown-content-header a:hover {
+    background-color: #ddd; /* Adjust as needed */
+}
+
+/* Show dropdown on hover */
+.dropdown-header:hover .dropdown-content-header {
+    display: block;
+}
+
+/* Arrow down styling */
+.arrow-down {
+    font-size: 0.8em;
+}

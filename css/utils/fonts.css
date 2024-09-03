@@ -1,0 +1,16 @@
+/* Utility classes for font styles */
+.font-bold {
+    font-weight: bold;
+  }
+  
+  .font-italic {
+    font-style: italic;
+  }
+  
+  .font-size-16 {
+    font-size: 16px;
+  }
+  
+  .font-size-24 {
+    font-size: 24px;
+  }

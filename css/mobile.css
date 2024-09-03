@@ -1,0 +1,13 @@
+/* Mobile and Tablet Styles */
+@media (max-width: 1024px) {
+    .menu-item {
+        display: none;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 1025px) {
+    .menu-item {
+        display: block;
+    }
+}
