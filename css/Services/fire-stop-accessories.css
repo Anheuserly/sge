@@ -1,0 +1,119 @@
+/* Container Styling */
+#fire-stop-accessories .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    background: linear-gradient(to bottom right, #f7f7f7, #e2e2e2);
+    border-radius: 20px;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Title Styling */
+#fire-stop-accessories h1 {
+    font-size: 2.8em;
+    color: #ff6347;
+    margin-bottom: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+}
+
+#fire-stop-accessories h1::after {
+    content: '';
+    width: 100px;
+    height: 4px;
+    background: #ff6347;
+    position: absolute;
+    left: 50%;
+    bottom: -20px;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* Accessories Grid Styling */
+.accessories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Accessory Item Styling */
+.accessory-item {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.accessory-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.12);
+    background: linear-gradient(to bottom right, #ff6347, #ff4500);
+    color: #fff;
+}
+
+.accessory-item h2 {
+    font-size: 1.6em;
+    color: #333;
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.accessory-item h2::before {
+    content: '';
+    width: 10px;
+    height: 100%;
+    background: #ff6347;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.accessory-item:hover h2::before {
+    background: #fff;
+}
+
+.accessory-item p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.8;
+    text-align: justify;
+    transition: color 0.3s ease;
+}
+
+.accessory-item p strong {
+    color: #ff6347;
+    transition: color 0.3s ease;
+}
+
+.accessory-item:hover p {
+    color: #fff;
+}
+
+.accessory-item:hover p strong {
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .accessory-item {
+        padding: 20px;
+    }
+
+    #fire-stop-accessories h1 {
+        font-size: 2.2em;
+    }
+
+    .accessory-item h2 {
+        font-size: 1.4em;
+    }
+}
