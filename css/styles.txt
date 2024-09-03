@@ -4,11 +4,6 @@
     --text-color: #333;
     --bg-color: #F8F9FA;
         }
-        [data-theme="dark"] {
-            --bg-color: #181818;
-            --text-color: #e0e0e0;
-            --link-color: #8ab4f8;
-        }
 
         * {
             margin: 0;
@@ -40,7 +35,9 @@
             transition: background-color 0.3s ease;
         }
 
-        
+        header.scrolled {
+            background-color: rgba(0, 86, 179, 0.9);
+        }
 
         nav ul {
             display: flex;

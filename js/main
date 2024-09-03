@@ -195,9 +195,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // GSAP animations
     gsap.registerPlugin(ScrollTrigger);
 
-    // GSAP animations
+
    
+
+
+    // GSAP animations
+    gsap.from("header", { duration: 1.5, y: -100, opacity: 0, ease: "bounce" });
     gsap.from(".contact-card", { duration: 1.5, scale: 0.8, opacity: 0, stagger: 0.3 });
+
    
     // Parallax effect for hero section
     gsap.to('.hero', {

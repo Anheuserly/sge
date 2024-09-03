@@ -1,6 +1,6 @@
 /* Footer section styles */
 footer {
-    background-color: #333;
+    background-color: #cf5252;
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -8,7 +8,7 @@ footer {
   }
   
   footer p {
-    color: white;
+    color: rgb(240, 17, 17);
     font-size: 16px;
     margin: 0;
   }
@@ -25,11 +25,11 @@ footer {
   }
   
   footer a {
-    color: white;
+    color: rgb(182, 36, 36);
     text-decoration: none;
     transition: color 0.2s ease;
   }
   
   footer a:hover {
-    color: #ccc;
+    color: #c22121;
   }
