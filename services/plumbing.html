@@ -21,6 +21,8 @@
      <link rel="stylesheet" href="../css/base/footerdropdown.css">
      <link rel="stylesheet" href="../css/base/headerdropdown.css">
      <link rel="stylesheet" href="../css/layout/header.css">
+     <link rel="stylesheet" href="../css/Services/plumbing.css">
+
 
 
 
@@ -35,8 +37,10 @@
         <div class="container">
             <nav>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#schedule-meeting">Schedule a Meeting</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="schedule.html">Schedule a Meeting</a></li>
+                    <li><a href="clients.html">Our Clients</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
                     <li class="dropdown-header">
                         <a href="services.html" id="services-link-header">
                             Services <span class="arrow-down">&#9660;</span>
@@ -63,50 +67,74 @@
            
         </div>
          <!-- Hamburger Menu -->
-    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
-    <nav id="slide-out-menu" class="menu">
-        <h3 class="menu-title">About Us</h3>
-        <ul>
-            <li><a href="#about">Our Story</a></li>
-            <li><a href="#team">Meet the Team</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-        </ul>
-        
-        <h3 class="menu-title">Services</h3>
-        <ul>
-            <li><a href="#services">Our Services</a></li>
-            <li><a href="#projects">Our Projects</a></li>
-            <li><a href="#clients">Our Clients</a></li>
-        </ul>
-        
-        <h3 class="menu-title">Work</h3>
-        <ul>
-            <li><a href="PDF/Work Done.pdf" target="_blank">Work Done <i class="fas fa-file-pdf"></i></a></li>
-            <li><a href="PDF/Work in Progess.pdf" target="_blank">Work in Progress <i class="fas fa-file-pdf"></i></a></li>
-        </ul>
-
-        <h3 class="menu-title">Company profile</h3>
-        <ul>
-            <li><a href="pdf/COMPANY_PROFILE_SGE_01042024 (NEW).pdf" target="_blank">Shree Ganesh Enterprises <i class="fas fa-file-pdf"></i></a></li>
-            <li><a href="pdf/Company_profile_S.S._01042024 (NEW).pdf" target="_blank">S.S Engineers and and Consultants <i class="fas fa-file-pdf"></i></a></li>
-        </ul>
-        
-        <h3 class="menu-title">Contact</h3>
-        <ul>
-            <li><a href="#contact">Get in Touch</a></li>
-            <li><a href="#" target="_blank">FAQs</a></li>
-        </ul>
-
-    </nav>
+         <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+         <nav id="slide-out-menu" class="menu">
+             <ul>
+                 <li><a href="#about">Our Story</a></li>
+                 <li><a href="#team">Meet the Team</a></li>
+                 <li><a href="#testimonials">Testimonials</a></li>
+         
+                 <li><a href="#services">Our Services</a></li>
+                 <li><a href="#projects">Our Projects</a></li>
+                 <li><a href="#clients">Our Clients</a></li>
+         
+                 <li><a href="PDF/Work Done.pdf" target="_blank">Work Done <i class="fas fa-file-pdf"></i></a></li>
+                 <li><a href="PDF/Work in Progess.pdf" target="_blank">Work in Progress <i class="fas fa-file-pdf"></i></a></li>
+         
+                 <li><a href="pdf/COMPANY_PROFILE_SGE_01042024 (NEW).pdf" target="_blank">Shree Ganesh Enterprises <i class="fas fa-file-pdf"></i></a></li>
+                 <li><a href="pdf/Company_profile_S.S._01042024 (NEW).pdf" target="_blank">S.S Engineers and Consultants <i class="fas fa-file-pdf"></i></a></li>
+         
+                 <li><a href="contact.html">Get in Touch</a></li>
+                 <li><a href="#" target="_blank">FAQs</a></li>
+             </ul>
+         </nav>
 
     </header>
    
     <main>
-        <section id="plumbing">
-            <h1>Plumbing Services</h1>
-            <p><strong>Residential Building:</strong> We provide comprehensive plumbing services for residential buildings, including installation, maintenance, and repair of plumbing systems. Our services cover everything from pipe fitting to fixture installation and troubleshooting.</p>
-            <p><strong>Commercial Building:</strong> Our plumbing services extend to commercial buildings, offering specialized solutions to meet the needs of larger-scale plumbing systems. This includes system design, installation, and maintenance for offices, retail spaces, and other commercial properties.</p>
+        <section id="plumbing" class="plumbing-services">
+            <div class="plumbing-container">
+                <h1>Plumbing Services</h1>
+        
+                <div class="service-item">
+                    <div class="service-icon">
+                        <img src="../image/residential-icon.png" alt="Residential Plumbing">
+                    </div>
+                    <div class="service-details">
+                        <h2>Residential Plumbing</h2>
+                        <p><strong>Residential Building:</strong> Our comprehensive plumbing solutions cover all aspects of residential properties. We handle everything from new installations to maintenance and repairs, including:</p>
+                        <ul>
+                            <li>Pipe fitting and replacement</li>
+                            <li>Fixture installations for kitchens, bathrooms, and toilets</li>
+                            <li>Leak detection and repair</li>
+                            <li>Drain cleaning and unclogging</li>
+                            <li>Water heater installations and repairs</li>
+                        </ul>
+                        <p>We ensure that every part of your home's plumbing system operates seamlessly, with a focus on efficiency and reliability.</p>
+                    </div>
+                </div>
+        
+                <div class="service-item">
+                    <div class="service-icon">
+                        <img src="../image/commercial-building.png" alt="Commercial Plumbing">
+                    </div>
+                    <div class="service-details">
+                        <h2>Commercial Plumbing</h2>
+                        <p><strong>Commercial Building:</strong> We provide specialized plumbing services for commercial spaces, including offices, retail environments, and industrial properties. Our offerings include:</p>
+                        <ul>
+                            <li>System design and installation</li>
+                            <li>Maintenance and repairs for complex plumbing systems</li>
+                            <li>Fixture installations in kitchens, bathrooms, and toilets</li>
+                            <li>Backflow prevention and testing</li>
+                            <li>Emergency plumbing services</li>
+                        </ul>
+                        <p>Our team ensures that your commercial plumbing systems are tailored to meet the specific needs of your business, ensuring minimal downtime and efficient operation.</p>
+                    </div>
+                </div>
+            </div>
         </section>
+        
+        
 
     </main>
 

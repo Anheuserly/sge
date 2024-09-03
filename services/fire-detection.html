@@ -21,6 +21,8 @@
      <link rel="stylesheet" href="../css/base/footerdropdown.css">
      <link rel="stylesheet" href="../css/base/headerdropdown.css">
      <link rel="stylesheet" href="../css/layout/header.css">
+     <link rel="stylesheet" href="../css/Services/fire-detection.css">
+
 
 
 
@@ -35,8 +37,10 @@
         <div class="container">
             <nav>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#schedule-meeting">Schedule a Meeting</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="schedule.html">Schedule a Meeting</a></li>
+                    <li><a href="clients.html">Our Clients</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
                     <li class="dropdown-header">
                         <a href="services.html" id="services-link-header">
                             Services <span class="arrow-down">&#9660;</span>
@@ -63,71 +67,96 @@
            
         </div>
          <!-- Hamburger Menu -->
-    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
-    <nav id="slide-out-menu" class="menu">
-        <h3 class="menu-title">About Us</h3>
-        <ul>
-            <li><a href="#about">Our Story</a></li>
-            <li><a href="#team">Meet the Team</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-        </ul>
-        
-        <h3 class="menu-title">Services</h3>
-        <ul>
-            <li><a href="#services">Our Services</a></li>
-            <li><a href="#projects">Our Projects</a></li>
-            <li><a href="#clients">Our Clients</a></li>
-        </ul>
-        
-        <h3 class="menu-title">Work</h3>
-        <ul>
-            <li><a href="PDF/Work Done.pdf" target="_blank">Work Done <i class="fas fa-file-pdf"></i></a></li>
-            <li><a href="PDF/Work in Progess.pdf" target="_blank">Work in Progress <i class="fas fa-file-pdf"></i></a></li>
-        </ul>
-
-        <h3 class="menu-title">Company profile</h3>
-        <ul>
-            <li><a href="pdf/COMPANY_PROFILE_SGE_01042024 (NEW).pdf" target="_blank">Shree Ganesh Enterprises <i class="fas fa-file-pdf"></i></a></li>
-            <li><a href="pdf/Company_profile_S.S._01042024 (NEW).pdf" target="_blank">S.S Engineers and and Consultants <i class="fas fa-file-pdf"></i></a></li>
-        </ul>
-        
-        <h3 class="menu-title">Contact</h3>
-        <ul>
-            <li><a href="#contact">Get in Touch</a></li>
-            <li><a href="#" target="_blank">FAQs</a></li>
-        </ul>
-
-    </nav>
+         <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+         <nav id="slide-out-menu" class="menu">
+             <ul>
+                 <li><a href="#about">Our Story</a></li>
+                 <li><a href="#team">Meet the Team</a></li>
+                 <li><a href="#testimonials">Testimonials</a></li>
+         
+                 <li><a href="#services">Our Services</a></li>
+                 <li><a href="#projects">Our Projects</a></li>
+                 <li><a href="#clients">Our Clients</a></li>
+         
+                 <li><a href="PDF/Work Done.pdf" target="_blank">Work Done <i class="fas fa-file-pdf"></i></a></li>
+                 <li><a href="PDF/Work in Progess.pdf" target="_blank">Work in Progress <i class="fas fa-file-pdf"></i></a></li>
+         
+                 <li><a href="pdf/COMPANY_PROFILE_SGE_01042024 (NEW).pdf" target="_blank">Shree Ganesh Enterprises <i class="fas fa-file-pdf"></i></a></li>
+                 <li><a href="pdf/Company_profile_S.S._01042024 (NEW).pdf" target="_blank">S.S Engineers and Consultants <i class="fas fa-file-pdf"></i></a></li>
+         
+                 <li><a href="contact.html">Get in Touch</a></li>
+                 <li><a href="#" target="_blank">FAQs</a></li>
+             </ul>
+         </nav>
 
     </header>
    
     <main>
-        <section>
-                    <h2>Addressable Detection System</h2>
-                    <p>An Addressable Fire Detection System identifies the exact location of a fire event. Each detector or device in the system has an address, allowing the control panel to pinpoint the precise location of a fire. This system is ideal for large buildings and complex structures.</p>
-            
-                    <h2>Conventional Detection System</h2>
-                    <p>The Conventional Fire Detection System divides the premises into different zones. Each zone has multiple detectors connected to the control panel. When a detector is triggered, the control panel indicates which zone the fire is in, but it does not specify the exact location within the zone.</p>
-            
-                    <h2>Wireless Fire Detection System</h2>
-                    <p>The Wireless Fire Detection System uses radio signals to communicate between detectors and the control panel. This system is easy to install and ideal for buildings where wiring is difficult, such as historical structures or temporary installations.</p>
-            
-                    <h2>Smoke Detection System</h2>
-                    <p>Smoke Detection Systems are designed to detect smoke particles in the air, which can be an early sign of a fire. These systems are typically installed in areas where fires are likely to produce smoke before flames, such as in living spaces or office environments.</p>
-            
-                    <h2>Heat Detection System</h2>
-                    <p>Heat Detection Systems activate when they sense a rise in temperature above a set threshold. These systems are useful in environments where smoke detectors might cause false alarms, such as kitchens or garages.</p>
-            
-                    <h2>Beam Detection System</h2>
-                    <p>Beam Detection Systems use an infrared beam to detect smoke over large areas, such as warehouses or large halls. When smoke interferes with the beam, the system triggers an alarm. This type of system is ideal for open areas where traditional detectors may not be suitable.</p>
-            
-                    <h2>CO2 Detection System</h2>
-                    <p>CO2 Detection Systems monitor levels of carbon dioxide (CO2) in the air. Elevated levels of CO2 can indicate combustion, making these systems useful in areas where CO2 levels need to be tightly controlled, such as laboratories or industrial settings.</p>
-            
-                    <h2>LPG Detection System</h2>
-                    <p>LPG Detection Systems are designed to detect leaks of liquefied petroleum gas (LPG). LPG is highly flammable, so early detection of leaks is crucial in preventing explosions or fires. These systems are commonly used in kitchens, industrial plants, and vehicles.</p>
-                </section>
-
+        <section id="fire-detection-systems">
+            <div class="container">
+                <h2 class="section-title">Our Fire Detection Systems</h2>
+                <p class="section-description">
+                    At Shree Ganesh Enterprises, we offer a comprehensive range of fire detection systems tailored to meet diverse safety requirements. Explore our advanced solutions designed to protect lives and property effectively.
+                </p>
+                <div class="cards">
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h3>Addressable Detection System</h3>
+                            <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="card-body">
+                            <p>An Addressable Fire Detection System identifies the exact location of a fire event. Each detector or device in the system has an address, allowing the control panel to pinpoint the precise location of a fire. This system is ideal for large buildings and complex structures.</p>
+                        </div>
+                    </div>
+        
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="fas fa-th-large"></i>
+                            <h3>Conventional Detection System</h3>
+                            <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="card-body">
+                            <p>The Conventional Fire Detection System divides the premises into different zones. Each zone has multiple detectors connected to the control panel. When a detector is triggered, the control panel indicates which zone the fire is in, but it does not specify the exact location within the zone.</p>
+                        </div>
+                    </div>
+        
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="fas fa-wifi"></i>
+                            <h3>Wireless Fire Detection System</h3>
+                            <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="card-body">
+                            <p>The Wireless Fire Detection System uses radio signals to communicate between detectors and the control panel. This system is easy to install and ideal for buildings where wiring is difficult, such as historical structures or temporary installations.</p>
+                        </div>
+                    </div>
+        
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="fas fa-smoke"></i>
+                            <h3>Smoke Detection System</h3>
+                            <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="card-body">
+                            <p>Smoke Detection Systems are designed to detect smoke particles in the air, which can be an early sign of a fire. These systems are typically installed in areas where fires are likely to produce smoke before flames, such as in living spaces or office environments.</p>
+                        </div>
+                    </div>
+        
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="fas fa-thermometer-half"></i>
+                            <h3>Heat Detection System</h3>
+                            <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="card-body">
+                            <p>Heat Detection Systems activate when they sense a rise in temperature above a set threshold. These systems are useful in environments where smoke detectors might cause false alarms, such as kitchens or garages.</p>
+                        </div>
+                    </div>
+        
+                    <div class="card">
+                        <div class="card-header
+        
     </main>
 
 

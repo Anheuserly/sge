@@ -21,6 +21,7 @@
      <link rel="stylesheet" href="../css/base/footerdropdown.css">
      <link rel="stylesheet" href="../css/base/headerdropdown.css">
      <link rel="stylesheet" href="../css/layout/header.css">
+     <link rel="stylesheet" href="../css/Services/security-system.css">
 
 
 
@@ -35,8 +36,10 @@
         <div class="container">
             <nav>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#schedule-meeting">Schedule a Meeting</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="schedule.html">Schedule a Meeting</a></li>
+                    <li><a href="clients.html">Our Clients</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
                     <li class="dropdown-header">
                         <a href="services.html" id="services-link-header">
                             Services <span class="arrow-down">&#9660;</span>
@@ -63,51 +66,64 @@
            
         </div>
          <!-- Hamburger Menu -->
-    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
-    <nav id="slide-out-menu" class="menu">
-        <h3 class="menu-title">About Us</h3>
-        <ul>
-            <li><a href="#about">Our Story</a></li>
-            <li><a href="#team">Meet the Team</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-        </ul>
-        
-        <h3 class="menu-title">Services</h3>
-        <ul>
-            <li><a href="#services">Our Services</a></li>
-            <li><a href="#projects">Our Projects</a></li>
-            <li><a href="#clients">Our Clients</a></li>
-        </ul>
-        
-        <h3 class="menu-title">Work</h3>
-        <ul>
-            <li><a href="PDF/Work Done.pdf" target="_blank">Work Done <i class="fas fa-file-pdf"></i></a></li>
-            <li><a href="PDF/Work in Progess.pdf" target="_blank">Work in Progress <i class="fas fa-file-pdf"></i></a></li>
-        </ul>
-
-        <h3 class="menu-title">Company profile</h3>
-        <ul>
-            <li><a href="pdf/COMPANY_PROFILE_SGE_01042024 (NEW).pdf" target="_blank">Shree Ganesh Enterprises <i class="fas fa-file-pdf"></i></a></li>
-            <li><a href="pdf/Company_profile_S.S._01042024 (NEW).pdf" target="_blank">S.S Engineers and and Consultants <i class="fas fa-file-pdf"></i></a></li>
-        </ul>
-        
-        <h3 class="menu-title">Contact</h3>
-        <ul>
-            <li><a href="#contact">Get in Touch</a></li>
-            <li><a href="#" target="_blank">FAQs</a></li>
-        </ul>
-
-    </nav>
+         <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+         <nav id="slide-out-menu" class="menu">
+             <ul>
+                 <li><a href="#about">Our Story</a></li>
+                 <li><a href="#team">Meet the Team</a></li>
+                 <li><a href="#testimonials">Testimonials</a></li>
+         
+                 <li><a href="#services">Our Services</a></li>
+                 <li><a href="#projects">Our Projects</a></li>
+                 <li><a href="#clients">Our Clients</a></li>
+         
+                 <li><a href="PDF/Work Done.pdf" target="_blank">Work Done <i class="fas fa-file-pdf"></i></a></li>
+                 <li><a href="PDF/Work in Progess.pdf" target="_blank">Work in Progress <i class="fas fa-file-pdf"></i></a></li>
+         
+                 <li><a href="pdf/COMPANY_PROFILE_SGE_01042024 (NEW).pdf" target="_blank">Shree Ganesh Enterprises <i class="fas fa-file-pdf"></i></a></li>
+                 <li><a href="pdf/Company_profile_S.S._01042024 (NEW).pdf" target="_blank">S.S Engineers and Consultants <i class="fas fa-file-pdf"></i></a></li>
+         
+                 <li><a href="contact.html">Get in Touch</a></li>
+                 <li><a href="#" target="_blank">FAQs</a></li>
+             </ul>
+         </nav>
 
     </header>
    
     <main>
-        <section id="security-system">
-            <h1>Security Systems</h1>
-            <p><strong>CCTV System:</strong> We offer advanced CCTV systems for comprehensive surveillance. Our systems include high-definition cameras, real-time monitoring, and secure storage solutions to ensure safety and security.</p>
-            <p><strong>Access Control:</strong> Our access control systems manage and monitor entry points to your premises. These systems include keycard access, biometric scanners, and remote management capabilities.</p>
-            <p><strong>Attendance System:</strong> Our attendance systems help streamline employee management with features such as time tracking, clock-in/out, and reporting. These systems can integrate with payroll software for seamless operations.</p>
+        <section id="security-system" class="security-systems">
+            <div class="security-container">
+                <h1>Security Systems</h1>
+                <div class="security-item">
+                    <div class="security-icon">
+                        <img src="../image/cctv.png" alt="CCTV System">
+                    </div>
+                    <div class="security-details">
+                        <h2>CCTV System</h2>
+                        <p><strong>CCTV System:</strong> Our state-of-the-art CCTV systems provide comprehensive surveillance with high-definition cameras, real-time monitoring, and secure storage solutions. Enhance your safety and security with our advanced surveillance technology.</p>
+                    </div>
+                </div>
+                <div class="security-item">
+                    <div class="security-icon">
+                        <img src="../image/access-control-icon.webp" alt="Access Control">
+                    </div>
+                    <div class="security-details">
+                        <h2>Access Control</h2>
+                        <p><strong>Access Control:</strong> Manage and monitor entry points with our advanced access control systems. Featuring keycard access, biometric scanners, and remote management capabilities, our solutions offer enhanced security and convenience.</p>
+                    </div>
+                </div>
+                <div class="security-item">
+                    <div class="security-icon">
+                        <img src="../image/a-time-attendance-machine-icon.jpg" alt="Attendance System">
+                    </div>
+                    <div class="security-details">
+                        <h2>Attendance System</h2>
+                        <p><strong>Attendance System:</strong> Streamline employee management with our efficient attendance systems. Features include time tracking, clock-in/out, and integration with payroll software for seamless operations and accurate reporting.</p>
+                    </div>
+                </div>
+            </div>
         </section>
+        
         
 
     </main>
