@@ -16,24 +16,25 @@
      <link rel="stylesheet" href="css/base/site.css">
      <link rel="stylesheet" href="css/components/whatsapp.css">
      <link rel="stylesheet" href="css/components/menuicon.css">
-   
+     
      <link rel="stylesheet" href="css/utils/contact-cards.css">
      <link rel="stylesheet" href="css/base/shedule.css">
      <link rel="stylesheet" href="css/base/footerdropdown.css">
      <link rel="stylesheet" href="css/base/headerdropdown.css">
      <link rel="stylesheet" href="css/layout/header.css">
+     <link rel="stylesheet" href="css/layout/contact-cards.css">
 </head>
 <body>
     <header>
         <img src="image/sge-logo.png" alt="Company Logo" id="logo">
+        <button id="theme-toggle">Toggle Dark Mode</button>
     <div class="container">
-        <nav>
+        <nav aria-label="Main Navigation">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="schedule.html">Schedule a Meeting</a></li>
-            <li><a href="clients.html">Our Clients</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="#schedule-meeting">Schedule a Meeting</a></li>
+                <li><a href="index.html" aria-label="Home Page">Home</a></li>
+            <li><a href="schedule.html" aria-label="Schedule a Meeting">Schedule a Meeting</a></li>
+            <li><a href="services.html" aria-label="Our Services">Services</a></li>
+            <li><a href="contact.html" aria-label="Contact Us">Contact</a></li>
                 <li class="dropdown-header">
                     <a href="services.html" id="services-link-header">
                         Services <span class="arrow-down">&#9660;</span>
@@ -59,7 +60,7 @@
         </nav>
        
     </div>
-     <!-- Hamburger Menu -->
+    <!-- Hamburger Menu -->
 <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
 <nav id="slide-out-menu" class="menu">
     <h3 class="menu-title">About Us</h3>
@@ -98,37 +99,28 @@
 
 </header>
     <main>
-        
-            <section id="clients">
-                <div class="container">
-                    <h2 class="section-title">Our Clients</h2>
-                    <div class="clients-marquee">
-                        <div class="clients-track">
-                            <img src="images/adani-logo.png" alt="Adani" class="client-logo">
-                            <img src="images/dlf-logo.png" alt="DLF" class="client-logo">
-                                    <img src="image/lt-logo.png" alt="L&T Construction" class="client-logo">
-                                    <img src="image/hscc-logo.png" alt="HSCC" class="client-logo">
-                                    <img src="image/manking-logo.png" alt="Manking" class="client-logo">
-                                    <img src="image/rockland-logo.png" alt="Rockland" class="client-logo">
-                                    <img src="image/dmrc-logo.png" alt="Delhi Metro Rail Corporation" class="client-logo">
-                                    <img src="image/sgrh-logo.png" alt="Sir Ganga Ram Hospital" class="client-logo">
-                                    <img src="image/daikin-logo.png" alt="Daikin" class="client-logo">
-                                    <img src="image/jmb-logo.png" alt="JMB Group" class="client-logo">
-                            <!-- Duplicate logos for seamless loop -->
-                                    <img src="image/adani-logo.png" alt="Adani" class="client-logo">
-                                    <img src="image/dlf-logo.png" alt="DLF" class="client-logo">
-                                    <img src="image/lt-logo.png" alt="L&T Construction" class="client-logo">
-                                    <img src="image/hscc-logo.png" alt="HSCC" class="client-logo">
-                                    <img src="image/manking-logo.png" alt="Manking" class="client-logo">
-                                    <img src="image/rockland-logo.png" alt="Rockland" class="client-logo">
-                                    <img src="image/dmrc-logo.png" alt="Delhi Metro Rail Corporation" class="client-logo">
-                                    <img src="image/sgrh-logo.png" alt="Sir Ganga Ram Hospital" class="client-logo">
-                                    <img src="image/daikin-logo.png" alt="Daikin" class="client-logo">
-                                    <img src="image/jmb-logo.png" alt="JMB Group" class="client-logo">
-                        </div>
-                    </div>
-                </div>
-                </section>
+        <section id="clients">
+            <div class="container">
+                <h2>Our Clients</h2>
+                <ul>
+                    <li><a href="https://www.adaniconnex.com" target="_blank">Adani Connex</a></li>
+                    <li><a href="https://www.lntecc.com" target="_blank">L&T Constructions</a></li>
+                    <li><a href="http://www.hsccltd.co.in" target="_blank">HSCC (INDIA) LIMITED</a></li>
+                    <li><a href="http://www.delhimetrorail.com" target="_blank">Delhi Metro Rail Corporation Pvt. Ltd.</a></li>
+                    <li><a href="https://www.dlf.in" target="_blank">DLF Project Ltd.</a></li>
+                    <li><a href="https://www.voltas.com" target="_blank">Voltas Ltd.</a></li>
+                    <li><a href="https://www.mahagunindia.com" target="_blank">Mahagun (INDIA) Pvt. Ltd.</a></li>
+                    <li><a href="https://www.v3sinfratech.com" target="_blank">V3S Infratech</a></li>
+                    <li><a href="https://www.aepcindia.com" target="_blank">Apparel Export Promotion Council (Ministry of Textile)</a></li>
+                    <li><a href="https://www.bluebells.org" target="_blank">Blue Bells Group of Schools, Gurgaon</a></li>
+                    <li><a href="https://www.indianexpress.com" target="_blank">Indian Express Group</a></li>
+                    <li><a href="https://www.uppcl.org" target="_blank">Hydra Power Station, Obra, Sonebhadra U.P.</a></li>
+                    <li><a href="http://www.snmhospitallah.com" target="_blank">SNM Hospital, Leh, Ladakh, Jammu & Kashmir</a></li>
+                    <li><a href="https://www.sgrh.com" target="_blank">Sir Ganga Ram Hospital</a></li>
+                    <li><a href="https://www.nbccindia.com" target="_blank">NBCC</a></li>
+                    <li><a href="https://www.iaf.gov.in" target="_blank">Air Force Station Tughlakabad</a></li>
+                </ul>
+            </div>
         </section>
     </main>
     <footer>

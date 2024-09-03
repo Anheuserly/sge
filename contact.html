@@ -16,24 +16,25 @@
      <link rel="stylesheet" href="css/base/site.css">
      <link rel="stylesheet" href="css/components/whatsapp.css">
      <link rel="stylesheet" href="css/components/menuicon.css">
-   
+     
      <link rel="stylesheet" href="css/utils/contact-cards.css">
      <link rel="stylesheet" href="css/base/shedule.css">
      <link rel="stylesheet" href="css/base/footerdropdown.css">
      <link rel="stylesheet" href="css/base/headerdropdown.css">
      <link rel="stylesheet" href="css/layout/header.css">
+     <link rel="stylesheet" href="css/layout/contact-cards.css">
 </head>
 <body>
     <header>
         <img src="image/sge-logo.png" alt="Company Logo" id="logo">
+        <button id="theme-toggle">Toggle Dark Mode</button>
     <div class="container">
-        <nav>
+        <nav aria-label="Main Navigation">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="schedule.html">Schedule a Meeting</a></li>
-            <li><a href="clients.html">Our Clients</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="#schedule-meeting">Schedule a Meeting</a></li>
+                <li><a href="index.html" aria-label="Home Page">Home</a></li>
+            <li><a href="schedule.html" aria-label="Schedule a Meeting">Schedule a Meeting</a></li>
+            <li><a href="services.html" aria-label="Our Services">Services</a></li>
+            <li><a href="contact.html" aria-label="Contact Us">Contact</a></li>
                 <li class="dropdown-header">
                     <a href="services.html" id="services-link-header">
                         Services <span class="arrow-down">&#9660;</span>
@@ -59,7 +60,7 @@
         </nav>
        
     </div>
-     <!-- Hamburger Menu -->
+    <!-- Hamburger Menu -->
 <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
 <nav id="slide-out-menu" class="menu">
     <h3 class="menu-title">About Us</h3>
@@ -99,67 +100,68 @@
 </header>
     <main>
         <section id="contact">
-            
-                <div class="container">
-                    <h2 class="section-title">Contact Us</h2>
-                    <div class="contact-grid">
-                        <div class="contact-card">
-                            <div class="contact-icon">
-                                <i class="fas fa-user-tie"></i>
-                            </div>
-                            <h3>Country Head</h3>
-                            <p class="contact-name">A.K. Saini</p>
-                            <div class="contact-details">
-                                <p><i class="fas fa-phone"></i> <a href="tel:+918527389555">8527389555</a>, <a href="tel:+919871936847">9871936847</a></p>
-                                <p><i class="fas fa-envelope"></i> <a href="mailto:anilkumarsaini0507@gmail.com">anilkumarsaini0507@gmail.com</a></p>
-                            </div>
+            <div class="container">
+                <h2 class="section-title">Contact Us</h2>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <img src="image/anilsaini-profile.jfif" alt="A.K. Saini" class="contact-photo">
+                        <h3>Country Head</h3>
+                        <p class="contact-name">A.K. Saini</p>
+                        <div class="contact-details">
+                            <p>
+                                <img src="image/phone-icon.png" alt="Phone" class="contact-icon"> 
+                                <a href="tel:+918527389555">8527389555</a>, <a href="tel:+919871936847">9871936847</a>
+                            </p>
+                            <p>
+                                <img src="image/email-icon.png" alt="Email" class="contact-icon"> 
+                                <a href="mailto:anilkumarsaini0507@gmail.com">anilkumarsaini0507@gmail.com</a>
+                            </p>
                         </div>
-                        <div class="contact-card">
-                            <div class="contact-icon">
-                                <i class="fas fa-drafting-compass"></i>
-                            </div>
-                            <h3>Country Head</h3>
-                            <p class="contact-name">Ar. Shashank Saini</p>
-                            <div class="contact-details">
-                                <p><i class="fas fa-phone"></i> <a href="tel:+918527378555">+91-8527378555</a></p>
-                                <p><i class="fas fa-envelope"></i> <a href="mailto:arcelevenarchitect@gmail.com">arcelevenarchitect@gmail.com</a></p>
-                            </div>
+                    </div>
+                    <div class="contact-card">
+                        <img src="image/shashanksaini-profile.png" alt="Ar. Shashank Saini" class="contact-photo">
+                        <h3>Architect</h3>
+                        <p class="contact-name">Ar. Shashank Saini</p>
+                        <div class="contact-details">
+                            <p>
+                                <img src="image/phone-icon.png" alt="Phone" class="contact-icon"> 
+                                <a href="tel:+918527378555">+91-8527378555</a>
+                            </p>
+                            <p>
+                                <img src="image/email-icon.png" alt="Email" class="contact-icon"> 
+                                <a href="mailto:arcelevenarchitect@gmail.com">arcelevenarchitect@gmail.com</a>
+                            </p>
                         </div>
-                        <div class="contact-card">
-                            <div class="contact-icon">
-                                <i class="fas fa-hard-hat"></i>
-                            </div>
+                    </div>
+                    <div class="contact-card">
+                        <img src="" alt="Mukesh Kumar" class="contact-photo">
                         <h3>Account Head</h3>
-                            <p class="contact-name">Mukesh Kumar</p>
-                            <div class="contact-details">
-                                <p><i class="fas fa-phone"></i> <a href="tel:+919716944225">+91-9716944225</a></p>
-                                <p><i class="fas fa-envelope"></i> <a href="mailto:mukeshkaim1404@reddifmail.in">mukeshkaim1404@reddifmail.in</a></p>
-                            </div>
-                            </div>
-                        <div class="contact-card">
-                            <div class="contact-icon">
-                                <i class="fas fa-hard-hat"></i>
-                            </div>
-                            <h3>Electrical Engineer</h3>
-                            <p class="contact-name">Shubham Kumar</p>
-                            <div class="contact-details">
-                                <p><i class="fas fa-phone"></i> <a href="tel:+919310286848">9310286848</a>, <a href="tel:+918171486963">8171486963</a></p>
-                                <p><i class="fas fa-envelope"></i> <a href="mailto:shubham2808kumar@gmail.com">shubham2808kumar@gmail.com</a></p>
-                            </div>
+                        <p class="contact-name">Mukesh Kumar</p>
+                        <div class="contact-details">
+                            <p>
+                                <img src="image/phone-icon.png" alt="Phone" class="contact-icon"> 
+                                <a href="tel:+919716944225">+91-9716944225</a>
+                            </p>
+                            <p>
+                                <img src="image/email-icon.png" alt="Email" class="contact-icon"> 
+                                <a href="mailto:mukeshkaim1404@reddifmail.in">mukeshkaim1404@reddifmail.in</a>
+                            </p>
                         </div>
-                        <div class="contact-card">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <h3>Office</h3>
-                            <p class="contact-address">Chattarpur Pahadi, New Delhi 110074</p>
-                            <div class="contact-details">
-                                <p><i class="fas fa-directions"></i> <a href="https://www.google.com/maps/search/?api=1&query=Chattarpur+Pahadi,+New+Delhi+110074" target="_blank">Get Directions</a></p>
-                            </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <img src="image/office.jpg" alt="Office Location" class="contact-photo">
+                        <h3>Office</h3>
+                        <p class="contact-address">Chattarpur Pahadi, New Delhi 110074</p>
+                        <div class="contact-details">
+                            <p>
+                                <img src="image/directions-icon.png" alt="Directions" class="contact-icon"> 
+                                <a href="https://www.google.com/maps/search/?api=1&query=Chattarpur+Pahadi,+New+Delhi+110074" target="_blank">Get Directions</a>
+                            </p>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
         </section>
     </main>
     <footer>
