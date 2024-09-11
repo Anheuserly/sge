@@ -3,117 +3,529 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fire Fighting & Plumbing Company</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Shree Ganesh Enterprises</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="common/css/styles.css">
+    <link rel="stylesheet" href="common/css/hero.css">
+    <link rel="stylesheet" href="common/css/whatsapp.css">
+    <link rel="stylesheet" href="common/css/chatbot.css">
+    <link rel="stylesheet" href="common/css/menu.css">
+    <link rel="stylesheet" href="common/css/services.css">
+    <link rel="stylesheet" href="common/css/project.css">
+    <link rel="stylesheet" href="common/css/accordion.css">
+    <link rel="stylesheet" href="common/css/certificate.css">
+
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="common/js/scripts.js"></script>
+    <script src="common/js/whatsapp.js"></script>
+    <script src="common/js/chatbot.js"></script>
+    <script src="common/js/menu.js"></script>
+    <script src="common/js/project.js"></script>
+    <script src="common/js/accordion.js"></script>
+    <script src="common/js/certificate.js"></script>
+    <script src="common/js/services.js"></script>
 </head>
 <body>
     <header>
         <nav>
+            <div class="logo">
+                <a href="#"><img src="common/images/Logo/Logo.png" alt="Shree Ganesh Enterprises"></a>
+            </div>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li>
-                    <a href="#">Services</a>
-                    <ul class="dropdown">
-                        <li>
-                            <a href="#">Fire Fighting Systems</a>
-                            <ul class="dropdown">
-                                <li><a href="#">Sprinkler System</a></li>
-                                <li><a href="#">Fire Hydrant System (Internal/External)</a></li>
-                                <li><a href="#">Fire Detection Systems</a>
-                                    <ul class="dropdown">
-                                        <li><a href="#">Addressable</a></li>
-                                        <li><a href="#">Conventional</a></li>
-                                        <li><a href="#">Wireless</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Smoke Detection System</a></li>
-                                <li><a href="#">Heat Detection System</a></li>
-                                <li><a href="#">Beam Detection System</a></li>
-                                <li><a href="#">CO2 Detection System</a></li>
-                                <li><a href="#">LPG Detection System</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Plumbing Services</a>
-                            <ul class="dropdown">
-                                <li><a href="#">Residential Plumbing</a></li>
-                                <li><a href="#">Commercial Plumbing</a></li>
-                                <li><a href="#">Kitchen Plumbing</a></li>
-                                <li><a href="#">Bathroom Plumbing</a></li>
-                                <li><a href="#">Toilet Plumbing</a></li>
-                                <li><a href="#">Installation & Repairs</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Industries Served</a></li>
-                <li><a href="#">Safety & Compliance</a></li>
-                <li><a href="#">Blog/Resources</a></li>
-                <li><a href="#">Testimonials</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Schedule a Meeting</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about/index.html">About</a></li>
+                <li><a href="services/index.html">Services</a></li>   
+                <li><a href="Clients/index.html">Clients</a></li>
+                <li><a href="Contacts/index.html">Contact</a></li>
+                <li><a href="Shedule a Meeting/index.html">Schedule a Meeting</a></li>
             </ul>
         </nav>
+
+           <!-- Hamburger Menu -->
+<div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+<nav id="slide-out-menu" class="menu">
+    <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about/index.html">About</a></li>
+                <li><a href="services/index.html">Services</a></li>   
+                <li><a href="Clients/index.html">Clients</a></li>
+                <li><a href="Contacts/index.html">Contact</a></li>
+                <li><a href="Shedule a Meeting/index.html">Schedule a Meeting</a></li>
+
+           </ul>
+</nav>
     </header>
 
     <main>
-        <section id="home">
-            <h1>Welcome to Our Fire Fighting & Plumbing Company</h1>
-            <p>We provide top-notch fire fighting systems and plumbing services for residential, commercial, and industrial clients.</p>
-        </section>
 
+        <section id="hero">
+            <video autoplay loop muted playsinline>
+                <source src="firefightingsystemfi-vmake.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero-content">
+                <h2>Innovative MEP Solutions</h2>
+                <p>Transforming spaces, creating experiences</p>
+                <a href="#contact" class="cta-button">Get in Touch</a>
+            </div>
+            <p class="m-scrollDown animation-target">Scroll Down<span class="m-scrollDown__bar"></span></p>
+        </div>
+        </section>
         <section id="about">
-            <h2>About Us</h2>
-            <p>Learn more about our company, our team, and our mission to ensure safety and excellence in our services.</p>
+            <div class="container">
+                <h2 class="section-title">About Us</h2>
+                <p class="company-info"><strong>Shree Ganesh Enterprises</strong>, formerly <strong>S.S. Engineers & Consultants</strong>, has been a trusted name in comprehensive engineering solutions for <strong>27+ years</strong>, built on a foundation of quality and innovation.</p>
+                <p class="founder-info">Our founder, <strong>Anil Kumar Saini</strong>, has established a reputation for excellence and reliability. As a GST-registered company (<strong>07ITNPS4205M1ZZ</strong>), we're dedicated to delivering tailored solutions that meet the unique needs of our clients.</p>
+            </div>
         </section>
+    
+        <section class="services-section">
+            <h1 class="section-title">Our Services</h1>
+            <div class="circle-container">
+                <div class="service-list">
+                    <div class="service-item" data-service="mechanical">Mechanical</div>
+                    <div class="service-item" data-service="electrical">Electrical</div>
+                    <div class="service-item" data-service="plumbing">Plumbing</div>
+                    <div class="service-item" data-service="fire-protection">Fire Protection System</div>
+                    <div class="service-item" data-service="maintenance">Annual Maintenance Contract</div>
+                    <div class="service-item" data-service="civil-design">Civil Design</div>
+                    <div class="service-item" data-service="build-services">Build Services</div>
+                </div>
+                <div class="circle">
+                    <!-- Circle content, if needed -->
+                </div>
+            </div>
+            <div class="description">
+                <h2 id="service-title">Select a Service</h2>
+                <p id="service-description">Please choose a service to see the details.</p>
+                <a href="services/index.html" id="know-more">Know More</a>
+            </div>
+        </section>
+        <section id="why-choose-us" class="why-choose-us-section">
+            <div class="container">
+                <h2 class="section-title">Why Choose Us</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-tools"></i>
+                        <h3>Expert Technicians</h3>
+                        <p>Our team of certified and experienced technicians ensures that every project is handled with precision and care.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Commitment to Safety</h3>
+                        <p>We prioritize safety in every aspect of our work, from fire fighting installations to plumbing repairs and maintenance.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>24/7 Emergency Services</h3>
+                        <p>Whether it's a fire emergency or a plumbing issue, we're available around the clock to address urgent situations.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-thumbs-up"></i>
+                        <h3>Customer Satisfaction</h3>
+                        <p>We pride ourselves on delivering high-quality services and ensuring complete customer satisfaction in every project.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="expertise" class="expertise-section">
+            <div class="container">
+                <div class="expertise-wrapper">
+                    <div class="expertise-list">
+                        <h2 class="section-title">Our Expertise</h2>
+                        <ul class="expertise-items">
+                            <li data-target="fire-fighting" class="expertise-item">
+                                <i class="icon-fire"></i> Fire Fighting
+                            </li>
+                            <li data-target="fire-detection" class="expertise-item">
+                                <i class="icon-detection"></i> Fire Detection
+                            </li>
+                            <li data-target="fire-extinguisher" class="expertise-item">
+                                <i class="icon-extinguisher"></i> Fire Extinguisher
+                            </li>
+                            <li data-target="separation-systems" class="expertise-item">
+                                <i class="icon-separation"></i> Separation Systems
+                            </li>
+                            <li data-target="miscellaneous-equipment" class="expertise-item">
+                                <i class="icon-miscellaneous"></i> Miscellaneous Equipment
+                            </li>
+                            <li data-target="fire-stop-accessories" class="expertise-item">
+                                <i class="icon-stop"></i> Fire Stop Accessories
+                            </li>
+                            <li data-target="electrical-systems" class="expertise-item">
+                                <i class="icon-electrical"></i> Electrical Systems
+                            </li>
+                            <li data-target="plumbing-solutions" class="expertise-item">
+                                <i class="icon-plumbing"></i> Plumbing Solutions
+                            </li>
+                            <li data-target="security-systems" class="expertise-item">
+                                <i class="icon-security"></i> Security Systems
+                            </li>
+                            <li data-target="information-systems" class="expertise-item">
+                                <i class="icon-information"></i> Information Systems
+                            </li>
+                            <li data-target="autocad-services" class="expertise-item">
+                                <i class="icon-autocad"></i> AutoCAD Services
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="expertise-content">
+                        <div id="fire-fighting" class="content-section">
+                            <div class="content-background fire-fighting-bg">
+                                <div class="content-text">
+                                    <h3>Fire Fighting</h3>
+                                    <p>Our fire fighting services offer a robust solution for fire suppression in a range of environments. We specialize in the design, installation, and maintenance of various fire fighting systems including sprinklers, hydrants, and fire pumps. Our solutions are tailored to meet the specific needs of both residential and commercial properties, ensuring maximum effectiveness and compliance with local regulations.</p>
+                                    <p>Our team conducts thorough risk assessments to determine the best fire fighting strategy for your property. We prioritize safety and reliability, providing systems that are rigorously tested and maintained to ensure they perform effectively during emergencies. From initial consultation to ongoing support, we are committed to delivering superior fire fighting solutions that provide peace of mind.</p>
+                                    <a href="services/Fire-fIghting/index.html" class="btn-know-more">Know More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="fire-detection" class="content-section">
+                            <div class="content-background fire-detection-bg">
+                                <div class="content-text">
+                                    <h3>Fire Detection</h3>
+                                    <p>Our fire detection services are designed to provide early and reliable detection of fire hazards. We install advanced systems including addressable, conventional, and wireless fire detection systems, each chosen based on the unique requirements of your property. These systems ensure timely alerts to potential fire threats, helping to mitigate risks and enhance safety.</p>
+                                    <p>We also offer comprehensive maintenance services to keep your fire detection systems in optimal condition. Regular testing, inspection, and upgrades are part of our service to ensure that your detection systems are always ready to respond quickly in case of a fire. Our goal is to offer you peace of mind by providing state-of-the-art technology and expert support.</p>
+                                    <a href="services/Fire-Detection/index.html" class="btn-know-more">Know More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="fire-extinguisher" class="content-section">
+                            <div class="content-background fire-extinguisher-bg">
+                                <div class="content-text">
+                                    <h3>Fire Extinguisher</h3>
+                                    <p>Our fire extinguisher services cover the selection, installation, and maintenance of a wide range of fire extinguishers. We provide various types including water, foam, CO2, and dry powder extinguishers, each suited for different fire classes. Our expert team ensures that the extinguishers are installed in optimal locations and are readily accessible in emergencies.</p>
+                                    <p>We also offer regular maintenance services to ensure that your extinguishers are in working order. This includes inspections, refills, and repairs as needed. In addition, we provide training sessions to educate you and your staff on the proper use of fire extinguishers, enhancing your preparedness in case of a fire.</p>
+                                    <a href="services/Fire-Extinguisher/index.html" class="btn-know-more">Know More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="separation-systems" class="content-section">
+                            <div class="content-background separation-systems-bg">
+                                <div class="content-text">
+                                    <h3>Separation Systems</h3>
+                                    <p>Our separation systems are designed to enhance fire containment within buildings. We install fire-resistant barriers, including walls, doors, and partitions, to prevent the spread of fire and smoke. These systems are crucial for maintaining safety and protecting different areas of a building from fire damage.</p>
+                                    <p>We provide tailored solutions to meet specific fire safety codes and regulations. Our team also offers fire stopping solutions for penetrations through barriers, ensuring that gaps around pipes and cables are securely sealed. With our comprehensive approach, you can be confident that your separation systems are effective and reliable.</p>
+                                    <a href="services/Saperation-System/index.html" class="btn-know-more">Know More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="miscellaneous-equipment" class="content-section">
+                            <div class="content-background miscellaneous-equipment-bg">
+                                <div class="content-text">
+                                    <h3>Miscellaneous Equipment</h3>
+                                    <p>Our miscellaneous equipment services include a variety of essential fire safety tools and devices. We supply and install emergency lighting, fire alarms, signage, and fire blankets, all designed to enhance safety and ensure compliance with fire safety regulations. Each piece of equipment plays a critical role in improving overall safety and preparedness.</p>
+                                    <p>We also offer installation, testing, and maintenance services to ensure that all equipment functions correctly. Our team is dedicated to providing high-quality equipment and reliable support to keep your property safe and secure. Whether it’s for a new installation or an upgrade to existing equipment, we are here to help.</p>
+                                    <a href="services/Miscellaneous-Equipment/index.html" class="btn-know-more">Know More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="fire-stop-accessories" class="content-section">
+                            <div class="content-background fire-stop-accessories-bg">
+                                <div class="content-text">
+                                    <h3>Fire Stop Accessories</h3>
+                                    <p>Fire stop accessories are vital for maintaining the integrity of fire-rated barriers within a building. We offer a range of products including sealants, fire collars, and intumescent materials designed to seal gaps around pipes, cables, and other penetrations. These accessories prevent the passage of fire and smoke, helping to compartmentalize and contain fires effectively.</p>
+                                    <p>Our team ensures that all fire stop accessories meet stringent safety standards and provide reliable protection. We also provide installation and maintenance services to ensure that all fire stop solutions are correctly applied and functioning as intended. Our focus is on delivering products that enhance safety and contribute to effective fire management.</p>
+                                    <a href="services/Fire-Stop-Accessories/index.html" class="btn-know-more">Know More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="electrical-systems" class="content-section">
+                            <div class="content-background electrical-systems-bg">
+                                <div class="content-text">
+                                    <h3>Electrical Services</h3>
+                                    <p>Our electrical systems services include a comprehensive range of solutions for residential, commercial, and industrial properties. We handle everything from power distribution and lighting to advanced control systems and electrical panels. Our team is skilled in designing and installing electrical systems that meet safety codes and industry standards.</p>
+                                    <p>We also provide maintenance and repair services to ensure that your electrical systems remain reliable and efficient. Whether it’s upgrading existing systems or implementing new solutions, our focus is on delivering high-quality, safe, and effective electrical systems that support your operational needs.</p>
+                                    <a href="services/Electricals/index.html" class="btn-know-more">Know More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="plumbing-solutions" class="content-section">
+                            <div class="content-background plumbing-solutions-bg">
+                                <div class="content-text">
+                                    <h3>Plumbing Solutions</h3>
+                                    <p>Our plumbing solutions offer a full spectrum of services for both residential and commercial properties. We specialize in the installation, maintenance, and repair of plumbing systems, including water supply, drainage, and sewage systems. Our team ensures that all plumbing work is performed to the highest standards, providing reliable and efficient solutions.</p>
+                                    <p>We also offer emergency plumbing services to address urgent issues and minimize disruptions. From routine maintenance to complex repairs and installations, our goal is to deliver top-notch plumbing solutions that meet your specific needs and ensure the smooth operation of your systems.</p>
+                                    <a href="services/Plumbing/index.html" class="btn-know-more">Know More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="security-systems" class="content-section">
+                            <div class="content-background security-systems-bg">
+                                <div class="content-text">
+                                    <h3>Security Systems</h3>
+                                    <p>Our security systems services provide advanced solutions to protect your property from unauthorized access and potential threats. We offer a range of security systems including surveillance cameras, alarm systems, access control, and intrusion detection. Each system is designed to meet your specific security requirements and enhance overall safety.</p>
+                                    <p>Our team handles the design, installation, and maintenance of security systems, ensuring that they are fully functional and provide reliable protection. We stay updated with the latest security technologies to offer you cutting-edge solutions that effectively safeguard your property and provide peace of mind.</p>
+                                    <a href="services/Security-System/index.html" class="btn-know-more">Know More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="information-systems" class="content-section">
+                            <div class="content-background information-systems-bg">
+                                <div class="content-text">
+                                    <h3>Information Systems</h3>
+                                    <p>Our information systems services include the design and implementation of comprehensive IT solutions for businesses. We offer a range of services including network infrastructure, data management, and software development. Our focus is on creating scalable and efficient systems that support your business operations and enhance productivity.</p>
+                                    <p>We work closely with you to understand your specific needs and tailor our solutions to align with your organizational goals. Our team is committed to delivering high-performance information systems that are secure, reliable, and capable of handling your data and IT requirements effectively.</p>
+                                    <a href="services/Information-System/index.html" class="btn-know-more">Know More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="autocad-services" class="content-section">
+                            <div class="content-background autocad-services-bg">
+                                <div class="content-text">
+                                    <h3>AutoCAD Services</h3>
+                                    <p>Our AutoCAD services provide expert drafting, design, and modification of CAD drawings for a variety of projects. We utilize the latest AutoCAD software to produce precise and high-quality drawings for architectural, engineering, and construction purposes. Our services ensure that all designs meet industry standards and project specifications.</p>
+                                    <p>We work closely with clients to understand their needs and deliver customized solutions that accurately reflect their vision. Whether it's creating new drawings or revising existing ones, our goal is to provide detailed and accurate CAD drawings that facilitate effective project planning and execution.</p>
+                                    <a href="services/AutoCAD-Drawing/index.html" class="btn-know-more">Know More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        
+        
+        
+        
+        <section id="certifications" class="certifications-section">
+            <div class="container">
+                <h2 class="section-title">Our Certifications</h2>
+                <div class="certifications-container">
+                    <div class="certifications-wrapper">
+                        <div class="certification-card">
+                            <h3>Ministry of Finance</h3>
+                            <p>Officially certified by the Ministry of Finance for compliance in safety and taxation regulations.</p>
+                        </div>
+                        <div class="certification-card">
+                            <h3>Department of Revenue</h3>
+                            <p>Certified by the Department of Revenue, ensuring adherence to legal and financial guidelines in all projects.</p>
+                        </div>
+                        <div class="certification-card">
+                            <h3>Employees' State Insurance Corporation</h3>
+                            <p>Fully compliant with ESIC for employee welfare and social security schemes.</p>
+                        </div>
+                        <div class="certification-card">
+                            <h3>Department of Trade and Taxes</h3>
+                            <p>Certified under the Department of Trade and Taxes for transparent and ethical business practices.</p>
+                        </div>
+                        <div class="certification-card">
+                            <h3>Employees' Provident Fund Organization</h3>
+                            <p>Certified by the EPFO for compliance with employee provident fund regulations.</p>
+                        </div>
+                        <div class="certification-card">
+                            <h3>Department of Commercial Taxes Uttar Pradesh</h3>
+                            <p>Certified by the Department of Commercial Taxes in Uttar Pradesh, ensuring compliance with local tax laws.</p>
+                        </div>
+                        <div class="certification-card">
+                            <h3>Micro, Small & Medium Enterprises</h3>
+                            <p>Certified by the MSME for compliance and support in small and medium business operations.</p>
+                        </div>
+                        <div class="certification-card">
+                            <h3>Apparel Export Promotion Council (AEPC) Ministry of Textiles</h3>
+                            <p>Certified by AEPC, Ministry of Textiles, for adherence to standards in the apparel export industry.</p>
+                        </div>
+                        <div class="certification-card">
+                            <h3>National Small Industries Corporation</h3>
+                            <p>Certified by NSIC for promoting and supporting small-scale industries.</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        
+        
+        
+        <section id="safety-tips" class="safety-tips-section">
+            <div class="container">
+                <h2 class="section-title">Safety Tips</h2>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <h3>Fire Safety at Home</h3>
+                        <p>Install smoke alarms on every floor of your home. Test them regularly and replace batteries annually. Ensure that fire extinguishers are accessible and up-to-date.</p>
+                        <a href="fire-safety.html" class="read-more">Read More</a>
+                    </div>
+                    <div class="tip-card">
+                        <h3>Prevent Plumbing Disasters</h3>
+                        <p>Regularly inspect your pipes for leaks. Avoid pouring grease down the drain and schedule routine maintenance to prevent blockages and costly repairs.</p>
+                        <a href="plumbing-maintenance.html" class="read-more">Read More</a>
+                    </div>
+                    <div class="tip-card">
+                        <h3>Fire Extinguisher Use</h3>
+                        <p>Always know how to use a fire extinguisher. The PASS method—Pull, Aim, Squeeze, Sweep—can help you control small fires before they get out of hand.</p>
+                        <a href="fire-extinguisher-tips.html" class="read-more">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="blog-snippet" class="blog-snippet-section">
+            <div class="container">
+                <h2 class="section-title">Latest Blogs</h2>
+                <div class="blog-grid">
+                    <div class="blog-card">
+                        <img src="Blog/Fire safety tips/Blog-img/DALL·E 2024-09-11 16.52.53 - A vibrant and informative image illustrating essential fire safety tips for every home. The scene shows a cozy living room with a fire extinguisher mo.webp" alt="Blog 1">
+                        <h3>Top Fire Safety Tips for Every Home</h3>
+                        <p>Discover essential fire safety tips that every homeowner should know. From installing smoke alarms to using fire extinguishers, stay protected.</p>
+                        <a href="blog/Fire safety tips/index.html" class="read-more">Read More</a>
+                    </div>
+                    <div class="blog-card">
+                        <img src="Blog/Plumbing Maintenence Guide/Blog-img/DALL·E 2024-09-11 16.55.38 - An instructional image representing a Plumbing Maintenance Guide. The image shows various plumbing tools like wrenches, pipe cutters, and .webp" alt="Blog 2">
+                        <h3>Plumbing Maintenance Guide</h3>
+                        <p>Regular plumbing maintenance can save you money and prevent major issues. Learn the best practices for keeping your pipes in top shape.</p>
+                        <a href="Blog/Plumbing Maintenence Guide/index.html" class="read-more">Read More</a>
+                    </div>
+                    <!-- Add more blog snippets as needed -->
+                </div>
+            </div>
+        </section>
+        
+        
+        <section id="location" class="location-section">
+            <h2>Our Location</h2>
+        
+            <!-- Textual Description of Location -->
+            <div class="location-description">
+                <p>
+                    Our office is located at <strong>House No. 435, Second Floor, Left Side, Khasra No. 60, 128-21, Chattarpur Pahadi, New Delhi - 110074</strong>.
+                    We are situated in a peaceful area of South Delhi, surrounded by the natural beauty of Chattarpur Hills. You can easily reach us through major roads connecting Chhatarpur, making it a convenient location for visitors from different parts of the city.
+                </p>
+            </div>
+        
+            <!-- Embedded Google Map -->
+            <div class="map-container">
+                <div class="map-embed">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27958.593589987543!2d77.1879128!3d28.4969774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19b9d80a8d13%3A0x6351e1ff34947b28!2sChhatarpur%2C%20New%20Delhi%2C%20Delhi%20110030!5e0!3m2!1sen!2sin!4v1633055365639!5m2!1sen!2sin" 
+                        width="600" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        
+            <!-- Button to Navigate -->
+            <div class="navigate-btn-container">
+                <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27958.593589987543!2d77.1879128!3d28.4969774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19b9d80a8d13%3A0x6351e1ff34947b28!2sChhatarpur%2C%20New%20Delhi%2C%20Delhi%20110030!5e0!3m2!1sen!2sin!4v1633055365639!5m2!1sen!2sin" class="navigate-btn" target="_blank">Navigate to Our Location</a>
+            </div>
+        
+            <!-- Scroll Down Animation -->
+            <p class="m-scrollDown animation-target">Scroll Down<span class="m-scrollDown__bar"></span></p>
+        </section>
+        
 
-        <section id="services">
-            <h2>Our Services</h2>
-            <p>Explore the wide range of fire fighting and plumbing services we offer.</p>
-        </section>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <p>Take a look at some of the projects we've completed for our satisfied clients.</p>
+        <section class="contact-profiles">
+            <h1>Meet Our Team</h1>
+            <div class="profiles-container">
+                <div class="profile">
+                    <img src="../en/Contacts/Anilsaini/anilsaini-profile.jfif" alt="Anil Kumar Saini">
+                    <div class="profile-info">
+                        <h2>Anil Kumar Saini</h2>
+                        <p>Country Head | Electrical Engineer</p>
+                        <a href="mailto:anilkumarsaini0507@gmail.com">anilkumarsaini0507@gmail.com</a>
+                        <p>Anil Kumar Saini is our Country Head and an experienced Electrical Engineer. He specializes in managing complex installations and ensuring the highest standards of electrical engineering.</p>
+                    </div>
+                </div>
+                <div class="profile">
+                    <img src="../en/Contacts/ShashankSaini/shashanksaini-profile.png" alt="Shashank Saini">
+                    <div class="profile-info">
+                        <h2>Shashank Saini</h2>
+                        <p>Architect</p>
+                        <a href="mailto:arcelevenarchitect@gmail.com">arcelevenarchitect@gmail.com</a>
+                        <p>Shashank Saini is a skilled Architect with a strong background in designing innovative and functional architectural solutions. His expertise includes both residential and commercial projects.</p>
+                    </div>
+                </div>
+                <div class="profile">
+                    <img src="../common/images/team/member3.jpg" alt="Mukesh Kumar">
+                    <div class="profile-info">
+                        <h2>Mukesh Kumar</h2>
+                        <p>Account Head</p>
+                        <a href="mailto:mukeshkaim1404@rediffmail.in">mukeshkaim1404@rediffmail.in</a>
+                        <p>Mukesh Kumar is our Account Head, responsible for overseeing financial operations and ensuring budget adherence across all projects. His role is crucial in maintaining financial integrity and project success.</p>
+                    </div>
+                </div>
+                <div class="profile">
+                    <img src="../common/images/team/member4.jpg" alt="Shubham Kumar">
+                    <div class="profile-info">
+                        <h2>Shubham Kumar</h2>
+                        <p>Electrical Engineer</p>
+                        <a href="mailto:shubham2808kumar@gmail.com">shubham2808kumar@gmail.com</a>
+                        <p>Shubham Kumar is a dedicated Electrical Engineer who plays a vital role in executing electrical installations and ensuring compliance with safety standards. His expertise contributes to the successful completion of various engineering projects.</p>
+                    </div>
+                </div>
+            </div>
         </section>
-
-        <section id="industries">
-            <h2>Industries We Serve</h2>
-            <p>We provide services to a variety of industries, including residential, commercial, and industrial sectors.</p>
-        </section>
-
-        <section id="safety">
-            <h2>Safety & Compliance</h2>
-            <p>Our services adhere to the highest safety standards and regulatory compliance.</p>
-        </section>
-
-        <section id="blog">
-            <h2>Blog & Resources</h2>
-            <p>Stay updated with our latest articles, safety tips, and technical guides.</p>
-        </section>
-
-        <section id="testimonials">
-            <h2>What Our Clients Say</h2>
-            <p>Read feedback from our satisfied clients.</p>
-        </section>
-
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Get in touch with us for any inquiries or service requests.</p>
-        </section>
-
-        <section id="schedule">
-            <h2>Schedule a Meeting</h2>
-            <p>Book a consultation or inspection with our team.</p>
-        </section>
+    
+       
+    
+        
+        
     </main>
 
     <footer>
-        <p>&copy; 2024 Fire Fighting & Plumbing Company. All rights reserved.</p>
-    </footer>
+        <div class="footer-contact">
+            <p>&copy; 2024 Shree Ganesh Enterprises. All rights reserved.</p>
+            
+        </div>
+        <div class="footer-social">
+            <a href="https://facebook.com/yourcompany" target="_blank" class="social-icon facebook" aria-label="Facebook"></a>
+            <a href="https://twitter.com/yourcompany" target="_blank" class="social-icon twitter" aria-label="Twitter"></a>
+            <a href="https://linkedin.com/company/yourcompany" target="_blank" class="social-icon linkedin" aria-label="LinkedIn"></a>
+          <a href="https://instagram.com/yourcompany" target="_blank" class="social-icon instagram" aria-label="Instagram"></a>
 
-    <script src="scripts.js"></script>
+        </div>
+        
+        <div class="footer-quick-links">
+            <a href="privacy_policy.html">Privacy Policy</a>
+            <a href="terms of serices.html">Terms of Service</a>
+            <a href="#">FAQ</a>
+        </div>
+        <div class="footer-newsletter">
+            <p>Subscribe to our newsletter:</p>
+            <form action="subscribe.php" method="post">
+                <input type="email" name="email" placeholder="Your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </footer>
+    
+    <div id="chatbot">
+        <div id="chatbot-header">
+            <h3>Chat with Ava</h3>
+            <button id="close-chat">×</button>
+        </div>
+        <div id="chatbot-messages"></div>
+        <div id="chatbot-input">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button id="send-message">Send</button>
+        </div>
+    </div>
+    <button id="open-chat">Chat with Ava</button>
+
+    <div id="whatsapp-icon">
+        <a href="#" id="whatsapp-link">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <div id="whatsapp-popup" class="hidden">
+        <p>How would you like to open WhatsApp?</p>
+        <button id="whatsapp-app">WhatsApp App</button>
+        <button id="whatsapp-web">WhatsApp Web</button>
+    </div>
+
+    
 </body>
 </html>
