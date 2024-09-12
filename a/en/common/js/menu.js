@@ -1,14 +1,15 @@
-// Selecting the elements
-const menuIcon = document.querySelector('.menu-icon');
-const menu = document.querySelector('.menu');
-const closeBtn = document.querySelector('.close-btn');
+function toggleMenu() {
+    const menu = document.getElementById('slide-out-menu');
+    const menuIcon = document.querySelector('.menu-icon');
+    const isOpen = menu.classList.contains('menu-open');
 
-// Open menu
-menuIcon.addEventListener('click', () => {
-    menu.classList.add('active');
-});
-
-// Close menu
-closeBtn.addEventListener('click', () => {
-    menu.classList.remove('active');
-});
+    if (isOpen) {
+        menu.classList.remove('menu-open');
+        menu.setAttribute('aria-hidden', 'true');
+        menuIcon.setAttribute('aria-label', 'Open menu');
+    } else {
+        menu.classList.add('menu-open');
+        menu.setAttribute('aria-hidden', 'false');
+        menuIcon.setAttribute('aria-label', 'Close menu');
+    }
+}
