@@ -26,6 +26,7 @@ header {
     transition: top 0.3s; /* Transition for smooth hide/show */
 }
 
+/* Base Styles for Desktop */
 nav {
     max-width: 1200px;
     margin: 0 auto;
@@ -73,24 +74,20 @@ nav ul li a:hover {
     box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3); /* Add shadow on hover */
 }
 
-/* Responsive Navigation for Mobile */
+/* Hide and Disable Navigation for Mobile */
 @media (max-width: 768px) {
     nav {
-        flex-direction: column;
-        align-items: center;
+        display: none; /* Completely hide the navigation bar on mobile */
     }
 
-    nav ul {
-        flex-direction: column;
-        text-align: center;
+    /* Ensure the menu icon is visible and functional */
+    .menu-icon {
+        display: inline-block;
     }
 
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    nav .logo {
-        margin-bottom: 15px;
+    /* Adjust slide-out menu if necessary */
+    .menu {
+        width: 250px; /* Adjust width as needed */
     }
 }
 
@@ -109,6 +106,17 @@ nav ul li a:hover {
 
 
 
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
 
 
 
