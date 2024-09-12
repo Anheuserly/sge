@@ -1,8 +1,4 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
+/* Menu Icon */
 .menu-icon {
     font-size: 30px;
     cursor: pointer;
@@ -22,6 +18,7 @@ body {
     background-color: #555;
 }
 
+/* Slide-Out Menu */
 .menu {
     position: fixed;
     top: 0;
@@ -36,13 +33,14 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+/* Menu Items */
 .menu ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
-    flex-direction: column; /* Change to row for horizontal layout */
-    align-items: center; /* Center the items horizontally */
+    flex-direction: column; /* Stack menu items vertically */
+    align-items: center; /* Center items horizontally */
 }
 
 .menu ul li {
@@ -64,10 +62,12 @@ body {
     padding-left: 20px;
 }
 
+/* Show Menu */
 .menu-open {
     right: 0; /* Move menu into view */
 }
 
+/* Close Button */
 .close-btn {
     font-size: 30px;
     color: white;
@@ -84,4 +84,15 @@ body {
 
 .close-btn:hover {
     background-color: #555;
+}
+
+/* Hide Navigation Bar on Mobile */
+@media (max-width: 768px) {
+    nav {
+        display: none; /* Hide the navigation bar on mobile */
+    }
+
+    .menu-icon {
+        display: inline-block; /* Ensure menu icon is visible on mobile */
+    }
 }
