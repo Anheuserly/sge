@@ -80,15 +80,7 @@ nav ul li a:hover {
         display: none; /* Completely hide the navigation bar on mobile */
     }
 
-    /* Ensure the menu icon is visible and functional */
-    .menu-icon {
-        display: inline-block;
-    }
-
-    /* Adjust slide-out menu if necessary */
-    .menu {
-        width: 250px; /* Adjust width as needed */
-    }
+    
 }
 
 
