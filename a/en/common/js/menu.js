@@ -1,15 +1,16 @@
-function toggleMenu() {
-    const menu = document.getElementById('slide-out-menu');
-    const menuIcon = document.querySelector('.menu-icon');
-    const isOpen = menu.classList.contains('menu-open');
-
-    if (isOpen) {
-        menu.classList.remove('menu-open');
-        menu.setAttribute('aria-hidden', 'true');
-        menuIcon.setAttribute('aria-label', 'Open menu');
+function toggleNav() {
+    const sidenav = document.getElementById("mySidenav");
+    if (sidenav.style.width === "250px") {
+        closeNav();
     } else {
-        menu.classList.add('menu-open');
-        menu.setAttribute('aria-hidden', 'false');
-        menuIcon.setAttribute('aria-label', 'Close menu');
+        openNav();
     }
+}
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
 }
