@@ -10,7 +10,8 @@
     <meta property="og:locale" content="en_US">
     <meta property="og:title" content="Shree Ganesh Enterprises - Expert Firefighting & Plumbing Services">
     <meta property="og:description" content="We provide professional firefighting, plumbing, and fire detection installation and testing services.">
-    <meta property="og:image" content="https://example.com/images/share-image.jpg">
+    <meta property="og:image" content="LOGO/sge.png">
+    <meta name="robots" content="index, follow">
     <meta property="og:url" content="index-2.html">
     <meta property="og:type" content="website">
     <title>Shree Ganesh Enterprises</title>
@@ -18,6 +19,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js" as="script">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
 
 
     <link rel="stylesheet" href="common/css/styles.css">
@@ -33,6 +36,8 @@
 
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
     <script src="common/js/scripts.js"></script>
     <script src="common/js/whatsapp.js"></script>
     <script src="common/js/chatbot.js"></script>
@@ -42,20 +47,26 @@
     <script src="common/js/certificate.js"></script>
     <script src="common/js/services.js"></script>
 
-    <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "Shree Ganesh Enterprises",
-          "url": "https://example.com",
-          "logo": "https://example.com/logo.png",
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+91-1234567890",
-            "contactType": "Customer Service"
-          }
-        }
-        </script>
+     <!-- Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Shree Ganesh Enterprises",
+      "url": "https://www.sge.org.in",
+      "logo": "https://www.yourwebsite.com/logo.png",
+      "description": "Your website description goes here.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-800-555-5555",
+        "contactType": "Customer Service"
+      }
+    }
+    </script>
+
+    
+    
+    
         
 </head>
 <body>
@@ -63,6 +74,7 @@
         <nav>
             <div class="logo">
                 <a href="#"><img src="common/images/Logo/Logo.png" alt="Shree Ganesh Enterprises"></a>
+                
             </div>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -327,47 +339,17 @@
         <section id="certifications" class="certifications-section">
             <div class="container">
                 <h2 class="section-title">Our Certifications</h2>
-                <div class="certifications-container">
-                    <div class="certifications-wrapper">
-                        <div class="certification-card">
-                            <h3>Ministry of Finance</h3>
-                            <p>Officially certified by the Ministry of Finance for compliance in safety and taxation regulations.</p>
-                        </div>
-                        <div class="certification-card">
-                            <h3>Department of Revenue</h3>
-                            <p>Certified by the Department of Revenue, ensuring adherence to legal and financial guidelines in all projects.</p>
-                        </div>
-                        <div class="certification-card">
-                            <h3>Employees' State Insurance Corporation</h3>
-                            <p>Fully compliant with ESIC for employee welfare and social security schemes.</p>
-                        </div>
-                        <div class="certification-card">
-                            <h3>Department of Trade and Taxes</h3>
-                            <p>Certified under the Department of Trade and Taxes for transparent and ethical business practices.</p>
-                        </div>
-                        <div class="certification-card">
-                            <h3>Employees' Provident Fund Organization</h3>
-                            <p>Certified by the EPFO for compliance with employee provident fund regulations.</p>
-                        </div>
-                        <div class="certification-card">
-                            <h3>Department of Commercial Taxes Uttar Pradesh</h3>
-                            <p>Certified by the Department of Commercial Taxes in Uttar Pradesh, ensuring compliance with local tax laws.</p>
-                        </div>
-                        <div class="certification-card">
-                            <h3>Micro, Small & Medium Enterprises</h3>
-                            <p>Certified by the MSME for compliance and support in small and medium business operations.</p>
-                        </div>
-                        <div class="certification-card">
-                            <h3>Apparel Export Promotion Council (AEPC) Ministry of Textiles</h3>
-                            <p>Certified by AEPC, Ministry of Textiles, for adherence to standards in the apparel export industry.</p>
-                        </div>
-                        <div class="certification-card">
-                            <h3>National Small Industries Corporation</h3>
-                            <p>Certified by NSIC for promoting and supporting small-scale industries.</p>
-                        </div>
-                    </div>
+                <div class="certifications-slider">
+                    <div><img src="common/images/Certificates/Ministry-of-finance.png" alt="Ministry of Finance Logo"></div>
+                    <div><img src="common/images/Certificates/department-of-revenue.jfif" alt="Department of Revenue Logo"></div>
+                    <div><img src="common/images/Certificates/Employees-State-Insurance-Corporation.avif" alt="Employees' State Insurance Corporation Logo"></div>
+                    <div><img src="common/images/Certificates/Department-of-Trade-and-Taxes.png" alt="Department of Trade and Taxes Logo"></div>
+                    <div><img src="common/images/Certificates/Employees-Provident-Fund-Organization.png" alt="Employees' Provident Fund Organization Logo"></div>
+                    <div><img src="common/images/Certificates/Department-of-Commercial-Taxes-Uttar-Pradesh.png" alt="Department of Commercial Taxes Uttar Pradesh Logo"></div>
+                    <div><img src="common/images/Certificates/Micro-Small-&-Medium-Enterprises.png" alt="Micro, Small & Medium Enterprises Logo"></div>
+                    <div><img src="common/images/Certificates/Apparel_Export_Promotion_Council_corpseed.webp" alt="Apparel Export Promotion Council Logo"></div>
+                    <div><img src="common/images/Certificates/National-Small-Industries-Corporation.png" alt="National Small Industries Corporation Logo"></div>
                 </div>
-                
             </div>
         </section>
         
