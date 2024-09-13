@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="common/css/project.css">
     <link rel="stylesheet" href="common/css/accordion.css">
     <link rel="stylesheet" href="common/css/certificate.css">
+    <link rel="stylesheet" href="common/css/sidenav.css">
 
 
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -71,12 +72,11 @@
 </head>
 <body>
     <header>
-        <nav>
+        <nav id="main-nav">
             <div class="logo">
                 <a href="#"><img src="common/images/Logo/Logo.png" alt="Shree Ganesh Enterprises"></a>
-                
             </div>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about/index.html">About</a></li>
                 <li><a href="services/index.html">Services</a></li> 
@@ -84,25 +84,23 @@
                 <li><a href="Clients/index.html">Clients</a></li>
                 <li><a href="Contacts/index.html">Contact</a></li>
                 <li><a href="Shedule a Meeting/index.html">Schedule a Meeting</a></li>
-                
             </ul>
-        </nav>
-
-           <!-- Hamburger Menu -->
-<div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
-<nav id="slide-out-menu" class="menu">
-    <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about/index.html">About</a></li>
-                <li><a href="services/index.html">Services</a></li>   
-                <li><a href="Projects/index.html">Projects</a></li>  
-                <li><a href="Clients/index.html">Clients</a></li>
-                <li><a href="Contacts/index.html">Contact</a></li>
-                <li><a href="Shedule a Meeting/index.html">Schedule a Meeting</a></li>
-
-           </ul>
+ <!-- Hamburger Menu -->
+ <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 </nav>
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="about/index.html">About</a>
+    <a href="services/index.html">Services</a>
+    <a href="Projects/index.html">Projects</a>
+    <a href="Clients/index.html">Clients</a>
+    <a href="Contacts/index.html">Contact</a>
+    <a href="Shedule a Meeting/index.html">Schedule a Meeting</a>
+</div>
     </header>
+    
 
     <main>
 
