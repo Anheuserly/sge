@@ -1,9 +1,18 @@
+/* Menu Icon */
+.menu-icon {
+    display: none; /* Hide the old menu icon on mobile */
+}
+
+/* Hamburger Menu */
 .hamburger {
-    display: none;
+    display: none; /* Hidden by default */
     cursor: pointer;
     width: 30px;
     height: 22px;
-    position: relative;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1001; /* Ensure it is above the content */
 }
 
 .hamburger .bar {
@@ -28,6 +37,7 @@
     top: 18px;
 }
 
+/* Side Navigation Menu */
 .sidenav {
     height: 100%;
     width: 0;
@@ -38,6 +48,7 @@
     overflow-x: hidden;
     transition: 0.3s;
     padding-top: 60px;
+    z-index: 1000; /* Ensure it is below the hamburger menu */
 }
 
 .sidenav a {
@@ -65,9 +76,9 @@
 /* Media Query for Mobile Devices */
 @media screen and (max-width: 768px) {
     .nav-links {
-        display: none;
+        display: none; /* Hide regular navigation links on mobile */
     }
     .hamburger {
-        display: block;
+        display: block; /* Show hamburger menu on mobile */
     }
 }
