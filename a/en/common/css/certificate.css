@@ -1,55 +1,12 @@
-.certifications-section {
-    padding: 60px 20px;
-    background-color: #f4f4f4;
-}
-
-.certifications-container {
-    max-width: 800px;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-.certifications-wrapper {
+.certifications-slider {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    transition: max-height 0.5s ease-out;
+    align-items: center; /* Center images vertically if needed */
 }
 
-.certification-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    width: calc(50% - 20px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.certification-card h3 {
-    margin-top: 0;
-    color: #d52b1e;
-}
-
-.certification-card p {
-    margin: 0;
-    color: #555;
-}
-
-.slide-btn {
-    display: block;
-    width: 200px;
-    padding: 10px;
-    margin: 20px auto;
-    background-color: #d52b1e;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    text-align: center;
-    transition: background-color 0.3s ease;
-}
-
-.slide-btn:hover {
-    background-color: #c12b1e;
+.certifications-slider img {
+    max-width: 120px; /* Adjust this value for the desired image size */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 10px; /* Add horizontal margin to space out the images */
+    padding: 5px; /* Optional: Add padding to separate images from slider edges */
+    box-sizing: border-box; /* Ensure padding is included in the element's total width */
 }
