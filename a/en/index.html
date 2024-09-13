@@ -32,7 +32,8 @@
     <link rel="stylesheet" href="common/css/project.css">
     <link rel="stylesheet" href="common/css/accordion.css">
     <link rel="stylesheet" href="common/css/certificate.css">
-    <link rel="stylesheet" href="common/css/sidenav.css">
+    
+    <link rel="stylesheet" href="common/css/style.css">
 
 
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -47,6 +48,19 @@
     <script src="common/js/accordion.js"></script>
     <script src="common/js/certificate.js"></script>
     <script src="common/js/services.js"></script>
+
+    <script src="../../use.typekit.net/wvc1sfl.js"></script>
+<script>try{Typekit.load();}catch(e){}</script>
+
+<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-33305938-6', 'auto');
+	ga('send', 'pageview');
+</script>
 
      <!-- Structured Data -->
   <script type="application/ld+json">
@@ -71,12 +85,13 @@
         
 </head>
 <body>
-    <header>
-        <nav id="main-nav">
-            <div class="logo">
-                <a href="#"><img src="common/images/Logo/Logo.png" alt="Shree Ganesh Enterprises"></a>
-            </div>
-            <ul class="nav-links">
+    <header class="l-header" id="l-header">
+        <div class="l-header__cont">
+            <div class="m-container">
+                <div class="gNavArea">
+                    <img src="common/images/Logo/Logo.png"alt="SGE lOGO" style="width: 150px; height: auto;">
+                    <nav class="gNav">
+        <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about/index.html">About</a></li>
                 <li><a href="services/index.html">Services</a></li> 
@@ -85,21 +100,45 @@
                 <li><a href="Contacts/index.html">Contact</a></li>
                 <li><a href="Shedule a Meeting/index.html">Schedule a Meeting</a></li>
             </ul>
- <!-- Hamburger Menu -->
- <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-</nav>
-
-<div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="index.html">Home</a>
-    <a href="about/index.html">About</a>
-    <a href="services/index.html">Services</a>
-    <a href="Projects/index.html">Projects</a>
-    <a href="Clients/index.html">Clients</a>
-    <a href="Contacts/index.html">Contact</a>
-    <a href="Shedule a Meeting/index.html">Schedule a Meeting</a>
+        </ul>
+    </nav>
 </div>
-    </header>
+<div class="utilArea">
+    <div class="searchArea">
+        <form id="ss-form1" action="/en/search/result.html" method="get">
+            <button class="searchArea__btn" type="button"><span class="fa fa-search"></span></button>
+            <input class="searchArea__input" type="text" id="ss-query1" name="query" autocomplete="off" aria-autocomplete="off">
+            <button class="searchArea__closeBtn" type="button"><span class="crossIcon"></span></button>
+        </form>
+    </div>
+    <div class="navArea">
+        <nav class="gNav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about/index.html">About</a></li>
+                <li><a href="services/index.html">Services</a></li> 
+                <li><a href="Projects/index.html">Projects</a></li>  
+                <li><a href="Clients/index.html">Clients</a></li>
+                <li><a href="Contacts/index.html">Contact</a></li>
+                <li><a href="Shedule a Meeting/index.html">Schedule a Meeting</a></li>
+        </ul>
+    </nav>
+    <ul class="linkList">
+        <li>
+            <a href="career/index.html">CAREER</a>
+        </li>
+
+    </ul>
+    
+            </div>
+        </div>
+        <button class="spMenuBtn" type="button"><span class="hamburgerIcon"><span></span></span></button>
+        <button class="spSearchBtn" type="button"><span class="fa fa-search"></span><span class="crossIcon"></span></button>
+    </div>
+</div>
+
+</header>
+   
     
 
     <main>
@@ -537,5 +576,19 @@
     </div>
 
     <button id="scroll-up" title="Scroll to Top">&#8679;</button>
+    
+<script src="../../ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="common/js/jquery-2.2.4.min.js"><\/script>')</script>
+<script>
+jQuery.ajaxPrefilter(function(s) {
+	if (s.crossDomain) { s.contents.script = false; }
+});
+</script>
+<script src="common/js/vendor.js"></script>
+<script src="common/js/functions.js"></script>
+
+<script src="common/js/preloadjs.min.js"></script>
+<script src="common/js/easeljs.min.js"></script>
+<script src="common/js/tweenjs.min.js"></script>
 </body>
 </html>
