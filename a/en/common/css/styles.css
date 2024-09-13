@@ -643,3 +643,44 @@ button:hover {
 .read-more:hover {
     color: #ff6f61;
 }
+
+.clients {
+    text-align: center;
+}
+
+.clients h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #004466;
+}
+
+.clients ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.clients li {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.clients li:hover {
+    transform: scale(1.05);
+}
+
+.clients li img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.clients li p {
+    font-weight: 600;
+    color: #004466;
+}
