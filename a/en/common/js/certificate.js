@@ -19,3 +19,35 @@ document.addEventListener('DOMContentLoaded', function () {
     const wrapper = document.querySelector('.certifications-wrapper');
     wrapper.style.maxHeight = '600px'; // Adjust height as needed
 });
+
+$(document).ready(function(){
+    $('.certifications-slider').slick({
+        infinite: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,        // Time between slides in milliseconds (3 seconds)
+        dots: true,
+        arrows: true,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 4
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2
+                }
+            }
+        ]
+    });
+});
