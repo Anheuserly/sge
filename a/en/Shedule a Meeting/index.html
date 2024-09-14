@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../common/css/project.css">
     <link rel="stylesheet" href="../common/css/accordion.css">
     <link rel="stylesheet" href="../common/css/certificate.css">
+    <link rel="stylesheet" href="../common/css/style.css">
 
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
@@ -26,63 +27,157 @@
     <script src="../common/js/accordion.js"></script>
     <script src="../common/js/certificate.js"></script>
     <script src="../common/js/services.js"></script>
+
+    <script src="../../../use.typekit.net/wvc1sfl.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+    
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+    
+        ga('create', 'UA-33305938-6', 'auto');
+        ga('send', 'pageview');
+    </script>
+    
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <a href="#"><img src="../common/images/Logo/Logo.png" alt="Shree Ganesh Enterprises"></a>
-            </div>
-            <ul>
+    <header class="l-header" id="l-header">
+        <div class="l-header__cont">
+            <div class="m-container">
+                <div class="gNavArea">
+                    <img src="../common/images/Logo/Logo.png"alt="SGE lOGO" style="width: 150px; height: auto;">
+                    <nav class="gNav">
+        <ul>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../about/index.html">About</a></li>
-                <li><a href="../services/index.html">Services</a></li>   
+                <li><a href="../services/index.html">Services</a></li> 
+                <li><a href="../Projects/index.html">Projects</a></li>  
                 <li><a href="../Clients/index.html">Clients</a></li>
                 <li><a href="../Contacts/index.html">Contact</a></li>
                 <li><a href="../Shedule a Meeting/index.html">Schedule a Meeting</a></li>
             </ul>
-        </nav>
-    </header>
+        </ul>
+    </nav>
+</div>
+<div class="utilArea">
+    <div class="searchArea">
+        <form id="ss-form1" action="/en/search/result.html" method="get">
+            <button class="searchArea__btn" type="button"><span class="fa fa-search"></span></button>
+            <input class="searchArea__input" type="text" id="ss-query1" name="query" autocomplete="off" aria-autocomplete="off">
+            <button class="searchArea__closeBtn" type="button"><span class="crossIcon"></span></button>
+        </form>
+    </div>
+    <div class="navArea">
+        <nav class="gNav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about/index.html">About</a></li>
+                <li><a href="../services/index.html">Services</a></li> 
+                <li><a href="../Projects/index.html">Projects</a></li>  
+                <li><a href="../Clients/index.html">Clients</a></li>
+                <li><a href="../Contacts/index.html">Contact</a></li>
+                <li><a href="../Shedule a Meeting/index.html">Schedule a Meeting</a></li>
+        </ul>
+    </nav>
+    <ul class="linkList">
+        <li>
+            <a href="career/index.html">CAREER</a>
+        </li>
+
+    </ul>
+    
+            </div>
+        </div>
+        <button class="spMenuBtn" type="button"><span class="hamburgerIcon"><span></span></span></button>
+        <button class="spSearchBtn" type="button"><span class="fa fa-search"></span><span class="crossIcon"></span></button>
+    </div>
+</div>
+
+</header>
 
     <main>
-        <section id="schedule-meeting">
-            
-            <div class="container">
-                <h2 class="section-title">Schedule a Meeting</h2>
-                <form
-                action="https://formspree.io/f/mdknbonr"
-                method="POST"
-              >
-              <div class="form-group">
-                <label for="full-name">Full Name</label>
-                <input type="text" id="full-name" name="Full Name" required>
-            </div>
-            <div class="form-group">
-                <label for="contact-number">Contact Number</label>
-                <input type="tel" id="contact-number" name="Contact Number" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="Email" required>
-            </div>
-                <div class="form-group">
-                    <label for="preferred-date">Preferred Date</label>
-                    <input type="date" id="preferred-date" name="Preferred Date" required>
+
+        
+
+
+        <section class="contact-profiles">
+            <h1>Meet Our Team</h1>
+            <div class="profiles-container">
+                <div class="profile">
+                    <img src="../Contacts/Anilsaini/anilsaini-profile.jfif" alt="Anil Kumar Saini">
+                    <div class="profile-info">
+                        <h2>Anil Kumar Saini</h2>
+                        <p>Country Head | Electrical Engineer</p>
+                        <a href="mailto:anilkumarsaini0507@gmail.com">anilkumarsaini0507@gmail.com</a>
+                        <p>Anil Kumar Saini is our Country Head and an experienced Electrical Engineer. He specializes in managing complex installations and ensuring the highest standards of electrical engineering.</p>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="preferred-time">Preferred Time</label>
-                    <input type="time" id="preferred-time" name="Preferred Time" required>
+                <div class="profile">
+                    <img src="../Contacts/ShashankSaini/shashanksaini-profile.png" alt="Shashank Saini">
+                    <div class="profile-info">
+                        <h2>Shashank Saini</h2>
+                        <p>Architect</p>
+                        <a href="mailto:arcelevenarchitect@gmail.com">arcelevenarchitect@gmail.com</a>
+                        <p>Shashank Saini is a skilled Architect with a strong background in designing innovative and functional architectural solutions. His expertise includes both residential and commercial projects.</p>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="meeting-purpose">Purpose of Meeting</label>
-                    <textarea id="meeting-purpose" name="Meeting Purpose" rows="4" required></textarea>
+                <div class="profile">
+                    <img src="../Contacts/Mukesh Kumar/WhatsApp Image 2024-09-12 at 4.34.33 PM.jpeg" alt="Mukesh Kumar">
+                    <div class="profile-info">
+                        <h2>Mukesh Kumar</h2>
+                        <p>Account Head</p>
+                        <a href="mailto:mukeshkaim1404@rediffmail.in">mukeshkaim1404@rediffmail.in</a>
+                        <p>Mukesh Kumar is our Account Head, responsible for overseeing financial operations and ensuring budget adherence across all projects. His role is crucial in maintaining financial integrity and project success.</p>
+                    </div>
                 </div>
-                <!-- your other form fields go here -->
-                <button type="submit" class="btn btn-primary">Schedule Meeting</button>
-              </form>
+                <div class="profile">
+                    <img src="../Contacts/Shubham Kumar/shubhamkumar-profile.jpg" alt="Shubham Kumar">
+                    <div class="profile-info">
+                        <h2>Shubham Kumar</h2>
+                        <p>Electrical Engineer</p>
+                        <a href="mailto:shubham2808kumar@gmail.com">shubham2808kumar@gmail.com</a>
+                        <p>Shubham Kumar is a dedicated Electrical Engineer who plays a vital role in executing electrical installations and ensuring compliance with safety standards. His expertise contributes to the successful completion of various engineering projects.</p>
+                    </div>
+                </div>
             </div>
         </section>
-    </section>
+
+        <section id="location" class="location-section">
+            <h2>Our Location</h2>
+        
+            <!-- Textual Description of Location -->
+            <div class="location-description">
+                <p>
+                    Our office is located at <strong>House No. 435, Second Floor, Left Side, Khasra No. 60, 128-21, Chattarpur Pahadi, New Delhi - 110074</strong>.
+                    We are situated in a peaceful area of South Delhi, surrounded by the natural beauty of Chattarpur Hills. You can easily reach us through major roads connecting Chhatarpur, making it a convenient location for visitors from different parts of the city.
+                </p>
+            </div>
+        
+            <!-- Embedded Google Map -->
+            <div class="map-container">
+                <div class="map-embed">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27958.593589987543!2d77.1879128!3d28.4969774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19b9d80a8d13%3A0x6351e1ff34947b28!2sChhatarpur%2C%20New%20Delhi%2C%20Delhi%20110030!5e0!3m2!1sen!2sin!4v1633055365639!5m2!1sen!2sin" 
+                        width="600" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        
+            <!-- Button to Navigate -->
+            <div class="navigate-btn-container">
+                <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27958.593589987543!2d77.1879128!3d28.4969774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19b9d80a8d13%3A0x6351e1ff34947b28!2sChhatarpur%2C%20New%20Delhi%2C%20Delhi%20110030!5e0!3m2!1sen!2sin!4v1633055365639!5m2!1sen!2sin" class="navigate-btn" target="_blank">Navigate to Our Location</a>
+            </div>
+        
+            <!-- Scroll Down Animation -->
+            <p class="m-scrollDown animation-target">Scroll Down<span class="m-scrollDown__bar"></span></p>
+        </section>
+        
     </main>
 
     <footer>
@@ -111,8 +206,21 @@
             </form>
         </div>
     </footer>
+</div>
     
-    
+    <script src="../../../ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="common/js/jquery-2.2.4.min.js"><\/script>')</script>
+<script>
+jQuery.ajaxPrefilter(function(s) {
+	if (s.crossDomain) { s.contents.script = false; }
+});
+</script>
+<script src="../common/js/vendor.js"></script>
+<script src="../common/js/functions.js"></script>
+
+<script src="../common/js/preloadjs.min.js"></script>
+<script src="../common/js/easeljs.min.js"></script>
+<script src="../common/js/tweenjs.min.js"></script>
 
     
 </body>
