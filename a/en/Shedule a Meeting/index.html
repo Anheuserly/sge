@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="../common/css/certificate.css">
     <link rel="stylesheet" href="../common/css/style.css">
 
+
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="../common/js/scripts.js"></script>
@@ -40,7 +41,6 @@
         ga('create', 'UA-33305938-6', 'auto');
         ga('send', 'pageview');
     </script>
-    
 </head>
 <body>
     <header class="l-header" id="l-header">
@@ -96,88 +96,59 @@
 </div>
 
 </header>
-
     <main>
-
-        
-
-
-        <section class="contact-profiles">
-            <h1>Meet Our Team</h1>
-            <div class="profiles-container">
-                <div class="profile">
-                    <img src="../Contacts/Anilsaini/anilsaini-profile.jfif" alt="Anil Kumar Saini">
-                    <div class="profile-info">
-                        <h2>Anil Kumar Saini</h2>
-                        <p>Country Head | Electrical Engineer</p>
-                        <a href="mailto:anilkumarsaini0507@gmail.com">anilkumarsaini0507@gmail.com</a>
-                        <p>Anil Kumar Saini is our Country Head and an experienced Electrical Engineer. He specializes in managing complex installations and ensuring the highest standards of electrical engineering.</p>
-                    </div>
+        <section id="schedule-meeting">
+            
+            <div class="container">
+                <h2 class="section-title">Schedule a Meeting</h2>
+                <form
+                action="https://formspree.io/f/mdknbonr"
+                method="POST"
+              >
+              <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="Full Name" required>
+            </div>
+            <div class="form-group">
+                <label for="contact-number">Contact Number</label>
+                <input type="tel" id="contact-number" name="Contact Number" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="Email" required>
+            </div>
+                <div class="form-group">
+                    <label for="preferred-date">Preferred Date</label>
+                    <input type="date" id="preferred-date" name="Preferred Date" required>
                 </div>
-                <div class="profile">
-                    <img src="../Contacts/ShashankSaini/shashanksaini-profile.png" alt="Shashank Saini">
-                    <div class="profile-info">
-                        <h2>Shashank Saini</h2>
-                        <p>Architect</p>
-                        <a href="mailto:arcelevenarchitect@gmail.com">arcelevenarchitect@gmail.com</a>
-                        <p>Shashank Saini is a skilled Architect with a strong background in designing innovative and functional architectural solutions. His expertise includes both residential and commercial projects.</p>
-                    </div>
+                <div class="form-group">
+                    <label for="preferred-time">Preferred Time</label>
+                    <input type="time" id="preferred-time" name="Preferred Time" required>
                 </div>
-                <div class="profile">
-                    <img src="../Contacts/Mukesh Kumar/WhatsApp Image 2024-09-12 at 4.34.33 PM.jpeg" alt="Mukesh Kumar">
-                    <div class="profile-info">
-                        <h2>Mukesh Kumar</h2>
-                        <p>Account Head</p>
-                        <a href="mailto:mukeshkaim1404@rediffmail.in">mukeshkaim1404@rediffmail.in</a>
-                        <p>Mukesh Kumar is our Account Head, responsible for overseeing financial operations and ensuring budget adherence across all projects. His role is crucial in maintaining financial integrity and project success.</p>
-                    </div>
+                <div class="form-group">
+                    <label for="meeting-purpose">Purpose of Meeting</label>
+                    <textarea id="meeting-purpose" name="Meeting Purpose" rows="4" required></textarea>
                 </div>
-                <div class="profile">
-                    <img src="../Contacts/Shubham Kumar/shubhamkumar-profile.jpg" alt="Shubham Kumar">
-                    <div class="profile-info">
-                        <h2>Shubham Kumar</h2>
-                        <p>Electrical Engineer</p>
-                        <a href="mailto:shubham2808kumar@gmail.com">shubham2808kumar@gmail.com</a>
-                        <p>Shubham Kumar is a dedicated Electrical Engineer who plays a vital role in executing electrical installations and ensuring compliance with safety standards. His expertise contributes to the successful completion of various engineering projects.</p>
-                    </div>
-                </div>
+                <!-- your other form fields go here -->
+                <button type="submit" class="btn btn-primary">Schedule Meeting</button>
+              </form>
             </div>
         </section>
-
-        <section id="location" class="location-section">
-            <h2>Our Location</h2>
-        
-            <!-- Textual Description of Location -->
-            <div class="location-description">
-                <p>
-                    Our office is located at <strong>House No. 435, Second Floor, Left Side, Khasra No. 60, 128-21, Chattarpur Pahadi, New Delhi - 110074</strong>.
-                    We are situated in a peaceful area of South Delhi, surrounded by the natural beauty of Chattarpur Hills. You can easily reach us through major roads connecting Chhatarpur, making it a convenient location for visitors from different parts of the city.
-                </p>
-            </div>
-        
-            <!-- Embedded Google Map -->
-            <div class="map-container">
-                <div class="map-embed">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27958.593589987543!2d77.1879128!3d28.4969774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19b9d80a8d13%3A0x6351e1ff34947b28!2sChhatarpur%2C%20New%20Delhi%2C%20Delhi%20110030!5e0!3m2!1sen!2sin!4v1633055365639!5m2!1sen!2sin" 
-                        width="600" 
-                        height="400" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy">
-                    </iframe>
-                </div>
-            </div>
-        
-            <!-- Button to Navigate -->
-            <div class="navigate-btn-container">
-                <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27958.593589987543!2d77.1879128!3d28.4969774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19b9d80a8d13%3A0x6351e1ff34947b28!2sChhatarpur%2C%20New%20Delhi%2C%20Delhi%20110030!5e0!3m2!1sen!2sin!4v1633055365639!5m2!1sen!2sin" class="navigate-btn" target="_blank">Navigate to Our Location</a>
-            </div>
-        
-            <!-- Scroll Down Animation -->
-            <p class="m-scrollDown animation-target">Scroll Down<span class="m-scrollDown__bar"></span></p>
-        </section>
-        
+    </section>
+    <section id="contact-list">
+        <div class="contact">
+            <p>Anil Saini</p>
+            <p>Email: <a href="mailto:sge@anil.org.in">sge@anil.org.in</a></p>
+        </div>
+        <div class="contact">
+            <p>Shashank Saini</p>
+            <p>Email: <a href="mailto:shashank@sge.org.in">shashank@sge.org.in</a></p>
+        </div>
+        <div class="contact">
+            <p>Shubham Kumar</p>
+            <p>Email: <a href="mailto:shubham@sge.in">shubham@sge.in</a></p>
+        </div>
+    </section>
     </main>
 
     <footer>
@@ -206,13 +177,14 @@
             </form>
         </div>
     </footer>
+    
 </div>
     
-    <script src="../../../ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="../../../ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="common/js/jquery-2.2.4.min.js"><\/script>')</script>
 <script>
 jQuery.ajaxPrefilter(function(s) {
-	if (s.crossDomain) { s.contents.script = false; }
+if (s.crossDomain) { s.contents.script = false; }
 });
 </script>
 <script src="../common/js/vendor.js"></script>
