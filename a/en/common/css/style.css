@@ -147,8 +147,12 @@ html.wf-active .l-header {
   position: relative;
   z-index: 1;
   height: 100%;
-  background-color: #eb4b4b;
+  background-color: #D32F2F; /* A deeper red for a more professional look */
+  color: #F5F5F5; /* Light grey/white for readable text */
+  border-bottom: 4px solid #FFCA28; /* Accent yellow for a fire-like effect */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adds subtle depth */
 }
+
 
 .l-header .m-container::after {
   content: "";
