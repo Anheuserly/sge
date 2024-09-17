@@ -1100,7 +1100,7 @@ html.wf-active .l-header {
 
 .p-projectsDet__detail__desc .lead {
   margin-bottom: 51px;
-  font-family: minion-pro-display, serif;
+  font-family: 'Poppins', 'Montserrat', sans-serif;
   font-size: 2rem;
   letter-spacing: .5px;
 }
@@ -1132,7 +1132,7 @@ html.wf-active .l-header {
 
 .p-projectsDet__detail__desc table td {
   padding: 15px 0 15px 30px;
-  font-family: minion-pro-display, serif;
+  font-family: 'Poppins', 'Montserrat', sans-serif;
   font-size: 1.4rem;
   font-weight: bold;
 }
@@ -1354,7 +1354,7 @@ html.wf-active .l-header {
 }
 
 .p-expertiseTop__header .leadArea__text {
-  font-family: minion-pro-display, serif;
+  font-family: 'Poppins', 'Montserrat', sans-serif;
   font-size: 2rem;
   letter-spacing: .5px;
 }
@@ -1611,7 +1611,7 @@ html.wf-active .l-header {
 
 .p-expertiseDet__header__subTitle {
   margin-top: 20px;
-  font-family: minion-pro-display, serif;
+  font-family: 'Poppins', 'Montserrat', sans-serif;
   font-size: 2rem;
   letter-spacing: .5px;
 }
@@ -1638,7 +1638,7 @@ html.wf-active .l-header {
 .p-expertiseDet__detail__desc {
   float: left;
   width: 65%;
-  font-family: minion-pro-display, serif;
+  font-family: 'Poppins', 'Montserrat', sans-serif;
   font-size: 2rem;
   letter-spacing: .5px;
 }
@@ -1803,7 +1803,7 @@ html.wf-active .l-header {
 }
 
 .p-insightsTop__header .leadArea__text {
-  font-family: minion-pro-display, serif;
+  font-family: 'Poppins', 'Montserrat', sans-serif;
   font-size: 2rem;
   letter-spacing: .5px;
 }
@@ -1886,7 +1886,7 @@ html.wf-active .l-header {
 
 .p-insightsDet__header__subTitle {
   margin-top: 20px;
-  font-family: minion-pro-display, serif;
+  font-family: 'Poppins', 'Montserrat', sans-serif;
   font-size: 2rem;
   letter-spacing: .5px;
 }
@@ -1913,7 +1913,7 @@ html.wf-active .l-header {
 .p-insightsDet__detail__desc {
   float: left;
   width: 65%;
-  font-family: minion-pro-display, serif;
+  font-family: 'Poppins', 'Montserrat', sans-serif;
   font-size: 2rem;
   letter-spacing: .5px;
 }
@@ -2952,7 +2952,7 @@ html.wf-active .l-header {
 
 .tab-accordion-slide__contents__accordion .accordion-text p {
   margin-top: 30px;
-  font-family: minion-pro-display, serif;
+  font-family: 'Poppins', 'Montserrat', sans-serif;
   font-size: 1.89615rem;
   line-height: 1.6;
   letter-spacing: 0.06em;
@@ -3399,7 +3399,7 @@ html.wf-active .l-header {
 
 .middle-slider .related-area a .text-area .text {
   color: #000;
-  font-family: minion-pro-display, serif;
+  font-family: 'Poppins', 'Montserrat', sans-serif;
   font-size: 1.78461rem;
   letter-spacing: 1px;
 }
@@ -3542,7 +3542,7 @@ html.wf-active .l-header {
     letter-spacing: 0.05em;
   }
   .middle-slider .related-area a .text-area .text {
-    font-family: minion-pro-display, serif;
+    font-family: 'Poppins', 'Montserrat', sans-serif;
     font-size: 1.11538rem;
     letter-spacing: 0.08em;
   }
@@ -3730,7 +3730,7 @@ html.wf-active .l-header {
   padding: 0;
   background-color: transparent;
   color: #888;
-  font-family: minion-pro-display, serif;
+  font-family: 'Poppins', 'Montserrat', sans-serif;
   font-size: 1.6rem;
 }
 
@@ -3811,7 +3811,7 @@ html.wf-active .l-header {
 
 .p-search #ss-main.css3.blue #ss-result .ss-page .ss-summary {
   color: #888;
-  font-family: minion-pro-display, serif;
+  font-family: 'Poppins', 'Montserrat', sans-serif;
   font-size: 1.6rem;
   letter-spacing: .5px;
 }
@@ -3905,7 +3905,7 @@ html.wf-active .l-header {
 }
 
 .p-search #ss-main.css3.blue #ss-result #ss-not-found .desc {
-  font-family: minion-pro-display, serif;
+  font-family: 'Poppins', 'Montserrat', sans-serif;
   font-size: 2rem;
   letter-spacing: .5px;
 }
@@ -4085,7 +4085,7 @@ html.wf-active .l-header {
 }
 
 .p-404__contArea__cont .leadArea .text {
-  font-family: minion-pro-display, serif;
+  font-family: 'Poppins', 'Montserrat', sans-serif;
   font-size: 2rem;
   letter-spacing: .5px;
 }
@@ -4204,7 +4204,7 @@ html.wf-active .cookieConfirm {
 }
 
 .cookieConfirm__msg {
-  font-family: minion-pro-display, serif;
+  font-family: 'Poppins', 'Montserrat', sans-serif;
   font-size: 1.2rem;
   font-weight: bold;
   letter-spacing: .5px;
