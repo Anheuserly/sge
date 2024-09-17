@@ -228,6 +228,67 @@ footer {
     background-color: #0056b3;
 }
 
+/* About Us Section */
+#about {
+    padding: 50px 0; /* Add some padding for better spacing */
+    background: #ffffff; /* Background color for contrast */
+    color: #0a0a0a; /* Text color for readability */
+}
+
+#about .container {
+    width: 80%; /* Adjust width to fit content */
+    max-width: 1200px; /* Maximum width for large screens */
+    margin: 0 auto; /* Center container */
+    text-align: center; /* Center text */
+}
+
+.section-title {
+    font-size: 3.5em; /* Larger font size */
+    margin-bottom: 30px;
+    color: #0f0; /* Color matching your theme */
+}
+
+.company-info,
+.founder-info {
+    font-size: 1.5em; /* Larger font size for paragraphs */
+    line-height: 1.6; /* Improve readability with line height */
+    margin-bottom: 20px; /* Space between paragraphs */
+    text-align: center; /* Center align text */
+}
+
+.company-info strong,
+.founder-info strong {
+    font-weight: bold; /* Make important text stand out */
+}
+
+.founder-info {
+    margin-top: 20px; /* Add some space before the founder info */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2.5em; /* Slightly smaller font size for mobile */
+    }
+
+    .company-info,
+    .founder-info {
+        font-size: 1.2em; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 2em; /* Further adjust for very small screens */
+    }
+
+    .company-info,
+    .founder-info {
+        font-size: 1em; /* Further adjust for very small screens */
+    }
+}
+
+
 
 /* Button Styles */
 button {
