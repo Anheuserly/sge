@@ -228,18 +228,81 @@ footer {
     background-color: #0056b3;
 }
 
-/* About Us Section */
-#about {
-    padding: 50px 0; /* Add some padding for better spacing */
-    background: #ffffff; /* Background color for contrast */
-    color: #0a0a0a; /* Text color for readability */
+.about-us {
+    padding: 50px 20px; /* Increased padding */
+    background-color: #f4f4f4;
 }
 
-#about .container {
-    width: 80%; /* Adjust width to fit content */
-    max-width: 1200px; /* Maximum width for large screens */
-    margin: 0 auto; /* Center container */
-    text-align: center; /* Center text */
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; /* Increased gap between items */
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 600px; /* Increased max-width */
+    height: auto;
+    border-radius: 12px; /* Slightly larger border radius */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+}
+
+.about-text {
+    flex: 1;
+    min-width: 350px; /* Increased minimum width */
+    line-height: 1.8; /* Increased line-height for better readability */
+}
+
+h1 {
+    font-size: 4rem; /* Increased from 3rem */
+    margin-bottom: 40px; /* Increased margin */
+    color: #333;
+    text-align: center;
+}
+
+h2 {
+    font-size: 3rem; /* Increased from 2.5rem */
+    margin: 30px 0 20px; /* Increased margin */
+    color: #555;
+}
+
+p {
+    font-size: 1.5rem; /* Increased from 1.3rem */
+    margin-bottom: 25px; /* Increased margin */
+}
+
+strong {
+    font-size: 1.6rem; /* Increased from 1.4rem */
+    color: #333;
+}
+
+.company-profiles, .work-docs {
+    margin-top: 50px; /* Increased margin */
+}
+
+.company-profiles ul, .work-docs ul {
+    list-style: none;
+    padding: 0;
+}
+
+.company-profiles li, .work-docs li {
+    margin-bottom: 20px; /* Increased margin */
+}
+
+.company-profiles a, .work-docs a {
+    font-size: 1.5rem; /* Increased from 1.3rem */
+    color: #007bff;
+    text-decoration: none;
+}
+
+.company-profiles a:hover, .work-docs a:hover {
+    text-decoration: underline;
 }
 
 .section-title {
