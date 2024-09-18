@@ -371,45 +371,215 @@ button:hover {
     transform: translateY(-2px);
 }
 
-
-
-
-#schedule-meeting {
+/* Styles for the contact profiles section */
+.contact-profiles {
+    padding: 40px 20px;
     background-color: #f8f9fa;
-    padding: 60px 0;
+    text-align: center;
+    margin-top: 80px; /* Adjust this value as needed */
+}
+.contact-profiles h1 {
+    font-size: 3rem; /* Increased font size for the section title */
+    margin-bottom: 40px;
+    color: #212529;
+}
+
+.profiles-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 280px; /* Slightly increased width for better layout */
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile img {
+    width: 120px; /* Increased image size */
+    height: 120px; /* Increased image size */
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.profile-info {
+    text-align: center;
+}
+
+.profile-info h2 {
+    font-size: 2rem; /* Increased font size for names */
+    color: #212529;
+    margin-bottom: 10px;
+}
+
+.profile-info p {
+    font-size: 1.2rem; /* Increased font size for descriptions */
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+
+.profile-info a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem; /* Increased font size for links */
+}
+
+.profile-info a:hover {
+    text-decoration: underline;
+}
+
+.profile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#contact-list {
+    max-width: 500px; /* Increased width for better layout */
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.contact {
+    padding: 15px 0; /* Increased padding for better readability */
+    border-bottom: 1px solid #ccc;
+}
+
+.contact:last-child {
+    border-bottom: none;
+}
+
+.contact p {
+    margin: 0;
+    font-size: 1.2rem; /* Increased font size for contact details */
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5em; /* Increased font size */
+    margin-bottom: 30px; /* Increased margin */
+    color: #333;
+    font-weight: 700;
+}
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 3em; /* Larger font size for title */
+    margin-bottom: 30px; 
+    color: #333;
+    font-weight: 700;
 }
 
 .meeting-form {
-    max-width: 600px;
+    background: #fff;
+    padding: 40px; /* Increased padding */
+    border-radius: 12px; 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
     margin: 0 auto;
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 30px; /* Increased margin for spacing */
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+    font-size: 1.6em; /* Larger font size for labels */
+    margin-bottom: 12px; 
+    color: #555;
+    font-weight: 600;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 10px;
+    padding: 14px; /* Increased padding for inputs */
     border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 6px;
+    font-size: 1.4em; /* Larger font size for inputs */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #007bff;
+    outline: none;
 }
 
 .form-group textarea {
     resize: vertical;
 }
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 18px; /* Increased button size */
+    border: none;
+    border-radius: 6px;
+    font-size: 1.5em; /* Larger font size for button */
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    background-color: #007bff;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.02);
+}
+
+
 
 .company-profiles {
     margin-top: 2rem;
