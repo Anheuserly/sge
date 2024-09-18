@@ -898,3 +898,42 @@ a:hover {
     opacity: 0;
     animation: fadeInUp 0.6s forwards;
 }
+
+
+/* Container and Section Styling */
+#about {
+    padding: 60px 20px; /* Increased padding */
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px; /* Increased padding */
+    background-color: #fff; /* Background color for contrast */
+    border-radius: 12px; /* Larger border radius */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+}
+
+/* Title Styling */
+.section-title {
+    font-size: 4rem; /* Increased from 3rem */
+    margin-bottom: 30px; /* Increased margin */
+    color: #333; /* Dark color for better readability */
+    text-align: center; /* Centered title */
+    font-weight: 700; /* Bold text */
+}
+
+/* Paragraph Styling */
+.company-info, .founder-info {
+    font-size: 1.6rem; /* Increased from 1.4rem */
+    line-height: 1.8; /* Increased line height for readability */
+    margin-bottom: 25px; /* Increased spacing between paragraphs */
+    color: #555; /* Dark gray color for text */
+}
+
+/* Strong Tags */
+.company-info strong, .founder-info strong {
+    font-size: 1.8rem; /* Increased from 1.5rem */
+    color: #222; /* Darker color for emphasis */
+}
