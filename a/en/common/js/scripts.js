@@ -95,3 +95,40 @@ document.addEventListener('DOMContentLoaded', function () {
         observer.observe(element);
     });
 });
+
+document.querySelectorAll('.contact-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        const name = button.getAttribute('data-name');
+        alert(`Contact details for ${name}`);
+        // Implement actual contact details functionality here
+    });
+});
+
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
+const carouselTrack = document.querySelector('.carousel-track');
+const slides = document.querySelectorAll('.carousel-slide');
+let currentIndex = 0;
+
+function updateCarousel() {
+    const totalSlides = slides.length;
+    if (currentIndex >= totalSlides) currentIndex = 0;
+    if (currentIndex < 0) currentIndex = totalSlides - 1;
+    carouselTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+prevButton.addEventListener('click', () => {
+    currentIndex--;
+    updateCarousel();
+});
+
+nextButton.addEventListener('click', () => {
+    currentIndex++;
+    updateCarousel();
+});
+
+// Optional: Auto-slide functionality
+setInterval(() => {
+    currentIndex++;
+    updateCarousel();
+}, 5000); // Change slide every 5 seconds
