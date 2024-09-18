@@ -476,42 +476,110 @@ a:hover {
 
 
 
-#schedule-meeting {
-    background-color: #f8f9fa;
-    padding: 60px 0;
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5em; /* Increased font size */
+    margin-bottom: 30px; /* Increased margin */
+    color: #333;
+    font-weight: 700;
+}
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 3em; /* Larger font size for title */
+    margin-bottom: 30px; 
+    color: #333;
+    font-weight: 700;
 }
 
 .meeting-form {
-    max-width: 600px;
+    background: #fff;
+    padding: 40px; /* Increased padding */
+    border-radius: 12px; 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
     margin: 0 auto;
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 30px; /* Increased margin for spacing */
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+    font-size: 1.6em; /* Larger font size for labels */
+    margin-bottom: 12px; 
+    color: #555;
+    font-weight: 600;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 10px;
+    padding: 14px; /* Increased padding for inputs */
     border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 6px;
+    font-size: 1.4em; /* Larger font size for inputs */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #007bff;
+    outline: none;
 }
 
 .form-group textarea {
     resize: vertical;
 }
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 18px; /* Increased button size */
+    border: none;
+    border-radius: 6px;
+    font-size: 1.5em; /* Larger font size for button */
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    background-color: #007bff;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.02);
+}
+
+
 
 .company-profiles {
     margin-top: 2rem;
@@ -807,30 +875,30 @@ a:hover {
     color: #ff6f61;
 }
 
-
 .clients {
     text-align: center;
 }
 
 .clients h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    font-size: 2.5rem; /* Slightly increased font size for section title */
+    margin-bottom: 2.5rem;
     color: #004466;
 }
 
 .clients ul {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Increased min size for better spacing */
+    gap: 2.5rem; /* Increased gap for better spacing */
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 .clients li {
     background-color: white;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s;
 }
 
@@ -841,13 +909,55 @@ a:hover {
 .clients li img {
     max-width: 100%;
     height: auto;
-    margin-bottom: 1rem;
+    display: block;
+    margin: 0 auto 1rem; /* Centering and added margin for balance */
+}
+
+.clients li .building-img {
+    max-height: 180px; /* Consistent height for all building images */
+    object-fit: cover; /* Maintain aspect ratio while fitting the box */
+}
+
+.clients li .logo-img {
+    max-height: 100px; /* Consistent height for logos */
+    object-fit: contain; /* Keep logos contained without distortion */
 }
 
 .clients li p {
+    font-size: 1.2rem; /* Slightly larger font size for client names */
     font-weight: 600;
     color: #004466;
+    margin-top: 1rem;
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .clients ul {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust for smaller screens */
+        gap: 1.5rem;
+    }
+
+    .clients li {
+        padding: 1rem;
+    }
+
+    .clients li .building-img {
+        max-height: 140px;
+    }
+
+    .clients li .logo-img {
+        max-height: 80px;
+    }
+
+    .clients h2 {
+        font-size: 2rem;
+    }
+
+    .clients li p {
+        font-size: 1rem;
+    }
+}
+
 
 #scroll-up {
     position: fixed;
