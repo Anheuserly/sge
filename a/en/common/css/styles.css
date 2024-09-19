@@ -115,7 +115,7 @@ nav ul li a:hover {
     background: #555;
 }
 
-
+\\ for experties
 
 section {
     margin-bottom: 60px;
@@ -129,17 +129,17 @@ h1, h2 {
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 p {
     font-size: 1.1rem;
-    color: #6c757d;
-    max-width: 800px;
+    color: #ffffff;
+    max-width: 900px;
     margin: 0 auto;
     line-height: 1.8;
 }
@@ -1117,5 +1117,3 @@ body {
     color: #777;
     margin: 0;
 }
-
-
