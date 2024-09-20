@@ -190,6 +190,10 @@ footer {
     background-image: url('../images/Social-icons/instagram.png'); /* Instagram icon */
 }
 
+.footer-social a.youtube {
+    background-image: url('../images/Social-icons/youtube.png'); /* Instagram icon */
+}
+
 .footer-social a:hover {
     background-color: #007bff; /* Highlight color on hover */
     transform: scale(1.1); /* Slightly enlarge icon on hover */
