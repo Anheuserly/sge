@@ -48,18 +48,18 @@ document.addEventListener('DOMContentLoaded', function() {
         chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
     }
 
-   function getBotResponse(message) {
+    function getBotResponse(message) {
         const lowerMessage = message.toLowerCase();
         
         if (customerName === "Customer") {
             customerName = message;
             return `Nice to meet you, ${customerName}! How can I assist you today?`;
         }
-
+    
         if (lowerMessage.includes('hello') || lowerMessage.includes('hi')) {
             return `Hello ${customerName}! How can I help you today?`;
         } else if (lowerMessage.includes('services')) {
-            return "We offer a range of services including MEP work, fire fighting installation, plumbing services, and architectural design. Which one would you like to know more about?";
+            return "We offer a range of services including MEP work, fire fighting installation, plumbing services, and supply services. Which one would you like to know more about?";
         } else if (lowerMessage.includes('contact')) {
             return "You can contact us at 8527389555 or email us at anilkumarsaini0507@gmail.com";
         } else if (lowerMessage.includes('mep')) {
@@ -96,25 +96,19 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 return "Our plumbing services include installation, maintenance, repairs, inspections, and emergency services. We ensure reliable and efficient plumbing systems. How can we assist you today?";
             }
-        } else if (lowerMessage.includes('architectural')) {
-            if (lowerMessage.includes('design')) {
-                return "Our architectural design services offer innovative and sustainable solutions, from concept to completion. We focus on creating functional and aesthetic spaces. Would you like to know more about our design process?";
+        } else if (lowerMessage.includes('supply')) {
+            if (lowerMessage.includes('materials')) {
+                return "We supply high-quality construction materials including pipes, fittings, and electrical components. Would you like to know more about the materials we provide?";
             } else if (lowerMessage.includes('consultation')) {
-                return "We provide architectural consultation services to help you plan and execute your projects effectively. Our experts offer valuable insights and advice. Would you like to schedule a consultation?";
-            } else if (lowerMessage.includes('project management')) {
-                return "Our project management services ensure that your architectural projects are completed on time and within budget. We oversee every aspect of the project. Would you like to discuss your project requirements?";
+                return "We offer supply consultation services to help you select the right materials for your project needs. Would you like to schedule a consultation?";
             } else if (lowerMessage.includes('cost') || lowerMessage.includes('price')) {
-                return "Architectural service costs depend on the project's complexity and requirements. For a personalized quote, please contact us. Would you like an estimate for your project?";
-            } else if (lowerMessage.includes('renovation')) {
-                return "We offer renovation services to transform and update existing spaces. Our team can help you redesign and improve your property. Would you like to discuss a renovation project?";
-            } else if (lowerMessage.includes('sustainable')) {
-                return "Sustainability is a key focus in our architectural designs. We aim to create energy-efficient and eco-friendly buildings. Would you like to learn more about our sustainable design practices?";
-            } else if (lowerMessage.includes('residential')) {
-                return "Our residential architectural services cater to home design and construction. We create beautiful and functional living spaces. Would you like to discuss a residential project?";
-            } else if (lowerMessage.includes('commercial')) {
-                return "We provide architectural services for commercial projects, including office buildings, retail spaces, and more. Our designs aim to enhance functionality and appeal. Would you like to discuss a commercial project?";
+                return "Supply service costs vary based on the materials and quantity needed. For a detailed quote, please contact us. Would you like an estimate for your supply needs?";
+            } else if (lowerMessage.includes('delivery')) {
+                return "We provide timely and reliable delivery services for all materials you purchase from us. Would you like to discuss delivery options?";
+            } else if (lowerMessage.includes('bulk')) {
+                return "We offer bulk supply services for larger projects, ensuring you get the materials you need in sufficient quantities. Would you like to know more about our bulk supply options?";
             } else {
-                return "Our architectural services cover design, consultation, project management, renovations, and sustainable practices. How can we assist you today?";
+                return "Our supply services include construction materials, consultations, deliveries, and bulk ordering options. How can we assist you today?";
             }
         } else if (lowerMessage.includes('thank')) {
             return `You're welcome, ${customerName}! Is there anything else I can help you with?`;
@@ -124,6 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return `I'm sorry, ${customerName}. I didn't quite understand that. Can you please rephrase or ask about our services, contact information, or specific projects?`;
         }
     }
+    
 	
 	// Add a typing indicator
     function showTypingIndicator() {
