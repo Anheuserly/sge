@@ -1,86 +1,32 @@
-/* General Section Styling */
+body {
+    font-family: Arial, sans-serif; /* Base font for the body */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-color: #eaeaea; /* Background color for the entire page */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+}
+
+.container {
+    max-width: 1200px; /* Maximum width for the container */
+    width: 100%; /* Full width for responsiveness */
+    padding: 20px; /* Padding around the container */
+}
+
 .location-section {
-    padding: 50px 15px;
-    text-align: center;
-    background-color: #f4f4f4;
+    background-color: #f0f4f8; /* Light background color */
+    padding: 40px 20px; /* Added padding for better spacing */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center; /* Center align text */
+    width: 100%; /* Full width */
+    max-width: 600px; /* Limit maximum width */
 }
 
 .location-section h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-/* Description Styling */
-.location-description {
-    max-width: 800px;
-    margin: 0 auto 30px auto;
-    font-size: 1.2em;
-    color: #555;
-}
-
-.location-description p {
-    line-height: 1.6;
-}
-
-/* Map Container */
-.map-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-.map-embed iframe {
-    max-width: 100%;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-}
-
-/* Button Styling */
-.navigate-btn-container {
-    margin-top: 20px;
-}
-
-.navigate-btn {
-    display: inline-block;
-    padding: 12px 25px;
-    background-color: #3498db;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.2em;
-    transition: background-color 0.3s ease;
-}
-
-.navigate-btn:hover {
-    background-color: #2980b9;
-}
-
-/* Scroll Down Indicator */
-.m-scrollDown {
-    margin-top: 50px;
-    font-size: 1em;
-    color: #666;
-    cursor: pointer;
-}
-
-.m-scrollDown__bar {
-    display: block;
-    width: 50px;
-    height: 4px;
-    background-color: #666;
-    margin: 10px auto;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .location-description {
-        font-size: 1.1em;
-    }
-    .navigate-btn {
-        font-size: 1em;
-        padding: 10px 20px;
-    }
+    font-size: 2.5rem; /* Larger font size for the heading */
+    color: #333; /* Dark text color */
+    margin-bottom: 20px; /* Spacing below the heading */
 }
