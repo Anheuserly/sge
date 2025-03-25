@@ -1,0 +1,17 @@
+@media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+    }
+  
+    nav ul li {
+      margin-bottom: 10px;
+    }
+  
+   .hero h1 {
+      font-size: 2.5rem;
+    }
+  
+   .hero p {
+      font-size: 1.2rem;
+    }
+  }

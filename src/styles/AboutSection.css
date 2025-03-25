@@ -1,0 +1,31 @@
+.about-section {
+    padding: 80px 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+  }
+  
+  .about-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .about-card {
+    width: 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .about-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .about-card h3 {
+    color: #ff3b30;
+    margin-bottom: 10px;
+  }
+  

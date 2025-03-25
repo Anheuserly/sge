@@ -1,0 +1,15 @@
+/* Grid system styles */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 10px;
+  }
+  
+  .grid-item {
+    background-color: #eee;
+    padding: 20px;
+  }
+  
+  .grid-item:nth-child(even) {
+    background-color: #ddd;
+  }

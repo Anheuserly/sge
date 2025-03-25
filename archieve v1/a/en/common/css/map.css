@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif; /* Base font for the body */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-color: #eaeaea; /* Background color for the entire page */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+}
+
+.container {
+    max-width: 1200px; /* Maximum width for the container */
+    width: 100%; /* Full width for responsiveness */
+    padding: 20px; /* Padding around the container */
+}
+
+.location-section {
+    background-color: #f0f4f8; /* Light background color */
+    padding: 40px 20px; /* Added padding for better spacing */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center; /* Center align text */
+    width: 100%; /* Full width */
+    max-width: 600px; /* Limit maximum width */
+}
+
+.location-section h2 {
+    font-size: 2.5rem; /* Larger font size for the heading */
+    color: #333; /* Dark text color */
+    margin-bottom: 20px; /* Spacing below the heading */
+}

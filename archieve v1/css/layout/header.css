@@ -1,0 +1,38 @@
+/* Ensure that the header takes up the full width of the viewport */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 5px; /* Increase padding to make the header thicker */
+    background-color: transparent;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+/* Style the logo */
+#logo {
+    height: 50px; /* Adjust the height as needed */
+}
+
+
+
+/* Navigation links */
+nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 15px 20px; /* Adjust padding to remove gaps */
+    display: block;
+    color: #000; /* Or your preferred text color */
+}
+
+
