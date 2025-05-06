@@ -4,20 +4,43 @@ import '../styles/AboutSection.css';
 const AboutSection = () => {
   return (
     <section className="about-section">
-      <h2>About Us</h2>
-      <p>We specialize in fire safety solutions, electrical installations, and plumbing services, ensuring top-tier safety and compliance.</p>
       <div className="about-container">
-        <div className="about-card">
-          <h3>🔥 Fire Safety Experts</h3>
-          <p>We install and maintain fire sprinkler systems, hydrants, and advanced detection systems.</p>
+        <div className="about-content">
+          <h2 className="about-title">About Us</h2>
+          <div className="about-underline"></div>
+          <p className="about-description">
+            We are a passionate team dedicated to creating innovative solutions that make a difference.
+            With years of experience in the industry, we strive to deliver excellence in everything we do.
+          </p>
+          <div className="about-features">
+            <div className="feature-item">
+              <div className="feature-icon">
+                <i className="fas fa-rocket"></i>
+              </div>
+              <h3>Innovation</h3>
+              <p>Pushing boundaries with creative solutions</p>
+            </div>
+            <div className="feature-item">
+              <div className="feature-icon">
+                <i className="fas fa-users"></i>
+              </div>
+              <h3>Teamwork</h3>
+              <p>Collaborative approach to every project</p>
+            </div>
+            <div className="feature-item">
+              <div className="feature-icon">
+                <i className="fas fa-chart-line"></i>
+              </div>
+              <h3>Growth</h3>
+              <p>Constantly evolving and improving</p>
+            </div>
+          </div>
+          <button className="about-btn">Learn More</button>
         </div>
-        <div className="about-card">
-          <h3>⚡ Electrical Solutions</h3>
-          <p>From wiring to panel installations, we provide reliable electrical services for homes and industries.</p>
-        </div>
-        <div className="about-card">
-          <h3>🚰 Plumbing Services</h3>
-          <p>We ensure high-quality plumbing installations, including pipelines, fittings, and maintenance.</p>
+        <div className="about-image">
+          <div className="image-container">
+            <img src="https://source.unsplash.com/random/600x400/?team" alt="Our Team" />
+          </div>
         </div>
       </div>
     </section>
@@ -25,3 +48,4 @@ const AboutSection = () => {
 };
 
 export default AboutSection;
+
