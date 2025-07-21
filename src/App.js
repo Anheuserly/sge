@@ -1,35 +1,34 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
-import { Analytics } from '@vercel/analytics/react'; // ✅ Add this line
-// Import loading screen
+import { Analytics } from '@vercel/analytics/react';
 import LoadingScreen from './components/LoadingScreen';
 import './firebase.js';
 
-// Import pages
-import Home from './pages/Home.jsx';
+// Pages
+import Home from './pages/Home';
 import Services from './pages/Services';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import About from './pages/About';
 import Career from './pages/Career';
+import OurApp from './pages/OurApp'; // 👈 NEW PAGE
 import NotFound from './pages/NotFound';
 
-// Import components
+// Components
 import Footer from './components/Footer';
 
-// Import global styles
+// Styles
 import './styles/App.css';
 
 function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const minLoadingTime = setTimeout(() => {
+    const timer = setTimeout(() => {
       setLoading(false);
     }, 2000);
-
-    return () => clearTimeout(minLoadingTime);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -47,11 +46,12 @@ function App() {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/career" element={<Career />} />
+                <Route path="/our-app" element={<OurApp />} /> {/* ✅ NEW ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </AnimatePresence>
             <Footer />
-            <Analytics /> {/* ✅ Add Analytics at the bottom inside Router */}
+            <Analytics />
           </div>
         </Router>
       )}

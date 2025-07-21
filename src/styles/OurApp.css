@@ -1,0 +1,75 @@
+.our-app-page {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+  }
+  
+  .our-app-page h1 {
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 10px;
+  }
+  
+  .our-app-page p {
+    color: #555;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .app-card {
+    background: #f9f9f9;
+    padding: 30px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+    text-align: left;
+  }
+  
+  .app-card h2 {
+    font-size: 1.8rem;
+    color: #111;
+    margin-bottom: 10px;
+  }
+  
+  .app-card p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .playstore-btn,
+  .apk-btn {
+    display: inline-block;
+    padding: 10px 18px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .playstore-btn {
+    background-color: #1b74e4;
+    color: #fff;
+  }
+  
+  .apk-btn {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .playstore-btn:hover {
+    background-color: #145db2;
+  }
+  
+  .apk-btn:hover {
+    background-color: #1e7e34;
+  }
+  

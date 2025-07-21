@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Shree Ganesh Website</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #1e1e1e;
+            color: #fff;
+            text-align: center;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Message styling */
+        .message {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            animation: glow 1.5s ease-in-out infinite alternate;
+            letter-spacing: 2px;
+        }
+
+        /* Glowing effect for the message */
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #3498db, 0 0 20px #3498db, 0 0 30px #3498db, 0 0 40px #3498db;
+            }
+            to {
+                text-shadow: 0 0 20px #f39c12, 0 0 30px #f39c12, 0 0 40px #f39c12, 0 0 50px #f39c12;
+            }
+        }
+
+        /* Logo styling */
+        .logo {
+            width: 120px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        /* Loading bar container */
+        .loading-bar {
+            width: 200px;
+            height: 10px;
+            background-color: #333;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        /* Loading bar animation */
+        .loading-bar-fill {
+            height: 100%;
+            width: 0;
+            background-color: #3498db;
+            border-radius: 5px;
+            animation: loading 3s linear forwards;
+        }
+
+        @keyframes loading {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 100%;
+            }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+    </style>
+
+    <script>
+        // Redirect after 3 seconds with fade-out effect
+        setTimeout(function() {
+            document.body.style.animation = "fadeOut 1s forwards";
+            setTimeout(function() {
+                window.location.href = "public/index.html"; // Replace with your desired URL
+            }, 1000); // Delay for fade-out transition
+        }, 3000);
+    </script>
+</head>
+<body>
+    <div class="content">
+        
+        <!-- Replace with your company logo image -->
+        <img src="a/en/common/images/Logo/Logo.png" alt="Shree Ganesh Logo" class="logo">
+        <!-- Loading bar -->
+        <div class="loading-bar">
+            <div class="loading-bar-fill"></div>
+        </div>
+    </div>
+</body>
+</html>
+

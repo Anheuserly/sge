@@ -1,19 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
-  faMapMarkerAlt, 
-  faPhone, 
-  faEnvelope, 
+import {
+  faMapMarkerAlt,
+  faPhone,
+  faEnvelope,
   faClock,
   faChevronUp
 } from '@fortawesome/free-solid-svg-icons';
-import { 
-  faLinkedin, 
-  faTwitter, 
-  faFacebookF, 
-  faInstagram, 
-  faYoutube 
+import {
+  faLinkedin,
+  faTwitter,
+  faFacebookF,
+  faInstagram,
+  faYoutube
 } from '@fortawesome/free-brands-svg-icons';
 import '../styles/Footer.css';
 
@@ -27,44 +27,31 @@ const Footer = () => {
 
   return (
     <footer className="footer">
-      <div className="footer-top">
-        <div className="container">
-          <div className="newsletter-section">
-            <h3>Subscribe to Our Newsletter</h3>
-            <p>Stay updated with our latest projects and industry insights</p>
-            <form className="newsletter-form">
-              <input type="email" placeholder="Your Email Address" required />
-              <button type="submit">Subscribe</button>
-            </form>
-          </div>
-        </div>
-      </div>
-
       <div className="footer-main">
         <div className="container">
           <div className="footer-content">
             <div className="footer-section company-info">
               <div className="footer-logo">
-                <img src="/logo-white.png" alt="SHREE GANESH ENTERPRISES" />
+                
               </div>
               <p className="footer-description">
                 Professional MEP & Fire Safety Services delivering excellence in mechanical, electrical, 
                 and plumbing systems since 1997. Trusted by leading businesses across the country.
               </p>
               <div className="social-icons">
-                <a href="https://linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/shree-ganesh-enterprises-1385b5271" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
                   <FontAwesomeIcon icon={faLinkedin} />
                 </a>
                 <a href="https://twitter.com" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
                   <FontAwesomeIcon icon={faTwitter} />
                 </a>
-                <a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.facebook.com/profile.php?id=100091506081596" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
                   <FontAwesomeIcon icon={faFacebookF} />
                 </a>
-                <a href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/_sgemep/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
                   <FontAwesomeIcon icon={faInstagram} />
                 </a>
-                <a href="https://youtube.com" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+                <a href="https://youtube.com/@sgemep?si=UIj49pqei7FAskoG" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
                   <FontAwesomeIcon icon={faYoutube} />
                 </a>
               </div>
@@ -99,7 +86,7 @@ const Footer = () => {
               <div className="contact-info">
                 <div className="contact-item">
                   <FontAwesomeIcon icon={faMapMarkerAlt} />
-                  <p>House No. 435, Second Floor, Left Side, Khasra No. 60, 128- D21, Chattarpur Pahadi, New Delhi - 110074</p>
+                  <p>House No. 535, Second Floor, Left Side, Khasra No. 60, 128- D21, Chattarpur Pahadi, New Delhi - 110074</p>
                 </div>
                 <div className="contact-item">
                   <FontAwesomeIcon icon={faPhone} />

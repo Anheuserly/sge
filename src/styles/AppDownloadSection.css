@@ -1,0 +1,99 @@
+/* src/styles/AppDownloadSection.css */
+
+.app-download-section {
+    padding: 4rem 2rem;
+    background: linear-gradient(to right, #f8f9fa, #eef2f5);
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .app-download-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+  }
+  
+  .app-download-section p {
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    color: #555;
+  }
+  
+  .app-card {
+    background-color: #ffffff;
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .app-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+  }
+  
+  .app-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+  }
+  
+  .app-card p {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 1.5rem;
+  }
+  
+  .button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .playstore-btn,
+  .apk-btn {
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    color: #fff;
+    display: inline-block;
+    min-width: 160px;
+    text-align: center;
+  }
+  
+  .playstore-btn {
+    background: linear-gradient(to right, #34a853, #0f9d58);
+  }
+  
+  .apk-btn {
+    background: linear-gradient(to right, #007bff, #0056b3);
+  }
+  
+  .playstore-btn:hover,
+  .apk-btn:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+  }
+  
+  @media (max-width: 600px) {
+    .app-download-section h1 {
+      font-size: 2rem;
+    }
+  
+    .app-card {
+      padding: 1.5rem;
+    }
+  
+    .playstore-btn,
+    .apk-btn {
+      font-size: 0.95rem;
+      padding: 0.65rem 1.2rem;
+    }
+  }
+  

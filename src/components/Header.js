@@ -78,7 +78,7 @@ const Header = () => {
           <div className="top-bar-right">
             <div className="contact-item address-item">
               <FaMapMarkerAlt className="contact-icon" />
-              <address>House No. 435, Second Floor, Left Side, Khasra No. 60, 128-D21, Chattarpur Pahadi, New Delhi - 110074</address>
+              <address>House No. 535, Second Floor, Left Side, Khasra No. 60, 128-D21, Chattarpur Pahadi, New Delhi - 110074</address>
             </div>
             
             <div className="social-links">
@@ -175,6 +175,8 @@ const Header = () => {
             <NavLink to="/career" onClick={() => setMenuOpen(false)}>
               Career
             </NavLink>
+            <NavLink to="/our-app" onClick={() => setMenuOpen(false)}>
+            Our App</NavLink>
 
             <div className="nav-cta">
               <a href="/quote" className="cta-button">Get a Quote</a>
