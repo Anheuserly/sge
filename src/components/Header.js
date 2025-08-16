@@ -133,35 +133,9 @@ const Header = () => {
               Home
             </NavLink>
 
-            <div className="dropdown-container" ref={dropdownRef}>
-              <button
-                className={`dropdown-trigger ${dropdownOpen === 'services' ? 'active' : ''}`}
-                onClick={() => toggleDropdown('services')}
-              >
-                Services <FaChevronDown className="dropdown-icon" />
-              </button>
-              <CSSTransition
-                in={dropdownOpen === 'services'}
-                timeout={300}
-                classNames="dropdown"
-                unmountOnExit
-              >
-                <div className="dropdown-menu">
-                  {servicesSubmenu.map((item, index) => (
-                    <NavLink
-                      key={index}
-                      to={item.path}
-                      onClick={() => {
-                        setDropdownOpen(null);
-                        setMenuOpen(false);
-                      }}
-                    >
-                      {item.title}
-                    </NavLink>
-                  ))}
-                </div>
-              </CSSTransition>
-            </div>
+            <NavLink to="/services" onClick={() => setMenuOpen(false)}>
+             Services
+            </NavLink>
 
             <NavLink to="/projects" onClick={() => setMenuOpen(false)}>
               Projects
@@ -169,14 +143,14 @@ const Header = () => {
             <NavLink to="/about" onClick={() => setMenuOpen(false)}>
               About
             </NavLink>
+            <NavLink to="/documents" onClick={() => setMenuOpen(false)}>
+            Documents</NavLink>
             <NavLink to="/contact" onClick={() => setMenuOpen(false)}>
               Contact
             </NavLink>
             <NavLink to="/career" onClick={() => setMenuOpen(false)}>
               Career
             </NavLink>
-            <NavLink to="/our-app" onClick={() => setMenuOpen(false)}>
-            Our App</NavLink>
 
             <div className="nav-cta">
               <a href="/quote" className="cta-button">Get a Quote</a>
