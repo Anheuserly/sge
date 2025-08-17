@@ -1,0 +1,235 @@
+/* src/styles/DocumentModal.css */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 1rem;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+  }
+  
+  .modal-overlay.fullscreen {
+    padding: 0;
+  }
+  
+  .modal-content {
+    background: white;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  .modal-overlay.fullscreen .modal-content {
+    max-width: 100%;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem;
+    background: #2c3e50;
+    color: white;
+  }
+  
+  .modal-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  
+  .modal-actions {
+    display: flex;
+    gap: 0.8rem;
+  }
+  
+  .close-btn, .fullscreen-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    transition: background 0.2s ease;
+  }
+  
+  .close-btn:hover, .fullscreen-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .pdf-viewer {
+    flex: 1;
+    padding: 1.5rem;
+    background: #f5f7fa;
+    min-height: 400px;
+    display: flex;
+  }
+  
+  .pdf-swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .pdf-page {
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .page-content {
+    padding: 2rem;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
+  }
+  
+  .page-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+  }
+  
+  .page-content p {
+    font-size: 1.1rem;
+    color: #34495e;
+    max-width: 600px;
+    line-height: 1.6;
+  }
+  
+  .mock-note {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #7f8c8d;
+  }
+  
+  .modal-footer {
+    padding: 1.2rem;
+    background: white;
+    border-top: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  
+  .document-description {
+    margin: 0;
+    text-align: center;
+    color: #7f8c8d;
+    font-size: 0.95rem;
+  }
+  
+  .download-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.5rem;
+    background: #3498db;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s ease;
+  }
+  
+  .download-btn:hover {
+    background: #2980b9;
+  }
+  
+  .swiper-button-prev, 
+  .swiper-button-next {
+    color: #3498db !important;
+    background: rgba(255, 255, 255, 0.8);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .swiper-button-prev:after, 
+  .swiper-button-next:after {
+    font-size: 1.2rem !important;
+  }
+  
+  .swiper-pagination-bullet {
+    background: #7f8c8d;
+    opacity: 0.5;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background: #3498db;
+    opacity: 1;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .modal-header h2 {
+      font-size: 1.3rem;
+    }
+    
+    .page-content {
+      padding: 1.5rem;
+    }
+    
+    .page-content h3 {
+      font-size: 1.5rem;
+    }
+    
+    .page-content p {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .modal-header {
+      padding: 1rem;
+    }
+    
+    .pdf-viewer {
+      padding: 1rem;
+    }
+    
+    .page-content {
+      padding: 1rem;
+    }
+    
+    .swiper-button-prev, 
+    .swiper-button-next {
+      display: none;
+    }
+  }

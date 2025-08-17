@@ -1,0 +1,75 @@
+.partner-registration {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+  }
+  
+  .partner-registration h1 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #2c3e50;
+  }
+  
+  .pr-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  
+  .pr-form input {
+    padding: 14px 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .pr-form input:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 6px rgba(76, 175, 80, 0.3);
+  }
+  
+  .pr-form button {
+    padding: 14px;
+    background: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .pr-form button:hover:not(:disabled) {
+    background: #43a047;
+    transform: translateY(-2px);
+  }
+  
+  .pr-form button:disabled {
+    background: #a5d6a7;
+    cursor: not-allowed;
+  }
+  
+  @media (max-width: 600px) {
+    .partner-registration {
+      margin: 30px 20px;
+      padding: 25px;
+    }
+  
+    .partner-registration h1 {
+      font-size: 1.6rem;
+    }
+  
+    .pr-form input,
+    .pr-form button {
+      font-size: 1rem;
+    }
+  }
+  

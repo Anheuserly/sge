@@ -1,0 +1,45 @@
+.bp-apply {
+  text-align: center;
+  margin-top: 40px;
+  padding: 30px;
+}
+
+.bp-apply h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.bp-apply p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.bp-apply a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.bp-apply a:hover {
+  text-decoration: underline;
+}
+
+.bp-apply-actions {
+  margin-top: 25px;
+}
+
+.bp-apply-btn {
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  background: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.bp-apply-btn:hover {
+  background: #43a047;
+  transform: translateY(-2px);
+}

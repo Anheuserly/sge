@@ -238,6 +238,8 @@ const Footer = () => {
               <Link to="/terms">Terms of Service</Link>
               <span className="divider">|</span>
               <Link to="/sitemap">Sitemap</Link>
+              <span className="divider">|</span>
+              <Link to="/our-app-privacy-policy">Our App Privacy Policy</Link>
             </div>
             <button className="back-to-top" onClick={scrollToTop} aria-label="Back to top">
               <FontAwesomeIcon icon={faChevronUp} />

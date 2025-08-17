@@ -1,0 +1,46 @@
+.bp-why {
+    background-color: #f9f9f9; /* Light background */
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 12px;
+    max-width: 800px;
+    margin: 40px auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+  
+  .bp-why h2 {
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 700;
+  }
+  
+  .bp-why ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .bp-why li {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 15px 0;
+    position: relative;
+    padding-left: 30px;
+    transition: all 0.3s ease;
+  }
+  
+  .bp-why li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #4CAF50; /* green check mark */
+    font-weight: bold;
+  }
+  
+  .bp-why li:hover {
+    color: #000;
+    transform: translateX(5px);
+  }
+  
