@@ -18,6 +18,7 @@ import BecomePartner from './pages/BecomePartner';   // ✅ NEW
 import NotFound from './pages/NotFound';
 import OurAppPrivacyPolicy from "./pages/OurAppPrivacyPolicy";
 import PartnerRegistration from "./pages/PartnerRegistration"; // ✅ at top
+import ThankYou from "./pages/ThankYou";
 // Components
 import Footer from './components/Footer';
 
@@ -54,6 +55,7 @@ function App() {
                 <Route path="/documents" element={<Documents />} />
                 <Route path="/our-app-privacy-policy" element={<OurAppPrivacyPolicy />} />
                 <Route path="/partner-registration" element={<PartnerRegistration />} />
+                <Route path="/thank-you" element={<ThankYou />} />
 
                 <Route path="*" element={<NotFound />} />
               </Routes>

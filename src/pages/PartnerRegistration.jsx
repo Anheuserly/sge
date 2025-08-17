@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { registerPartner } from "../services/partnerService";
+import { useNavigate } from "react-router-dom"; // ✅ import navigation
+import { registerPartner } from "../services/partnerAuthService";
 import "../styles/PartnerRegistration.css";
 
 const PartnerRegistration = () => {
@@ -8,7 +9,9 @@ const PartnerRegistration = () => {
     phone: "",
     businessName: "",
   });
+
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate(); // ✅ hook for redirect
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -16,14 +19,29 @@ const PartnerRegistration = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!/^\d{10,15}$/.test(formData.phone)) {
+      alert("Please enter a valid phone number (10–15 digits).");
+      return;
+    }
+
     setLoading(true);
 
     try {
       const response = await registerPartner(formData);
-      console.log("✅ Partner Registered:", response);
-      alert("Thank you for applying! We have saved your registration.");
+
+      if (response.success) {
+        if (response.message === "Partner already exists") {
+          navigate("/thank-you", { state: { existing: true } });
+        } else {
+          navigate("/thank-you", { state: { existing: false } });
+        }
+      } else {
+        throw response.error;
+      }
     } catch (err) {
-      alert("❌ Error saving partner. Please try again.");
+      console.error("❌ Error registering partner:", err);
+      alert("Something went wrong. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -57,6 +75,7 @@ const PartnerRegistration = () => {
           onChange={handleChange}
           required
         />
+
         <button type="submit" disabled={loading}>
           {loading ? "Submitting..." : "Submit Application"}
         </button>

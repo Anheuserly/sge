@@ -1,0 +1,46 @@
+.thank-you {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .thank-you h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: #ffdd57;
+  }
+  
+  .thank-you p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+  
+  .thank-you .btn-home {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #ffdd57;
+    color: #1e3c72;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .thank-you .btn-home:hover {
+    background: #ffc107;
+    transform: translateY(-2px);
+  }
+  
