@@ -1,16 +1,21 @@
+import Image from "next/image";
 import Link from "next/link";
 import SectionHeading from "@/components/SectionHeading";
 import ServiceRequestForm from "@/components/ServiceRequestForm";
 import {
+  appLinks,
   company,
   highlights,
-  achievements,
+  documentLibrary,
   featuredSolutions,
+  heroCapabilities,
   serviceModel,
   methodology,
   majorProjects,
   clients,
   certifications,
+  operatingSectors,
+  proofPoints,
 } from "@/lib/content";
 
 export default function HomePage() {
@@ -19,7 +24,7 @@ export default function HomePage() {
       <section className="hero">
         <div className="container hero-grid">
           <div className="hero-copy">
-            <span className="eyebrow">SGE • Since 1997</span>
+            <span className="eyebrow">SGE / New Delhi / Since 1997</span>
             <h1>{company.name}</h1>
             <p className="hero-subtitle">{company.tagline}</p>
             <p className="lead">{company.overview}</p>
@@ -33,30 +38,29 @@ export default function HomePage() {
             </div>
             <div className="hero-badges">
               <span>{company.iso}</span>
-              <span>Design → AMC</span>
+              <span>Design to AMC</span>
               <span>Fire • Plumbing • Electrical</span>
             </div>
           </div>
-          <div className="hero-stack">
-            <div className="hero-card">
-              <p className="card-title">All-in-One Service Model</p>
-              <p className="muted">
-                Single-point accountability from concept to compliance-ready
-                handover.
-              </p>
-              <div className="step-flow">
+          <div className="hero-visual" aria-label="SGE service capability summary">
+            <div className="operations-panel">
+              <div className="operations-head">
+                <span>Service Desk</span>
+                <strong>Design to AMC</strong>
+              </div>
+              <div className="operations-grid">
+                {heroCapabilities.map((item) => (
+                  <div key={item.label} className="operations-row">
+                    <span>{item.label}</span>
+                    <strong>{item.value}</strong>
+                  </div>
+                ))}
+              </div>
+              <div className="operations-footer">
                 {serviceModel.map((step) => (
                   <span key={step}>{step}</span>
                 ))}
               </div>
-            </div>
-            <div className="hero-card accent">
-              <p className="card-title">Rebranded Legacy</p>
-              <p className="muted">{company.legal}</p>
-              <p className="muted">{company.association}</p>
-              <Link className="button small" href="/projects">
-                View Project Capability
-              </Link>
             </div>
           </div>
         </div>
@@ -116,10 +120,10 @@ export default function HomePage() {
               ))}
             </div>
           </div>
-          <div className="panel">
-            <h3>Experience & Achievements</h3>
+          <div className="panel proof-panel">
+            <h3>Why Clients Use SGE</h3>
             <ul className="checklist">
-              {achievements.map((item) => (
+              {proofPoints.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
@@ -127,7 +131,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section alt">
+      <section className="section">
         <div className="container">
           <SectionHeading
             eyebrow="Major Projects"
@@ -145,6 +149,34 @@ export default function HomePage() {
       </section>
 
       <section className="section">
+        <div className="container app-band">
+          <div>
+            <span className="eyebrow">Digital Service Support</span>
+            <h2>{appLinks.name}</h2>
+            <p className="muted">{appLinks.summary}</p>
+          </div>
+          <div className="app-downloads">
+            <Link href={appLinks.appStore} target="_blank" rel="noreferrer">
+              <Image
+                src="/badges/app-store.svg"
+                alt="Download on the App Store"
+                width={135}
+                height={40}
+              />
+            </Link>
+            <Link href={appLinks.playStore} target="_blank" rel="noreferrer">
+              <Image
+                src="/badges/google-play.svg"
+                alt="Get it on Google Play"
+                width={135}
+                height={40}
+              />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="section alt">
         <div className="container">
           <SectionHeading
             eyebrow="Clients & Compliance"
@@ -168,6 +200,40 @@ export default function HomePage() {
                 ))}
               </ul>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <SectionHeading
+            eyebrow="Sectors"
+            title="Built for Operational Facilities"
+            subtitle="SGE works across active buildings where safety, uptime and documentation matter."
+          />
+          <div className="sector-grid">
+            {operatingSectors.map((sector) => (
+              <span key={sector}>{sector}</span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section alt">
+        <div className="container">
+          <SectionHeading
+            eyebrow="Document Library"
+            title="Profile and Compliance Downloads"
+            subtitle="Open the profile deck or statutory documents directly from the website."
+          />
+          <div className="document-grid">
+            {documentLibrary.map((doc) => (
+              <Link href={doc.href} className="document-card" key={doc.title}>
+                <span className="document-type">{doc.type}</span>
+                <strong>{doc.title}</strong>
+                <small>Download PDF</small>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

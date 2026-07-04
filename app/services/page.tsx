@@ -1,5 +1,7 @@
+import Image from "next/image";
+import Link from "next/link";
 import SectionHeading from "@/components/SectionHeading";
-import { servicePillars, maintenance, serviceModel } from "@/lib/content";
+import { appLinks, servicePillars, maintenance, serviceModel } from "@/lib/content";
 
 export default function ServicesPage() {
   return (
@@ -60,6 +62,34 @@ export default function ServicesPage() {
             {serviceModel.map((item) => (
               <span key={item}>{item}</span>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section alt">
+        <div className="container app-band">
+          <div>
+            <span className="eyebrow">AMC Support</span>
+            <h2>{appLinks.name}</h2>
+            <p className="muted">{appLinks.summary}</p>
+          </div>
+          <div className="app-downloads">
+            <Link href={appLinks.appStore} target="_blank" rel="noreferrer">
+              <Image
+                src="/badges/app-store.svg"
+                alt="Download on the App Store"
+                width={135}
+                height={40}
+              />
+            </Link>
+            <Link href={appLinks.playStore} target="_blank" rel="noreferrer">
+              <Image
+                src="/badges/google-play.svg"
+                alt="Get it on Google Play"
+                width={135}
+                height={40}
+              />
+            </Link>
           </div>
         </div>
       </section>

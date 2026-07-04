@@ -4,6 +4,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { company } from "@/lib/content";
 
+export { metadata } from "./metadata";
+
 const headingFont = Space_Grotesk({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],

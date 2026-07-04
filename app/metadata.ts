@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default:
-      "Shree Ganesh Enterprises (SGE) | Fire, Plumbing & Electrical Solutions",
+      "Shree Ganesh Enterprises (SGE) | Fire, Plumbing, Electrical & AMC Solutions",
     template: "%s | Shree Ganesh Enterprises",
   },
   description:
@@ -35,14 +35,14 @@ export const metadata: Metadata = {
     url: siteUrl,
     siteName: "Shree Ganesh Enterprises",
     title:
-      "Shree Ganesh Enterprises (SGE) | Fire, Plumbing & Electrical Solutions",
+      "Shree Ganesh Enterprises (SGE) | Fire, Plumbing, Electrical & AMC Solutions",
     description:
       "End-to-end fire protection, electrical, plumbing, IBMS, and e-security solutions since 1997.",
   },
   twitter: {
     card: "summary_large_image",
     title:
-      "Shree Ganesh Enterprises (SGE) | Fire, Plumbing & Electrical Solutions",
+      "Shree Ganesh Enterprises (SGE) | Fire, Plumbing, Electrical & AMC Solutions",
     description:
       "End-to-end fire protection, electrical, plumbing, IBMS, and e-security solutions since 1997.",
   },

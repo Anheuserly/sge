@@ -1,6 +1,8 @@
+import Image from "next/image";
+import Link from "next/link";
 import SectionHeading from "@/components/SectionHeading";
 import ContactForm from "@/components/ContactForm";
-import { company, keyContacts } from "@/lib/content";
+import { appLinks, company, keyContacts } from "@/lib/content";
 
 export default function ContactPage() {
   return (
@@ -28,6 +30,10 @@ export default function ContactPage() {
               <div>
                 <span>Websites</span>
                 <p>{company.websites.join(" | ")}</p>
+              </div>
+              <div>
+                <span>Email</span>
+                <p>{company.email}</p>
               </div>
             </div>
             <div className="notice">
@@ -58,6 +64,34 @@ export default function ContactPage() {
                 <p className="muted">{contact.phone}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container app-band">
+          <div>
+            <span className="eyebrow">AMC Clients</span>
+            <h2>{appLinks.name}</h2>
+            <p className="muted">{appLinks.summary}</p>
+          </div>
+          <div className="app-downloads">
+            <Link href={appLinks.appStore} target="_blank" rel="noreferrer">
+              <Image
+                src="/badges/app-store.svg"
+                alt="Download on the App Store"
+                width={135}
+                height={40}
+              />
+            </Link>
+            <Link href={appLinks.playStore} target="_blank" rel="noreferrer">
+              <Image
+                src="/badges/google-play.svg"
+                alt="Get it on Google Play"
+                width={135}
+                height={40}
+              />
+            </Link>
           </div>
         </div>
       </section>

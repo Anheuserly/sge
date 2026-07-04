@@ -1,7 +1,7 @@
 export const company = {
   name: "Shree Ganesh Enterprises (SGE)",
   legal: "Rebranded corporate entity of S. S. Engineers & Consultants",
-  tagline: "Fire, Plumbing & Electrical Solutions",
+  tagline: "Fire, Plumbing, Electrical & AMC Solutions",
   founded: "July 1997",
   iso: "NSIC – ISO 9001:2008",
   overview:
@@ -10,14 +10,69 @@ export const company = {
     "Works in association with Tanushka Projects Pvt. Ltd. for fire safety, IBMS, e-security, PHE, electricals, and AMC services.",
   address:
     "Plot No 535, Second Floor, Left Side, Khasra No. 60, 128-D21, Chattarpur Pahadi, New Delhi, Delhi 110074",
-  phones: ["9871936847", "8527378555", "8171486963"], 
+  phones: ["9871936847", "8527378555", "8171486963"],
   websites: [
     "www.sge.org.in",
     "www.ssengineers.in",
     "www.amcmep.in",
     "www.palanhar.com",
   ],
+  email: "anilkumarsaini0507@gmail.com / anil@ssengineers.in",
 };
+
+export const appLinks = {
+  name: "AMC MEP 24x7 Service App",
+  appStore:
+    "https://apps.apple.com/in/app/amc-mep-24x7-service-app/id6756487144",
+  playStore:
+    "https://play.google.com/store/apps/details?id=com.mepsge.amcsge&pcampaignid=web_share",
+  summary:
+    "A service companion for AMC clients to raise requests, track support, and keep maintenance communication organized.",
+};
+
+export const documentLibrary = [
+  {
+    title: "Company Profile 2025",
+    type: "Capability Deck",
+    href: "/documents/SGE PPT 2025.pdf",
+  },
+  {
+    title: "GST Certificate",
+    type: "Statutory Registration",
+    href: "/documents/2 SHREE GANESH GST CERTIFICATE (1).pdf",
+  },
+  {
+    title: "PF Certificate",
+    type: "Labour Compliance",
+    href: "/documents/3 PF CERTIFICATE.pdf",
+  },
+  {
+    title: "ESI Certificate",
+    type: "Employee Insurance",
+    href: "/documents/4 ESI CERTIFICATE.pdf",
+  },
+  {
+    title: "Udyam Registration",
+    type: "MSME Registration",
+    href: "/documents/5 Udyam Registration Certificate.pdf",
+  },
+];
+
+export const heroCapabilities = [
+  { label: "Fire Fighting", value: "Hydrant / Sprinkler / Pump Room" },
+  { label: "Fire Alarm", value: "Detection / PA / Integration" },
+  { label: "Electrical", value: "HT-LT Panels / DG / Distribution" },
+  { label: "Plumbing", value: "Water Supply / Drainage / Pumping" },
+  { label: "Security", value: "CCTV / Access / Attendance" },
+  { label: "AMC", value: "Preventive / Breakdown / Documentation" },
+];
+
+export const proofPoints = [
+  "Turnkey design, supply, installation, testing and commissioning",
+  "AMC support for fire fighting, electrical, plumbing and security systems",
+  "Execution experience across data centers, hospitals, metro, schools and commercial facilities",
+  "Documented statutory registrations for GST, PF, ESI and MSME/Udyam",
+];
 
 
 
@@ -29,7 +84,7 @@ export const highlights = [
   },
   {
     label: "All-in-One",
-    value: "Design → AMC",
+    value: "Design to AMC",
     detail: "Single-point delivery from concept to maintenance.",
   },
   {
@@ -59,6 +114,17 @@ export const serviceModel = [
   "Commissioning",
   "Maintenance",
   "AMC",
+];
+
+export const operatingSectors = [
+  "Data centers",
+  "Hospitals",
+  "Metro and transport",
+  "Schools and institutes",
+  "High-rise residential",
+  "Hotels and commercial buildings",
+  "Government facilities",
+  "Industrial campuses",
 ];
 
 export const methodology = [

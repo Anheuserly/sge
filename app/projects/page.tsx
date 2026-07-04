@@ -65,7 +65,7 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section alt">
         <div className="container">
           <SectionHeading
             eyebrow="Work Methodology"

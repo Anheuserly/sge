@@ -1,5 +1,6 @@
+import Link from "next/link";
 import SectionHeading from "@/components/SectionHeading";
-import { clients, certifications } from "@/lib/content";
+import { clients, certifications, documentLibrary } from "@/lib/content";
 
 export default function ClientsPage() {
   return (
@@ -41,6 +42,25 @@ export default function ClientsPage() {
               <div key={item} className="tile">
                 <p>{item}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <SectionHeading
+            eyebrow="Document Library"
+            title="Compliance Documents"
+            subtitle="Public profile and statutory registration files for quick verification."
+          />
+          <div className="document-grid">
+            {documentLibrary.map((doc) => (
+              <Link href={doc.href} className="document-card" key={doc.title}>
+                <span className="document-type">{doc.type}</span>
+                <strong>{doc.title}</strong>
+                <small>Download PDF</small>
+              </Link>
             ))}
           </div>
         </div>
