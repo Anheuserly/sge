@@ -20,7 +20,8 @@ brand:
     - "Use the real SGE logo from public/shreeganeshlogo.jpeg."
     - "Treat company profile and certificates as downloadable documents only."
     - "Do not show PDF page screenshots or company profile page images in the hero, homepage sections, projects page, clients page, or document cards."
-    - "Use service-capability panels, concise proof points, project/client names, and app badges as the visible design material."
+    - "Use a light integrated MEP coverage board in the hero, not a dark service-desk dashboard."
+    - "Use concise proof points, project/client names, document download cards, and app badges as visible design material."
     - "Keep layouts structured, businesslike and scannable."
     - "Prefer navy, red, white, muted green and controlled gold accents."
     - "Avoid decorative blobs, excessive gradients, fake stock imagery and oversized marketing cards."
@@ -38,7 +39,7 @@ content_sources:
 
 site_requirements:
   homepage:
-    - "First viewport must show the SGE name, real logo identity, primary service scope and a clean service-capability board."
+    - "First viewport must show the SGE name, real logo identity, primary service scope and a clean integrated MEP coverage board."
     - "Include direct calls to request a site survey and explore services."
     - "Show highlights: established 1997, design-to-AMC model, pan-India service reach and experience."
     - "Show core services, work methodology, major projects, client proof, sectors and document download links."
@@ -59,7 +60,8 @@ site_requirements:
 design_checklist:
   layout:
     - "[ ] Header uses real logo and compact navigation."
-    - "[ ] Hero communicates SGE clearly within first viewport."
+    - "[ ] Hero communicates SGE clearly within first viewport without cramped or clipped right-side content."
+    - "[ ] Hero coverage board stacks cleanly on mobile and fits inside the container on desktop."
     - "[ ] Sections are full-width bands or clean constrained layouts."
     - "[ ] Cards are only used for repeated items, forms and document previews."
     - "[ ] Mobile layout stacks cleanly without text overlap."

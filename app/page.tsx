@@ -42,21 +42,21 @@ export default function HomePage() {
               <span>Fire • Plumbing • Electrical</span>
             </div>
           </div>
-          <div className="hero-visual" aria-label="SGE service capability summary">
-            <div className="operations-panel">
-              <div className="operations-head">
-                <span>Service Desk</span>
-                <strong>Design to AMC</strong>
+          <div className="hero-visual" aria-label="SGE facility systems capability">
+            <div className="capability-board">
+              <div className="capability-board-head">
+                <span>Integrated MEP Coverage</span>
+                <strong>Facility systems, planned and maintained</strong>
               </div>
-              <div className="operations-grid">
+              <div className="capability-grid">
                 {heroCapabilities.map((item) => (
-                  <div key={item.label} className="operations-row">
+                  <div key={item.label} className="capability-cell">
                     <span>{item.label}</span>
                     <strong>{item.value}</strong>
                   </div>
                 ))}
               </div>
-              <div className="operations-footer">
+              <div className="delivery-strip" aria-label="Delivery stages">
                 {serviceModel.map((step) => (
                   <span key={step}>{step}</span>
                 ))}
