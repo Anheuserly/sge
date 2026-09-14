@@ -1,27 +1,39 @@
 import Image from "next/image";
 import Link from "next/link";
 import SectionHeading from "@/components/SectionHeading";
-import ServiceRequestForm from "@/components/ServiceRequestForm";
-import {
-  appLinks,
-  company,
-  highlights,
-  documentLibrary,
-  featuredSolutions,
-  heroCapabilities,
-  serviceModel,
-  methodology,
-  majorProjects,
-  clients,
-  certifications,
-  operatingSectors,
-  proofPoints,
-} from "@/lib/content";
+import CatalogSlider from "@/components/CatalogSlider";
+import { company, appLinks } from "@/lib/content";
 
-export default function HomePage() {
+async function getListings() {
+  try {
+    const res = await fetch("https://storage.amcmep.in/v1/listings", {
+      next: { revalidate: 60 },
+    });
+    if (!res.ok) return [];
+    const data = await res.json();
+    return data.rows || [];
+  } catch (error) {
+    return [];
+  }
+}
+
+export default async function HomePage() {
+  const listings = await getListings();
+  const businessId = process.env.NEXT_PUBLIC_BUSINESS_ID || "3bc9edf1-68df-4dcf-98be-fc3295651c28";
+  
+  const myListings = listings.filter(
+    (l: any) => 
+      l.business_id === businessId || 
+      l.business_name === "SHREE GANESH ENTERPRISES" ||
+      l.business_id === "hln5dfpt1l_6o9og00k9q63faez"
+  );
+
+  // Categorize listings
+  const categories = Array.from(new Set(myListings.map((l: any) => l.category || "General"))) as string[];
+
   return (
     <main>
-      <section className="hero">
+      <section className="hero" style={{ paddingBottom: "2rem" }}>
         <div className="container hero-grid">
           <div className="hero-copy">
             <span className="eyebrow">SGE / New Delhi / Since 1997</span>
@@ -49,101 +61,40 @@ export default function HomePage() {
                 <strong>Facility systems, planned and maintained</strong>
               </div>
               <div className="capability-grid">
-                {heroCapabilities.map((item) => (
-                  <div key={item.label} className="capability-cell">
-                    <span>{item.label}</span>
-                    <strong>{item.value}</strong>
-                  </div>
-                ))}
-              </div>
-              <div className="delivery-strip" aria-label="Delivery stages">
-                {serviceModel.map((step) => (
-                  <span key={step}>{step}</span>
-                ))}
+                <div className="capability-cell">HVAC</div>
+                <div className="capability-cell">Fire Fighting</div>
+                <div className="capability-cell">Electrical</div>
+                <div className="capability-cell">Plumbing</div>
+                <div className="capability-cell">AMC</div>
+                <div className="capability-cell">Consulting</div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container stats-grid">
-          {highlights.map((item) => (
-            <div key={item.label} className="stat-card">
-              <p className="stat-value">{item.value}</p>
-              <p className="stat-label">{item.label}</p>
-              <p className="muted">{item.detail}</p>
-            </div>
-          ))}
         </div>
       </section>
 
       <section className="section alt">
         <div className="container">
           <SectionHeading
-            eyebrow="Core Solutions"
-            title="Fire Safety, MEP, and Integrated Systems"
-            subtitle="Our technical solutions cover design to commissioning for complex facilities."
+            eyebrow="Marketplace"
+            title="Book Our Services Directly"
+            subtitle="Explore our comprehensive e-commerce catalog of MEP solutions and annual maintenance contracts, ready to request."
           />
-          <div className="grid-2">
-            {featuredSolutions.map((solution) => (
-              <div key={solution.title} className="panel">
-                <div className="panel-head">
-                  <h3>{solution.title}</h3>
-                  <p className="muted">{solution.description}</p>
-                </div>
-                <ul>
-                  {solution.items.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
+          
+          <div style={{ marginTop: "3rem" }}>
+            {categories.map(category => {
+              const catListings = myListings.filter((l: any) => (l.category || "General") === category);
+              return (
+                <CatalogSlider key={category} category={category} listings={catListings} />
+              );
+            })}
+            
+            {myListings.length === 0 && (
+              <div className="panel" style={{ textAlign: "center", padding: "4rem" }}>
+                <h3>Catalog Updating...</h3>
+                <p className="muted">We are bringing our services online. Check back shortly.</p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container split">
-          <div>
-            <SectionHeading
-              eyebrow="Work Methodology"
-              title="Structured Execution, Clear Accountability"
-              subtitle="Every project moves through three disciplined stages to ensure compliance."
-            />
-            <div className="grid-3">
-              {methodology.map((step) => (
-                <div key={step.title} className="tile">
-                  <h4>{step.title}</h4>
-                  <p className="muted">{step.detail}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="panel proof-panel">
-            <h3>Why Clients Use SGE</h3>
-            <ul className="checklist">
-              {proofPoints.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container">
-          <SectionHeading
-            eyebrow="Major Projects"
-            title="Execution Across India"
-            subtitle="Selected projects across residential, healthcare, metro, and commercial sectors."
-          />
-          <div className="list-grid">
-            {majorProjects.map((item) => (
-              <div key={item} className="list-card">
-                <span>{item}</span>
-              </div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -151,109 +102,17 @@ export default function HomePage() {
       <section className="section">
         <div className="container app-band">
           <div>
-            <span className="eyebrow">Digital Service Support</span>
+            <span className="eyebrow">Digital AMC Management</span>
             <h2>{appLinks.name}</h2>
             <p className="muted">{appLinks.summary}</p>
           </div>
           <div className="app-downloads">
             <Link href={appLinks.appStore} target="_blank" rel="noreferrer">
-              <Image
-                src="/badges/app-store.svg"
-                alt="Download on the App Store"
-                width={135}
-                height={40}
-              />
+              <Image src="/badges/app-store.svg" alt="App Store" width={135} height={40} />
             </Link>
             <Link href={appLinks.playStore} target="_blank" rel="noreferrer">
-              <Image
-                src="/badges/google-play.svg"
-                alt="Get it on Google Play"
-                width={135}
-                height={40}
-              />
+              <Image src="/badges/google-play.svg" alt="Google Play" width={135} height={40} />
             </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="section alt">
-        <div className="container">
-          <SectionHeading
-            eyebrow="Clients & Compliance"
-            title="Trusted by Institutions and Developers"
-            subtitle="Long-term relationships backed by statutory registrations and industry approvals."
-          />
-          <div className="grid-2">
-            <div className="panel">
-              <h3>Key Clients</h3>
-              <div className="logo-grid">
-                {clients.map((item) => (
-                  <span key={item}>{item}</span>
-                ))}
-              </div>
-            </div>
-            <div className="panel">
-              <h3>Registrations & Certifications</h3>
-              <ul>
-                {certifications.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container">
-          <SectionHeading
-            eyebrow="Sectors"
-            title="Built for Operational Facilities"
-            subtitle="SGE works across active buildings where safety, uptime and documentation matter."
-          />
-          <div className="sector-grid">
-            {operatingSectors.map((sector) => (
-              <span key={sector}>{sector}</span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section alt">
-        <div className="container">
-          <SectionHeading
-            eyebrow="Document Library"
-            title="Profile and Compliance Downloads"
-            subtitle="Open the profile deck or statutory documents directly from the website."
-          />
-          <div className="document-grid">
-            {documentLibrary.map((doc) => (
-              <Link href={doc.href} className="document-card" key={doc.title}>
-                <span className="document-type">{doc.type}</span>
-                <strong>{doc.title}</strong>
-                <small>Download PDF</small>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container split">
-          <div>
-            <SectionHeading
-              eyebrow="Start a Project"
-              title="Book a Site Survey"
-              subtitle="Share your scope and we will propose the right protection and MEP plan."
-            />
-          </div>
-          <div className="form-panel">
-            <h3>Request a Service Survey</h3>
-            <p className="muted">
-              Provide site details and requirements. Our team will respond with a
-              detailed plan.
-            </p>
-            <ServiceRequestForm />
           </div>
         </div>
       </section>

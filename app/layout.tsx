@@ -2,6 +2,7 @@ import { Space_Grotesk, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ChatWidget from "@/components/ChatWidget";
 import { company } from "@/lib/content";
 
 export { metadata } from "./metadata";
@@ -26,13 +27,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${headingFont.variable} ${bodyFont.variable}`}>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${headingFont.variable} ${bodyFont.variable}`} suppressHydrationWarning>
         <div className="page">
           <Header />
           {children}
           <Footer />
         </div>
+        <ChatWidget />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
