@@ -55,21 +55,21 @@ const blogPosts = [
 
 export default function BlogPage() {
   return (
-    <main className="container mx-auto px-4 py-16" style={{ maxWidth: '1100px' }}>
-      <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-        <span style={{ backgroundColor: 'rgba(200, 24, 29, 0.08)', color: 'var(--brand)', padding: '0.5rem 1.25rem', borderRadius: '30px', fontSize: '0.85rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', display: 'inline-block', marginBottom: '1rem' }}>
+    <main className="container mx-auto px-4 py-12" style={{ maxWidth: '1000px' }}>
+      <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+        <span style={{ backgroundColor: 'rgba(200, 24, 29, 0.08)', color: 'var(--brand)', padding: '0.4rem 1rem', borderRadius: '30px', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', display: 'inline-block', marginBottom: '1rem' }}>
           Technical Knowledge Base
         </span>
-        <h1 style={{ fontSize: 'clamp(2.4rem, 4vw, 3.5rem)', fontWeight: 800, marginBottom: '1rem', fontFamily: 'var(--font-heading)', color: 'var(--navy)' }}>
+        <h1 style={{ fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 800, marginBottom: '1rem', fontFamily: 'var(--font-heading)', color: 'var(--navy)' }}>
           Industry Insights &amp; Engineering Guides
         </h1>
-        <p style={{ color: '#64748b', fontSize: '1.2rem', maxWidth: '700px', margin: '0 auto', lineHeight: 1.6 }}>
+        <p style={{ color: '#64748b', fontSize: '1.1rem', maxWidth: '700px', margin: '0 auto', lineHeight: 1.6 }}>
           Practical engineering knowledge, statutory compliance frameworks, and digital facility management trends directly from veteran MEP practitioners.
         </p>
       </div>
 
       {/* Featured Article */}
-      <div style={{ backgroundColor: '#0f172a', borderRadius: '24px', padding: '3.5rem 3rem', color: 'white', marginBottom: '4rem', boxShadow: '0 20px 40px -10px rgba(15, 23, 42, 0.2)' }}>
+      <div style={{ backgroundColor: '#0f172a', borderRadius: '20px', padding: '2rem 2.5rem', color: 'white', marginBottom: '3rem', boxShadow: '0 10px 25px -10px rgba(15, 23, 42, 0.2)' }}>
         <div style={{ display: 'flex', gap: '1rem', alignItems: 'center', marginBottom: '1rem' }}>
           <span style={{ backgroundColor: 'var(--brand)', color: 'white', padding: '4px 12px', borderRadius: '20px', fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase' }}>
             Featured Guide
@@ -102,15 +102,15 @@ export default function BlogPage() {
       </div>
 
       {/* Grid of Articles */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2.5rem' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '1.5rem' }}>
         {blogPosts.slice(1).map((post, idx) => (
           <article
             key={idx}
             style={{
               backgroundColor: 'white',
-              borderRadius: '16px',
+              borderRadius: '12px',
               border: '1px solid #e2e8f0',
-              padding: '2.25rem',
+              padding: '1.5rem',
               display: 'flex',
               flexDirection: 'column',
               boxShadow: '0 4px 12px rgba(0,0,0,0.02)',

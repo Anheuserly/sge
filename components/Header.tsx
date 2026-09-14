@@ -24,16 +24,13 @@ export default function Header() {
           <HeaderSearch />
         </div>
 
-        <div style={{ display: 'flex', gap: '1.25rem', alignItems: 'center' }}>
-          <Link href="/bucket" suppressHydrationWarning style={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', width: '44px', height: '44px', borderRadius: '50%', backgroundColor: '#f1f5f9', color: 'var(--navy)', transition: 'background-color 0.2s' }}>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+          <Link href="/bucket" suppressHydrationWarning style={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', width: '40px', height: '40px', borderRadius: '50%', backgroundColor: '#f1f5f9', color: 'var(--navy)', transition: 'background-color 0.2s' }} aria-label="Bucket / Cart">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
               <line x1="3" y1="6" x2="21" y2="6"></line>
               <path d="M16 10a4 4 0 0 1-8 0"></path>
             </svg>
-          </Link>
-          <Link href="/partner" style={{ padding: '0.75rem 1.5rem', backgroundColor: 'var(--brand)', color: 'white', borderRadius: '10px', fontWeight: 'bold', textDecoration: 'none', fontSize: '0.95rem', boxShadow: '0 4px 6px rgba(200, 24, 29, 0.2)', transition: 'transform 0.2s' }}>
-            Partner with Us
           </Link>
         </div>
       </div>

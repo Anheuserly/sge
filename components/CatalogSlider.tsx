@@ -46,45 +46,51 @@ export default function CatalogSlider({ listings, category }: { listings: any[],
             href={`/product/${listing.id}`}
             key={listing.id} 
             style={{ 
-              minWidth: "300px", 
-              maxWidth: "300px", 
+              minWidth: "240px", 
+              maxWidth: "240px", 
               scrollSnapAlign: "start",
               backgroundColor: "white",
-              borderRadius: "12px",
-              boxShadow: "var(--shadow)",
+              borderRadius: "10px",
+              boxShadow: "0 2px 8px rgba(0,0,0,0.04)",
               border: "1px solid var(--line)",
               display: "flex",
               flexDirection: "column",
               overflow: "hidden",
               cursor: "pointer",
-              transition: "transform 0.2s",
+              transition: "transform 0.2s, box-shadow 0.2s",
               textDecoration: "none"
             }}
-            onMouseEnter={(e) => e.currentTarget.style.transform = "translateY(-4px)"}
-            onMouseLeave={(e) => e.currentTarget.style.transform = "translateY(0)"}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "translateY(-3px)";
+              e.currentTarget.style.boxShadow = "0 6px 16px rgba(0,0,0,0.08)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "translateY(0)";
+              e.currentTarget.style.boxShadow = "0 2px 8px rgba(0,0,0,0.04)";
+            }}
           >
             {listing.media_url ? (
-              <div style={{ height: "180px", background: "var(--steel)" }}>
+              <div style={{ height: "135px", background: "var(--steel)", overflow: "hidden" }}>
                 <img src={listing.media_url} alt={listing.title} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
               </div>
             ) : (
-              <div style={{ height: "180px", background: "var(--steel)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <span style={{ color: "var(--muted)", fontSize: "0.85rem" }}>No Image</span>
+              <div style={{ height: "135px", background: "var(--steel)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <span style={{ color: "var(--muted)", fontSize: "0.75rem" }}>No Image</span>
               </div>
             )}
             
-            <div style={{ padding: "1.25rem", flex: 1, display: "flex", flexDirection: "column" }}>
-              <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "0.5rem" }}>
-                <span style={{ fontSize: "0.75rem", textTransform: "uppercase", fontWeight: 700, color: "var(--brand)", letterSpacing: "0.05em" }}>{listing.type}</span>
+            <div style={{ padding: "0.85rem", flex: 1, display: "flex", flexDirection: "column" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.35rem" }}>
+                <span style={{ fontSize: "0.68rem", textTransform: "uppercase", fontWeight: 700, color: "var(--brand)", letterSpacing: "0.04em" }}>{listing.type || "MEP"}</span>
                 {listing.price && Number(listing.price) > 0 && (
-                  <span style={{ fontWeight: "bold", color: "var(--ink)" }}>{listing.currency === "INR" ? "₹" : listing.currency} {Number(listing.price).toLocaleString()}</span>
+                  <span style={{ fontWeight: 800, fontSize: "0.85rem", color: "var(--ink)" }}>{listing.currency === "INR" ? "₹" : listing.currency} {Number(listing.price).toLocaleString()}</span>
                 )}
               </div>
               
-              <h4 style={{ margin: "0 0 0.5rem 0", fontSize: "1.1rem", textTransform: "capitalize", color: "var(--ink)", lineHeight: 1.3 }}>
+              <h4 style={{ margin: "0 0 0.35rem 0", fontSize: "0.92rem", fontWeight: 700, textTransform: "capitalize", color: "var(--ink)", lineHeight: 1.25 }}>
                 {listing.title}
               </h4>
-              <p style={{ margin: "0 0 1.5rem 0", fontSize: "0.9rem", color: "var(--muted)", display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden" }}>
+              <p style={{ margin: "0 0 0.85rem 0", fontSize: "0.8rem", color: "var(--muted)", display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden", lineHeight: 1.4 }}>
                 {listing.description}
               </p>
               
@@ -94,13 +100,13 @@ export default function CatalogSlider({ listings, category }: { listings: any[],
                     display: "block", 
                     width: "100%", 
                     textAlign: "center", 
-                    padding: "0.75rem", 
+                    padding: "0.5rem 0.75rem", 
                     backgroundColor: "var(--brand)", 
                     color: "white", 
-                    borderRadius: "8px", 
-                    border: "none",
-                    fontWeight: 600,
-                    fontSize: "0.9rem",
+                    borderRadius: "6px", 
+                    border: "none", 
+                    fontWeight: 700, 
+                    fontSize: "0.8rem", 
                   }}
                 >
                   View Details

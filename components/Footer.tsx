@@ -36,7 +36,7 @@ export default function Footer() {
           <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
             <li><Link href="/pricing" style={{ color: '#94a3b8', textDecoration: 'none', fontSize: '0.9rem', transition: 'color 0.2s' }}>Pricing &amp; Plans</Link></li>
             <li><Link href="/partner" style={{ color: '#94a3b8', textDecoration: 'none', fontSize: '0.9rem', transition: 'color 0.2s' }}>Become a Partner</Link></li>
-            <li><Link href="/clients" style={{ color: '#94a3b8', textDecoration: 'none', fontSize: '0.9rem', transition: 'color 0.2s' }}>Success Stories</Link></li>
+            <li><Link href="/capabilities" style={{ color: '#94a3b8', textDecoration: 'none', fontSize: '0.9rem', transition: 'color 0.2s' }}>Platform Capabilities</Link></li>
           </ul>
         </div>
 
@@ -76,8 +76,8 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="container" style={{ borderTop: '1px solid #1e293b', paddingTop: '1.75rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
-        <p style={{ color: '#64748b', fontSize: '0.85rem', margin: 0 }}>
-          © {new Date().getFullYear()} {company.name}. All rights reserved.
+        <p style={{ color: '#64748b', fontSize: '0.85rem', margin: 0 }} suppressHydrationWarning>
+          © 2024 {company.name}. All rights reserved.
         </p>
         <div style={{ display: 'flex', gap: '2rem' }}>
           <Link href="/privacy" style={{ color: '#64748b', fontSize: '0.85rem', textDecoration: 'none' }}>Privacy Policy</Link>
