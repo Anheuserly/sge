@@ -21,7 +21,7 @@ async function getListings() {
 
 export default async function HomePage() {
   const listings = await getListings();
-  const businessId = process.env.NEXT_PUBLIC_BUSINESS_ID || "3bc9edf1-68df-4dcf-98be-fc3295651c28";
+  const businessId = process.env.NEXT_PUBLIC_BUSINESS_ID || "";
   
   const myListings = listings.filter(
     (l: any) => 
