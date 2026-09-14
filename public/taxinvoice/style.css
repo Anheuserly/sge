@@ -1,0 +1,664 @@
+/* ============================================================
+   SHREE GANESH ENTERPRISES — PREMIUM A4 TAX INVOICE
+   Designed for browser viewing + clean Print / Save as PDF
+   ============================================================ */
+
+:root {
+  --brand: #a73425;
+  --brand-deep: #7f241a;
+  --gold: #c89a55;
+  --ink: #1f2933;
+  --muted: #66737f;
+  --line: #d8dee4;
+  --soft-line: #e9edf0;
+  --paper: #ffffff;
+  --soft: #f8f6f2;
+  --brand-soft: #fbf2ef;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #e9ecef;
+  color: var(--ink);
+  font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+body {
+  padding: 24px;
+}
+
+.invoice-page {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto;
+  background: var(--paper);
+  padding: 14mm 14mm 10mm;
+  position: relative;
+  box-shadow: 0 14px 42px rgba(22, 31, 39, 0.14);
+  overflow: hidden;
+}
+
+.invoice-page::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--brand-deep), var(--brand), var(--gold));
+}
+
+/* ---------- Header ---------- */
+
+.brand-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 5px;
+}
+
+.brand-wrap {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-width: 0;
+}
+
+.logo-shell {
+  width: 72px;
+  height: 72px;
+  border: 1px solid #ead4cf;
+  border-radius: 50%;
+  background: #fff;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  box-shadow: 0 4px 16px rgba(127, 36, 26, 0.10);
+}
+
+.brand-logo {
+  width: 61px;
+  height: 61px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.brand-copy {
+  min-width: 0;
+}
+
+.eyebrow,
+.section-label {
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  font-size: 8.5px;
+  font-weight: 800;
+  color: var(--brand);
+}
+
+.brand-copy h1 {
+  margin: 5px 0 6px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 23px;
+  line-height: 1.05;
+  letter-spacing: 0.2px;
+  color: var(--ink);
+}
+
+.brand-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px 16px;
+  font-size: 8.5px;
+  color: var(--muted);
+}
+
+.brand-meta strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.invoice-title-block {
+  text-align: right;
+  min-width: 142px;
+  padding-left: 18px;
+  border-left: 1px solid var(--line);
+}
+
+.invoice-kicker {
+  display: inline-block;
+  margin-bottom: 2px;
+  color: var(--brand);
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 2.5px;
+}
+
+.invoice-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.8px;
+  color: var(--ink);
+}
+
+.accent-rule {
+  margin: 14px 0 13px;
+  height: 2px;
+  background: var(--soft-line);
+  position: relative;
+}
+
+.accent-rule span {
+  display: block;
+  width: 84px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--brand), var(--gold));
+}
+
+/* ---------- Panels ---------- */
+
+.top-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 0.9fr;
+  gap: 10px;
+}
+
+.panel,
+.notes-card,
+.totals-card,
+.bank-card,
+.signature-card {
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: #fff;
+}
+
+.panel {
+  padding: 12px 13px;
+}
+
+.client-panel {
+  background:
+    linear-gradient(180deg, rgba(251, 242, 239, 0.78), rgba(255, 255, 255, 0.96) 54%);
+}
+
+.client-panel h2 {
+  margin: 5px 0 5px;
+  font-size: 15px;
+  color: var(--ink);
+}
+
+.client-panel > p {
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: 9.2px;
+  line-height: 1.45;
+}
+
+.mini-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 1px solid var(--soft-line);
+  padding-top: 8px;
+  gap: 7px 14px;
+}
+
+.mini-grid div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.field-label {
+  color: var(--muted);
+  font-size: 7.6px;
+  text-transform: uppercase;
+  letter-spacing: 0.45px;
+}
+
+.mini-grid strong {
+  font-size: 8.8px;
+  color: var(--ink);
+}
+
+.invoice-meta-panel {
+  background: var(--soft);
+}
+
+.invoice-meta-panel .section-label {
+  margin-bottom: 6px;
+}
+
+.meta-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--soft-line);
+  font-size: 8.7px;
+}
+
+.meta-row:last-child {
+  border-bottom: 0;
+}
+
+.meta-row span {
+  color: var(--muted);
+}
+
+.meta-row strong {
+  text-align: right;
+  color: var(--ink);
+}
+
+/* ---------- Service Section ---------- */
+
+.service-section {
+  margin-top: 11px;
+}
+
+.section-heading-row {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 6px;
+}
+
+.section-heading-row h3 {
+  margin: 3px 0 0;
+  font-size: 13px;
+}
+
+.service-badge {
+  font-size: 7.5px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  color: var(--brand-deep);
+  background: var(--brand-soft);
+  border: 1px solid #efd5cf;
+  padding: 5px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* ---------- Table ---------- */
+
+.invoice-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 8.5px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.invoice-table th,
+.invoice-table td {
+  padding: 8px 7px;
+  vertical-align: top;
+}
+
+.invoice-table thead th {
+  background: var(--ink);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.55px;
+  font-size: 7.4px;
+  text-align: left;
+  border-right: 1px solid rgba(255,255,255,0.15);
+}
+
+.invoice-table thead th:last-child {
+  border-right: 0;
+}
+
+.invoice-table td {
+  border-right: 1px solid var(--soft-line);
+}
+
+.invoice-table td:last-child {
+  border-right: 0;
+}
+
+.invoice-table tbody tr {
+  background: #fff;
+}
+
+.invoice-table .sn { width: 6%; }
+.invoice-table .qty { width: 7%; }
+.invoice-table .sac { width: 10%; }
+.invoice-table .unit { width: 8%; }
+.invoice-table .rate { width: 13%; }
+.invoice-table .amount { width: 13%; }
+
+.main-item strong {
+  display: block;
+  color: var(--brand-deep);
+  margin-bottom: 5px;
+  font-size: 9.3px;
+}
+
+.main-item p {
+  margin: 0;
+  line-height: 1.46;
+  color: #4f5d67;
+}
+
+.center {
+  text-align: center;
+  vertical-align: middle !important;
+}
+
+.money {
+  text-align: right;
+  vertical-align: middle !important;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ---------- Totals & Notes ---------- */
+
+.totals-layout {
+  display: grid;
+  grid-template-columns: 1.55fr 0.8fr;
+  gap: 10px;
+  margin-top: 10px;
+  align-items: stretch;
+}
+
+.notes-card {
+  padding: 10px 12px;
+  background: var(--soft);
+}
+
+.notes-card ol {
+  margin: 6px 0 0;
+  padding-left: 16px;
+  font-size: 7.8px;
+  line-height: 1.42;
+  color: #4b5963;
+}
+
+.notes-card li + li {
+  margin-top: 2.5px;
+}
+
+.totals-card {
+  overflow: hidden;
+}
+
+.total-row,
+.grand-total {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 7px 10px;
+  font-size: 8.7px;
+  border-bottom: 1px solid var(--soft-line);
+}
+
+.total-row span {
+  color: var(--muted);
+}
+
+.total-row.muted strong {
+  color: #9aa4ad;
+}
+
+.grand-total {
+  border-bottom: 0;
+  background: linear-gradient(90deg, var(--brand-deep), var(--brand));
+  color: white;
+  align-items: center;
+}
+
+.grand-total span {
+  font-size: 8.4px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+}
+
+.grand-total strong {
+  font-size: 14px;
+}
+
+.amount-words {
+  margin-top: 8px;
+  border-left: 3px solid var(--gold);
+  background: #fcfaf7;
+  padding: 7px 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 8.5px;
+}
+
+.amount-words span {
+  color: var(--muted);
+  min-width: 86px;
+}
+
+.amount-words strong {
+  color: var(--ink);
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+}
+
+/* ---------- Bank + Signature ---------- */
+
+.bottom-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(210px, 0.70fr);
+  gap: 12px;
+  margin-top: 9px;
+  align-items: stretch;
+}
+
+.bank-card,
+.signature-card {
+  padding: 10px 12px;
+}
+
+.bank-grid {
+  display: grid;
+  grid-template-columns: 88px 1fr;
+  column-gap: 10px;
+  row-gap: 4px;
+  margin-top: 6px;
+  font-size: 8px;
+}
+
+.bank-grid span {
+  color: var(--muted);
+}
+
+.bank-grid strong {
+  color: var(--ink);
+}
+
+/* Signature stays in the actual RIGHT-SIDE corner instead of centered */
+.signature-card {
+  min-height: 94px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  text-align: right;
+  background: linear-gradient(180deg, #fff 0%, #fcfaf8 100%);
+  position: relative;
+}
+
+.for-company {
+  width: 100%;
+  text-align: right;
+  font-size: 7.7px;
+  color: var(--muted);
+  margin-bottom: auto;
+}
+
+.signature-space {
+  height: 28px;
+  width: 100%;
+}
+
+.signature-line {
+  width: 128px;
+  border-top: 1px solid #9ba6af;
+  margin: 0 0 5px auto;
+}
+
+.signature-card strong {
+  width: 100%;
+  text-align: right;
+  font-size: 8.3px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--ink);
+}
+
+/* ---------- Footer ---------- */
+
+.company-footer {
+  margin-top: 12px;
+  padding: 9px 0 0;
+  border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 9px;
+}
+
+.footer-mark {
+  align-self: center;
+}
+
+.footer-mark img {
+  width: 27px;
+  height: 27px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.footer-address {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: left;
+  align-items: flex-start;
+}
+
+.footer-address strong {
+  color: var(--brand-deep);
+  font-size: 8px;
+  letter-spacing: 0.5px;
+}
+
+.footer-address span {
+  color: #55636d;
+  font-size: 7.2px;
+  line-height: 1.25;
+}
+
+.footer-note {
+  text-align: right;
+  color: #8a949d;
+  font-size: 6.8px;
+  white-space: nowrap;
+  align-self: end;
+}
+
+/* ---------- Responsive Preview ---------- */
+
+@media screen and (max-width: 900px) {
+  body {
+    padding: 0;
+    background: #fff;
+  }
+
+  .invoice-page {
+    width: 100%;
+    min-height: auto;
+    padding: 24px;
+    box-shadow: none;
+  }
+
+  .brand-header,
+  .top-grid,
+  .totals-layout,
+  .bottom-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-header {
+    align-items: flex-start;
+  }
+}
+
+/* ---------- Print / Save as PDF ---------- */
+
+@page {
+  size: A4 portrait;
+  margin: 0;
+}
+
+@media print {
+  /* Keep desktop invoice structure when exporting to PDF */
+  .bottom-grid {
+    display: grid !important;
+    grid-template-columns: 1.45fr 0.70fr !important;
+    gap: 12px !important;
+  }
+
+  .signature-card {
+    align-items: flex-end !important;
+    text-align: right !important;
+  }
+
+  .signature-line {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+  }
+
+  .signature-card strong,
+  .for-company {
+    text-align: right !important;
+  }
+
+  .company-footer {
+    display: grid !important;
+    grid-template-columns: 30px 1fr auto !important;
+  }
+
+
+  html,
+  body {
+    width: 210mm;
+    height: 297mm;
+    background: #fff;
+  }
+
+  body {
+    padding: 0;
+  }
+
+  .invoice-page {
+    margin: 0;
+    width: 210mm;
+    height: 297mm;
+    min-height: 297mm;
+    box-shadow: none;
+    page-break-after: avoid;
+    break-after: avoid-page;
+  }
+}

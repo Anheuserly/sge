@@ -2,59 +2,33 @@ import { NextResponse } from "next/server";
 
 export const runtime = "edge";
 
-const getServerConfig = () => {
-  const endpoint =
-    process.env.APPWRITE_ENDPOINT ||
-    process.env.NEXT_PUBLIC_APPWRITE_ENDPOINT ||
-    "";
-  const projectId =
-    process.env.APPWRITE_PROJECT_ID ||
-    process.env.NEXT_PUBLIC_APPWRITE_PROJECT_ID ||
-    "";
-  const databaseId =
-    process.env.APPWRITE_DATABASE_ID ||
-    process.env.NEXT_PUBLIC_APPWRITE_DATABASE_ID ||
-    "";
-  const serviceRequestsCollection =
-    process.env.APPWRITE_SERVICE_REQUESTS_COLLECTION_ID ||
-    process.env.NEXT_PUBLIC_APPWRITE_SERVICE_REQUESTS_COLLECTION_ID ||
-    "service_requests";
-  const apiKey = process.env.APPWRITE_API_KEY || "";
-
-  if (!endpoint || !projectId || !databaseId) {
-    throw new Error("Missing Appwrite server configuration.");
-  }
-
-  return { endpoint, projectId, databaseId, serviceRequestsCollection, apiKey };
-};
-
 export async function POST(request: Request) {
   try {
     const payload = await request.json();
-    const { endpoint, projectId, databaseId, serviceRequestsCollection, apiKey } =
-      getServerConfig();
+    const apiUrl = process.env.SGE_API_URL || "https://api.amcmep.in/v1";
+    const businessId = process.env.SGE_BUSINESS_ID || "00000000-0000-0000-0000-000000000000";
 
-    const response = await fetch(
-      `${endpoint}/databases/${databaseId}/collections/${serviceRequestsCollection}/documents`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "X-Appwrite-Project": projectId,
-          "X-Appwrite-Response-Format": "1.0.0",
-          ...(apiKey ? { "X-Appwrite-Key": apiKey } : {}),
-        },
-        body: JSON.stringify({
-          documentId: crypto.randomUUID(),
-          data: payload,
-        }),
-      }
-    );
+    const response = await fetch(`${apiUrl}/website/inquiry`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        businessId,
+        title: `Service Request: ${payload.service || "General"}`,
+        description: payload.message || "No message provided",
+        name: payload.name || "Unknown",
+        phone: payload.phone || "Unknown",
+        email: payload.email || "",
+        address: payload.location || payload.company || "",
+        source: payload.source || "sge.org.in",
+        topic: payload.service || "service",
+        urgency: "normal",
+      }),
+    });
 
     if (!response.ok) {
       const errorText = await response.text();
       return NextResponse.json(
-        { message: errorText || "Appwrite error" },
+        { message: errorText || "DataHub error" },
         { status: response.status }
       );
     }
