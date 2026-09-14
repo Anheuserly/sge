@@ -58,7 +58,7 @@ export default function ProjectsPage() {
               Structured project control ensures safe handover and compliance
               readiness.
             </p>
-            <Link className="button" href="/contact">
+            <Link className="button" href="/partner">
               Start a Project Consultation
             </Link>
           </div>

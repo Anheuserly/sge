@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60" width="280" height="60">
+  <defs>
+    <linearGradient id="adani_blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#005BAA"/>
+      <stop offset="100%" stop-color="#0083CA"/>
+    </linearGradient>
+    <linearGradient id="adani_green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00A859"/>
+      <stop offset="100%" stop-color="#54B948"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(5, 5)">
+    <!-- Adani Ribbon Arc -->
+    <path d="M 10 38 C 2 28, 4 14, 18 8 C 30 2, 42 12, 38 26 C 36 34, 28 42, 16 46" fill="none" stroke="url(#adani_blue)" stroke-width="6" stroke-linecap="round"/>
+    <path d="M 22 46 C 34 44, 46 34, 44 20 C 42 8, 30 2, 18 8" fill="none" stroke="url(#adani_green)" stroke-width="4.5" stroke-linecap="round"/>
+    <circle cx="28" cy="24" r="5" fill="#F37021"/>
+  </g>
+  <text x="65" y="32" font-family="'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="24" font-weight="900" fill="#005BAA" letter-spacing="-0.5">adani</text>
+  <text x="145" y="32" font-family="'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="700" fill="#00A859" letter-spacing="1">conneX</text>
+  <text x="66" y="47" font-family="'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="8.5" font-weight="600" fill="#64748b" letter-spacing="2">DATA CENTERS</text>
+</svg>

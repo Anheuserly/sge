@@ -42,7 +42,8 @@ export default function CatalogSlider({ listings, category }: { listings: any[],
         }}
       >
         {listings.map((listing) => (
-          <div 
+          <Link
+            href={`/product/${listing.id}`}
             key={listing.id} 
             style={{ 
               minWidth: "300px", 
@@ -54,8 +55,13 @@ export default function CatalogSlider({ listings, category }: { listings: any[],
               border: "1px solid var(--line)",
               display: "flex",
               flexDirection: "column",
-              overflow: "hidden"
+              overflow: "hidden",
+              cursor: "pointer",
+              transition: "transform 0.2s",
+              textDecoration: "none"
             }}
+            onMouseEnter={(e) => e.currentTarget.style.transform = "translateY(-4px)"}
+            onMouseLeave={(e) => e.currentTarget.style.transform = "translateY(0)"}
           >
             {listing.media_url ? (
               <div style={{ height: "180px", background: "var(--steel)" }}>
@@ -83,10 +89,7 @@ export default function CatalogSlider({ listings, category }: { listings: any[],
               </p>
               
               <div style={{ marginTop: "auto" }}>
-                <Link 
-                  href={`https://amcmep.in/listing/${listing.id}`} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
+                <span
                   style={{ 
                     display: "block", 
                     width: "100%", 
@@ -95,19 +98,16 @@ export default function CatalogSlider({ listings, category }: { listings: any[],
                     backgroundColor: "var(--brand)", 
                     color: "white", 
                     borderRadius: "8px", 
-                    textDecoration: "none",
+                    border: "none",
                     fontWeight: 600,
                     fontSize: "0.9rem",
-                    transition: "background-color 0.2s"
                   }}
-                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "var(--brand-dark)"}
-                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "var(--brand)"}
                 >
-                  Request Service
-                </Link>
+                  View Details
+                </span>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

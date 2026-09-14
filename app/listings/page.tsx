@@ -95,7 +95,7 @@ export default async function ListingsPage() {
             <div className="panel" style={{ textAlign: 'center', padding: '4rem 2rem' }}>
               <h3>No Listings Found</h3>
               <p className="muted">We are currently updating our digital catalog. Please contact us directly for our offerings.</p>
-              <Link className="button" href="/contact" style={{ marginTop: '1.5rem', display: 'inline-block' }}>
+              <Link className="button" href="/partner" style={{ marginTop: '1.5rem', display: 'inline-block' }}>
                 Contact Us
               </Link>
             </div>

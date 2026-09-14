@@ -21,11 +21,11 @@ export const company = {
 };
 
 export const appLinks = {
-  name: "AMC MEP 24x7 Service App",
+  name: "AMC MEP 24x7 One App",
   appStore:
-    "https://apps.apple.com/in/app/amc-mep-24x7-service-app/id6756487144",
+    "https://apps.apple.com/app/amc-mep-24x7-one-app/id6792257571",
   playStore:
-    "https://play.google.com/store/apps/details?id=com.mepsge.amcsge&pcampaignid=web_share",
+    "https://play.google.com/store/apps/details?id=com.mepsge.amcsge",
   summary:
     "A service companion for AMC clients to raise requests, track support, and keep maintenance communication organized.",
 };

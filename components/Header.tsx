@@ -1,52 +1,41 @@
 import Image from "next/image";
 import Link from "next/link";
-import { company } from "@/lib/content";
-
-const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/services", label: "Solutions" },
-  { href: "/projects", label: "Projects" },
-  { href: "/listings", label: "Catalog" },
-  { href: "/clients", label: "Clients" },
-  { href: "/team", label: "Team" },
-  { href: "/contact", label: "Contact" },
-];
+import HeaderSearch from "./HeaderSearch";
 
 export default function Header() {
   return (
-    <header className="site-header">
-      <div className="top-strip">
-        <div className="container top-strip-inner">
-          <span>Since 1997</span>
-          <span>{company.iso}</span>
-          <span>{company.phones[0]}</span>
-        </div>
-      </div>
-      <div className="container header-inner">
-        <Link className="brand" href="/">
+    <header className="site-header" suppressHydrationWarning style={{ borderBottom: '1px solid #f1f5f9', backgroundColor: 'white', padding: '0.75rem 0' }}>
+      <div className="container header-inner" suppressHydrationWarning style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        <Link className="brand" href="/" suppressHydrationWarning style={{ display: 'flex', alignItems: 'center', gap: '0.85rem', textDecoration: 'none' }}>
           <Image
             src="/shreeganeshlogo.jpeg"
             alt="Shree Ganesh Enterprises logo"
-            width={48}
-            height={48}
-            className="brand-logo"
+            width={52}
+            height={52}
+            style={{ borderRadius: "50%", objectFit: "cover", boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}
             priority
           />
-          <div>
-            <p className="brand-name">{company.name}</p>
-            <p className="brand-sub">{company.tagline}</p>
-          </div>
+          <span style={{ fontSize: '1.2rem', fontWeight: 800, color: 'var(--navy)', letterSpacing: '0.5px', textTransform: 'uppercase' }}>
+            SHREE GANESH ENTERPRISES
+          </span>
         </Link>
-        <nav className="nav">
-          {navLinks.map((link) => (
-            <Link key={link.href} href={link.href}>
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-        <Link className="cta" href="/contact">
-          Site Survey
-        </Link>
+        
+        <div style={{ flex: 1, display: 'flex', justifyContent: 'center', padding: '0 1.5rem' }}>
+          <HeaderSearch />
+        </div>
+
+        <div style={{ display: 'flex', gap: '1.25rem', alignItems: 'center' }}>
+          <Link href="/bucket" suppressHydrationWarning style={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', width: '44px', height: '44px', borderRadius: '50%', backgroundColor: '#f1f5f9', color: 'var(--navy)', transition: 'background-color 0.2s' }}>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+          </Link>
+          <Link href="/partner" style={{ padding: '0.75rem 1.5rem', backgroundColor: 'var(--brand)', color: 'white', borderRadius: '10px', fontWeight: 'bold', textDecoration: 'none', fontSize: '0.95rem', boxShadow: '0 4px 6px rgba(200, 24, 29, 0.2)', transition: 'transform 0.2s' }}>
+            Partner with Us
+          </Link>
+        </div>
       </div>
     </header>
   );

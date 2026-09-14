@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60">
+  <rect x="5" y="8" width="44" height="44" rx="8" fill="#0A4D92"/>
+  <path d="M 27 16 L 27 44 M 13 30 L 41 30" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round"/>
+  <circle cx="27" cy="30" r="4" fill="#00AEEF"/>
+
+  <text x="60" y="32" font-family="'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="24" font-weight="900" fill="#0A4D92" letter-spacing="1">HSCC</text>
+  <text x="60" y="47" font-family="'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="700" fill="#64748b" letter-spacing="1">(INDIA) LIMITED</text>
+</svg>

@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${headingFont.variable} ${bodyFont.variable}`} suppressHydrationWarning>
-        <div className="page">
+        <div className="page" suppressHydrationWarning>
           <Header />
           {children}
           <Footer />
