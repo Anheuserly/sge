@@ -50,7 +50,7 @@ amcmep-platform/
 │   ├── utils/           → Shared utilities, helpers, validators
 │   └── auth/            → Shared auth logic, session guards, RBAC hooks
 ├── services/
-│   └── api/             → Edge functions, serverless API routes, Appwrite functions
+│   └── api/             → Edge functions, serverless API routes, PostgreSQL data access
 ├── turbo.json
 ├── package.json
 └── pnpm-workspace.yaml
@@ -135,8 +135,8 @@ amcmep-assets/
 ├─────────────────────────────────────────────────────────────────┤
 │                       BACKEND SERVICES                           │
 │  ┌────────────┐ ┌────────────┐ ┌────────────┐ ┌────────────┐    │
-│  │  Appwrite  │ │  Appwrite  │ │  Appwrite  │ │  Custom    │    │
-│  │  Auth      │ │  Database  │ │  Storage   │ │  Functions │    │
+│  │  JWT Auth  │ │ PostgreSQL │ │ Cloudflare │ │ Edge       │    │
+│  │  Service   │ │ Database   │ │ R2 / S3    │ │ Functions  │    │
 │  └────────────┘ └────────────┘ └────────────┘ └────────────┘    │
 │  ┌────────────┐ ┌────────────┐ ┌────────────┐                   │
 │  │  Search    │ │  Payments  │ │  Push/FCM  │                   │
@@ -189,7 +189,7 @@ services/api/
 │   ├── chat/
 │   ├── feed/
 │   └── marketplace/
-└── functions/                → Appwrite cloud functions
+└── functions/                → Backend microservices & edge functions
 ```
 
 **Rule:** Frontend teams do NOT write API client code. They import the generated SDK.
@@ -204,7 +204,7 @@ services/api/
 | `app.amcmep.in` | Vercel | Next.js (SPA) | Customer app, CDN-cached static |
 | `partner.amcmep.in` | Vercel | Next.js (SPA) | Partner dashboard |
 | `admin.amcmep.in` | Vercel | Next.js (SPA) | Internal, IP-restricted if needed |
-| `api.amcmep.in` | Vercel Edge / Appwrite | Edge Functions | Unified entry point |
+| `api.amcmep.in` | Edge / Cloudflare / Node | Edge Functions | Unified entry point |
 | `docs.amcmep.in` | Vercel / Mintlify | Static / MDX | Documentation hosting |
 | `status.amcmep.in` | Statuspage.io / Instatus | Static | Third-party status page |
 | Mobile | Play Store + App Store | Flutter | Separate release pipeline |
@@ -219,7 +219,7 @@ services/api/
    ├─ visits amcmep.in → sees public search, no auth needed
    │
    ├─ clicks "Login / Sign Up" → redirects to auth.amcmep.in (or modal)
-   │     → Appwrite Auth (OAuth + Phone + Email)
+   │     → JWT Auth (Phone OTP + Password + OAuth)
    │
    ├─ Customer? → redirect to app.amcmep.in (JWT session)
    ├─ Partner?  → redirect to partner.amcmep.in (JWT + role check)
@@ -227,9 +227,9 @@ services/api/
 ```
 
 **Auth Strategy:**
-- Use **Appwrite Auth** as the identity provider
-- Store role (`customer`, `partner`, `admin`) in Appwrite user preferences or a `roles` collection
-- Issue JWTs for session management
+- Use **Enterprise JWT Authentication** as the identity provider
+- Store role (`customer`, `partner`, `admin`) in PostgreSQL user tables and verified token claims
+- Issue secure HTTP-only cookies and JWTs for session management
 - API Gateway validates JWT on every request
 
 ---
@@ -276,7 +276,7 @@ amcmep.in/
 1. Build `apps/customer` (app.amcmep.in)
 2. Migrate features from current `amcmep-one-app` (if any exist)
 3. Connect to generated SDK
-4. Implement auth flow with Appwrite
+4. Implement auth flow with JWT & session cookies
 
 ### Phase 3: Partner Portal (Week 5-6)
 1. Build `apps/partner` (partner.amcmep.in)
@@ -321,12 +321,12 @@ Create these repositories on GitHub/GitLab:
 | Web Apps | Next.js 15 + React 19 + TypeScript |
 | Styling | Tailwind CSS + Shared Design System |
 | Mobile | Flutter (Dart) |
-| Backend | Appwrite (Auth, DB, Storage, Functions) |
+| Backend | PostgreSQL (Auth, Relational DB, R2 Storage, Edge APIs) |
 | API Gateway | Next.js Edge API Routes |
 | Search | Algolia or Typesense (for fast search) |
 | Payments | Razorpay (India) / Stripe (Global) |
 | Push | Firebase Cloud Messaging |
-| Hosting | Vercel (Web) + Appwrite Cloud (Backend) |
+| Hosting | Cloudflare Edge / Vercel (Web) + VPS PostgreSQL (Backend) |
 | CI/CD | GitHub Actions |
 | Monitoring | Vercel Analytics + Sentry |
 | Status | Instatus / Statuspage.io |
@@ -345,7 +345,7 @@ Create these repositories on GitHub/GitLab:
 | No design system | Build `packages/ui` before any new UI |
 | No RBAC (everyone sees everything) | Role-based access: customer, partner, admin |
 | Client-side search for SEO | Server-render search pages with ISR |
-| Appwrite functions inside mobile repo | Move to `services/api/functions` in monorepo |
+| Monolithic backend scripts | Move to structured services in monorepo |
 
 ---
 

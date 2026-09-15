@@ -1,5 +1,6 @@
 import Link from "next/link";
 import SectionHeading from "@/components/SectionHeading";
+import { listingsContent } from "@/lib/content";
 
 export const metadata = {
   title: "Service Listings | SGE",
@@ -41,9 +42,9 @@ export default async function ListingsPage() {
       <section className="page-hero">
         <div className="container">
           <SectionHeading
-            eyebrow="Marketplace & Offerings"
-            title="Our Service Listings"
-            subtitle="Browse our comprehensive range of MEP solutions, maintenance contracts, and specialized services available for booking."
+            eyebrow={listingsContent.eyebrow}
+            title={listingsContent.title}
+            subtitle={listingsContent.subtitle}
           />
         </div>
       </section>
@@ -85,7 +86,7 @@ export default async function ListingsPage() {
                   
                   <div style={{ marginTop: 'auto', paddingTop: '1rem' }}>
                     <Link className="button ghost" href={`https://amcmep.in/listing/${listing.id}`} target="_blank" rel="noopener noreferrer" style={{ width: '100%', textAlign: 'center', display: 'block' }}>
-                      View Details on AMC MEP &rarr;
+                      {listingsContent.viewDetailsText}
                     </Link>
                   </div>
                 </div>
@@ -93,10 +94,10 @@ export default async function ListingsPage() {
             </div>
           ) : (
             <div className="panel" style={{ textAlign: 'center', padding: '4rem 2rem' }}>
-              <h3>No Listings Found</h3>
-              <p className="muted">We are currently updating our digital catalog. Please contact us directly for our offerings.</p>
+              <h3>{listingsContent.emptyTitle}</h3>
+              <p className="muted">{listingsContent.emptySubtitle}</p>
               <Link className="button" href="/partner" style={{ marginTop: '1.5rem', display: 'inline-block' }}>
-                Contact Us
+                {listingsContent.contactButtonText}
               </Link>
             </div>
           )}

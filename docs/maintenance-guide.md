@@ -1,22 +1,22 @@
 # System Maintenance Guide
 
 ## 1. Daily Health Checks
-- **Log Monitoring**: Check the API logs for an increase in 5xx errors.
-- **Appwrite Status**: Verify that the Docker containers are healthy.
-- **Database Performance**: Monitor slow queries in the Appwrite console.
+- **Log Monitoring**: Check the API logs and Cloudflare Worker / OpenNext edge telemetry for an increase in 5xx errors.
+- **PostgreSQL / VPS Status**: Verify that the PostgreSQL database cluster and VPS services are healthy.
+- **Database Performance**: Monitor slow queries, connection pool sizing, and active transactions in the PostgreSQL engine.
 
 ## 2. Backup Strategy
-- **Database**: Daily automated snapshots of the Appwrite database.
-- **Storage**: S3-compatible backup of all uploaded media objects.
-- **Configuration**: Version-controlled  files and infrastructure scripts.
+- **Database**: Automated daily snapshots and WAL archives of the primary PostgreSQL database.
+- **Storage**: S3-compatible / Cloudflare R2 backup of all uploaded media objects, documents, and certification assets.
+- **Configuration**: Version-controlled environment files, secret management, and infrastructure scripts.
 
 ## 3. Update Procedure
-1. **Backup**: Take a manual snapshot of the database.
+1. **Backup**: Take a manual snapshot of the database prior to schema migrations.
 2. **Staging**: Deploy the update to the staging environment first.
-3. **Verification**: Run the smoke test suite (Auth $\rightarrow$ Listing $\rightarrow$ Request).
-4. **Production**: Deploy to production using a rolling update strategy to avoid downtime.
+3. **Verification**: Run smoke test suites (Auth $\rightarrow$ Listing API $\rightarrow$ Request).
+4. **Production**: Deploy to production using zero-downtime rolling updates.
 
 ## 4. Troubleshooting Common Issues
-- **Notification Failures**: Check the FCM (Firebase Cloud Messaging) token validity.
-- **Listing Invisibility**: Verify that the `published` flag is set to true and the category is active.
-- **Auth Loops**: Clear the browser cache and verify the session token expiry.
+- **Notification Failures**: Check the FCM (Firebase Cloud Messaging) token validity and Apple APNs configuration.
+- **Listing Invisibility**: Verify that the `published` flag is set to true, `business_id` matches, and the category is active.
+- **Auth Loops**: Clear browser session cookies and verify JWT session token expiry.

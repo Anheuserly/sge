@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { bucketContent } from "@/lib/content";
 
 export default function BucketPage() {
   const [bucket, setBucket] = useState<any[]>([]);
@@ -23,9 +24,11 @@ export default function BucketPage() {
 
   return (
     <main className="container mx-auto px-4 py-16" style={{ maxWidth: '800px' }}>
-      <h1 style={{ fontSize: '3rem', marginBottom: '1rem', fontFamily: 'var(--font-heading)' }}>Your Service Bucket</h1>
+      <h1 style={{ fontSize: '3rem', marginBottom: '1rem', fontFamily: 'var(--font-heading)' }}>
+        {bucketContent.title}
+      </h1>
       <p style={{ fontSize: '1.1rem', color: 'var(--muted)', marginBottom: '3rem' }}>
-        Review the MEP products and services you wish to request an AMC or quote for.
+        {bucketContent.subtitle}
       </p>
 
       {bucket.length > 0 ? (
@@ -53,24 +56,19 @@ export default function BucketPage() {
           </div>
           
           <div style={{ padding: '2rem', backgroundColor: '#f8fafc', borderRadius: '12px', border: '1px solid #e2e8f0', textAlign: 'center' }}>
-            <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Ready to proceed?</h3>
-            <p style={{ color: '#64748b', marginBottom: '2rem' }}>Submit your bucket to our engineering team to receive a formal AMC quotation and deployment schedule.</p>
+            <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>{bucketContent.readyTitle}</h3>
+            <p style={{ color: '#64748b', marginBottom: '2rem' }}>{bucketContent.readyDescription}</p>
             <Link href="mailto:support@sge.org.in?subject=AMC Quote Request" style={{ padding: '1rem 2.5rem', backgroundColor: 'var(--brand)', color: 'white', fontWeight: 'bold', borderRadius: '8px', textDecoration: 'none', display: 'inline-block', fontSize: '1.1rem' }}>
-              Request Official Quote
+              {bucketContent.requestQuoteButtonText}
             </Link>
           </div>
         </div>
       ) : (
-        <div style={{ padding: '4rem', textAlign: 'center', backgroundColor: '#f8fafc', borderRadius: '16px', border: '1px dashed #cbd5e1' }}>
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" strokeWidth="2" style={{ marginBottom: '1rem' }}>
-            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <path d="M16 10a4 4 0 0 1-8 0"></path>
-          </svg>
-          <h3 style={{ fontSize: '1.5rem', color: 'var(--navy)', marginBottom: '1rem' }}>Your bucket is empty</h3>
-          <p style={{ color: '#64748b' }}>Explore our marketplace to find services and products.</p>
-          <Link href="/#marketplace" style={{ display: 'inline-block', marginTop: '1.5rem', padding: '0.75rem 1.5rem', backgroundColor: 'var(--brand)', color: 'white', borderRadius: '8px', textDecoration: 'none', fontWeight: 'bold' }}>
-            View Full Catalog
+        <div style={{ padding: '4rem 2rem', backgroundColor: '#f8fafc', borderRadius: '16px', border: '1px solid #e2e8f0', textAlign: 'center' }}>
+          <h3 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', color: 'var(--navy)' }}>Your bucket is currently empty</h3>
+          <p style={{ color: '#64748b', marginBottom: '2rem' }}>Explore our services catalog to add items to your custom inquiry.</p>
+          <Link href="/#marketplace" style={{ padding: '0.75rem 2rem', backgroundColor: 'var(--brand)', color: 'white', fontWeight: 'bold', borderRadius: '8px', textDecoration: 'none' }}>
+            Explore Services
           </Link>
         </div>
       )}

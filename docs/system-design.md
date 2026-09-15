@@ -22,11 +22,11 @@ The system follows a decoupled client-server architecture:
 - A unified API surface that abstracts the backend. It handles authentication, request validation, and routing to various data sources.
 
 ### Data & Backend Layer
-- **Appwrite**: Serves as the primary Backend-as-a-Service (BaaS), providing:
-    - **Auth**: Phone-based and Email authentication.
-    - **Database**: NoSQL collections for businesses, listings, and requests.
-    - **Storage**: CDN-backed storage for site photos and certificates.
-    - **Functions**: Server-side logic for payment processing and notification triggers.
+- **PostgreSQL & Edge Services**: Serves as the primary enterprise data layer:
+    - **Auth**: Secure JWT-based sessions, role-based access control (RBAC), and SMS OTP authentication.
+    - **Database**: Relational PostgreSQL schema with ACID compliance for businesses, listings, work orders, and billing.
+    - **Storage**: S3 / R2 CDN-backed storage for site photos, blueprints, and statutory certificates.
+    - **Functions / Edge API**: Server-side logic for order dispatching, payment webhooks, and push notification triggers.
 
 ## 4. Key System Modules
 ### 4.1 Marketplace & Listings

@@ -1,34 +1,32 @@
-# Shared AMC MEP web session
+# Shared AMC MEP Web Session
 
-AMC MEP web products use one Appwrite project and one first-party API endpoint:
+AMC MEP web products share unified authentication via a first-party API endpoint:
 
 ```text
 https://auth.amcmep.in/v1
 ```
 
-This allows the secure Appwrite account cookie to remain first-party for:
+This allows the secure HTTP-only session cookie to remain first-party across subdomains:
 
 - `amcmep.in`
 - `app.amcmep.in`
 - `workspace.amcmep.in`
-- other trusted `*.amcmep.in` web products using the same Appwrite project
+- `sge.org.in` (cross-domain API authorization)
+- other trusted `*.amcmep.in` web products
 
-## Appwrite setup
+## Session Architecture
 
-1. In Appwrite Console, open project `680b2b830035595d7746`.
-2. Under **Settings > Custom domains**, create `auth.amcmep.in` as an API domain.
-3. Add the CNAME (and CAA when shown) provided by Appwrite to Cloudflare DNS.
-4. Add `amcmep.in`, `app.amcmep.in`, and `workspace.amcmep.in` as Web platforms/allowed domains.
-5. Wait for the Appwrite certificate and domain verification to become active.
+1. The authentication service issues encrypted JWT session cookies with 24-hour expiration.
+2. Standard claims include `userId`, `email`, `role` (`user`, `partner`, `admin`), and tenant workspace references.
+3. Edge middleware intercepts incoming web requests, verifies the session cookie, and injects `x-user-id`, `x-user-email`, and `x-user-role` headers into downstream API routes.
+4. CORS policies restrict origins to trusted AMC MEP production and staging domains.
 
-## Cloudflare setup
+## Environment Setup
 
-Set this build variable in every AMC MEP web project:
+Set this variable in AMC MEP web projects:
 
 ```text
-NEXT_PUBLIC_APPWRITE_ENDPOINT=https://auth.amcmep.in/v1
+NEXT_PUBLIC_AUTH_ENDPOINT=https://auth.amcmep.in/v1
 ```
 
-All projects must use the same `NEXT_PUBLIC_APPWRITE_PROJECT_ID`. Redeploy each project after changing the endpoint. Existing sessions created against `cloud.appwrite.io` may require one final sign-in; sessions created after migration are then shared across the AMC MEP web subdomains.
-
-`APPWRITE_API_KEY` is unrelated to browser SSO. Keep it server-only and add it only to deployments with privileged server routes. The browser-only workspace does not require it.
+All micro-frontends share this endpoint to validate sessions seamlessly without cross-origin third-party cookie restrictions.

@@ -4,7 +4,7 @@ import SectionHeading from "@/components/SectionHeading";
 import CatalogSlider from "@/components/CatalogSlider";
 import ClientMarquee from "@/components/ClientMarquee";
 
-import { company, appLinks } from "@/lib/content";
+import { company, appLinks, homeContent, heroMetrics } from "@/lib/content";
 
 async function getListings() {
   try {
@@ -62,90 +62,39 @@ export default async function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdProducts) }}
       />
       
-      {/* Authentic, Informative Hero Section */}
-      <section style={{ backgroundColor: '#09131f', color: 'white', padding: '3.5rem 0 3rem', borderBottom: '1px solid #1e293b', position: 'relative' }}>
-        <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2.5rem', alignItems: 'center' }}>
-            
-            {/* Left: Core Information */}
-            <div>
-              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', backgroundColor: 'rgba(200, 24, 29, 0.12)', border: '1px solid rgba(200, 24, 29, 0.3)', padding: '4px 12px', borderRadius: '20px', marginBottom: '1rem' }}>
-                <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: 'var(--brand)' }}></span>
-                <span style={{ fontSize: '0.78rem', fontWeight: 800, color: '#fca5a5', letterSpacing: '0.5px', textTransform: 'uppercase' }}>
-                  Since 1997 • Licensed MEP Contractor &amp; Digital AMC
-                </span>
-              </div>
+      {/* Modern & Clean Hero Section */}
+      <section style={{ backgroundColor: '#09131f', color: 'white', padding: '3.5rem 0 3rem', borderBottom: '1px solid #1e293b' }}>
+        <div className="container" style={{ maxWidth: '880px', textAlign: 'center' }}>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', backgroundColor: 'rgba(255, 255, 255, 0.06)', border: '1px solid rgba(255, 255, 255, 0.12)', padding: '5px 14px', borderRadius: '30px', marginBottom: '1.25rem' }}>
+            <span style={{ width: '7px', height: '7px', borderRadius: '50%', backgroundColor: 'var(--brand)' }}></span>
+            <span style={{ fontSize: '0.78rem', fontWeight: 700, color: '#e2e8f0', letterSpacing: '0.5px' }}>
+              {homeContent.hero.badge}
+            </span>
+          </div>
 
-              <h1 style={{ fontSize: 'clamp(1.85rem, 3.2vw, 2.75rem)', fontWeight: 800, lineHeight: 1.15, marginBottom: '1rem', fontFamily: 'var(--font-heading)', color: '#ffffff' }}>
-                Fire Protection, Electrical, Plumbing &amp; Turnkey MEP Services
-              </h1>
+          <h1 style={{ fontSize: 'clamp(1.9rem, 3.8vw, 3rem)', fontWeight: 800, lineHeight: 1.2, marginBottom: '1rem', fontFamily: 'var(--font-heading)', color: '#ffffff' }}>
+            {homeContent.hero.title}
+          </h1>
 
-              <p style={{ fontSize: '0.98rem', color: '#94a3b8', lineHeight: 1.6, marginBottom: '1.5rem', maxWidth: '580px' }}>
-                Shree Ganesh Enterprises delivers end-to-end building engineering across Delhi NCR and India — from fire hydrant installations, HVAC overhauling, and HT/LT sub-stations to 24x7 verified breakdown repairs via our unified mobile app.
-              </p>
+          <p style={{ fontSize: '1.02rem', color: '#94a3b8', lineHeight: 1.65, marginBottom: '2rem', maxWidth: '680px', margin: '0 auto 2rem' }}>
+            {homeContent.hero.subtitle}
+          </p>
 
-              {/* Service Highlights Pills */}
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1.75rem' }}>
-                {['Fire Fighting & Hydrants', 'Fire NOC & Alarms', 'HT/LT Panels & DG Sets', 'Commercial Plumbing & STP', '24x7 Emergency AMC'].map((service, sIdx) => (
-                  <span key={sIdx} style={{ backgroundColor: '#1e293b', color: '#e2e8f0', fontSize: '0.78rem', fontWeight: 600, padding: '4px 10px', borderRadius: '6px', border: '1px solid #334155' }}>
-                    ✓ {service}
-                  </span>
-                ))}
-              </div>
+          {/* Action Buttons & App Download */}
+          <div style={{ display: 'flex', gap: '0.85rem', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap', marginBottom: '2rem' }}>
+            <Link href={homeContent.hero.primaryCtaLink} style={{ padding: '0.75rem 1.6rem', backgroundColor: 'var(--brand)', color: 'white', borderRadius: '8px', fontWeight: 700, textDecoration: 'none', fontSize: '0.92rem', boxShadow: '0 4px 12px rgba(200, 24, 29, 0.3)' }}>
+              {homeContent.hero.primaryCtaText}
+            </Link>
+            <Link href={homeContent.hero.secondaryCtaLink} style={{ padding: '0.75rem 1.5rem', backgroundColor: '#1e293b', color: '#f1f5f9', border: '1px solid #334155', borderRadius: '8px', fontWeight: 700, textDecoration: 'none', fontSize: '0.92rem' }}>
+              {homeContent.hero.secondaryCtaText}
+            </Link>
+          </div>
 
-              {/* Quick Actions */}
-              <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', alignItems: 'center' }}>
-                <Link href="#marketplace" style={{ padding: '0.65rem 1.4rem', backgroundColor: 'var(--brand)', color: 'white', borderRadius: '8px', fontWeight: 700, textDecoration: 'none', fontSize: '0.9rem', transition: 'background-color 0.2s', boxShadow: '0 2px 8px rgba(200, 24, 29, 0.3)' }}>
-                  View Services &amp; Spares Catalog ↓
-                </Link>
-                <Link href="/pricing" style={{ padding: '0.65rem 1.3rem', backgroundColor: '#1e293b', color: '#f1f5f9', border: '1px solid #334155', borderRadius: '8px', fontWeight: 700, textDecoration: 'none', fontSize: '0.9rem', transition: 'background-color 0.2s' }}>
-                  AMC &amp; Partner Plans &rarr;
-                </Link>
-              </div>
-            </div>
-
-            {/* Right: Real Operational Metrics Card */}
-            <div style={{ backgroundColor: '#111e2f', borderRadius: '16px', border: '1px solid #1e2e42', padding: '1.5rem', boxShadow: '0 12px 30px rgba(0,0,0,0.25)' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingBottom: '0.85rem', borderBottom: '1px solid #1e2e42', marginBottom: '1rem' }}>
-                <span style={{ fontSize: '0.82rem', fontWeight: 700, color: '#38bdf8', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-                  Operational Verification
-                </span>
-                <span style={{ fontSize: '0.75rem', color: '#64748b', backgroundColor: '#09131f', padding: '2px 8px', borderRadius: '4px', border: '1px solid #1e293b' }}>
-                  Govt &amp; Private Compliant
-                </span>
-              </div>
-
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1.25rem' }}>
-                <div style={{ backgroundColor: '#09131f', padding: '0.85rem', borderRadius: '10px', border: '1px solid #1e293b' }}>
-                  <div style={{ fontSize: '1.6rem', fontWeight: 900, color: '#f8fafc' }}>28+ Years</div>
-                  <div style={{ fontSize: '0.75rem', color: '#94a3b8', marginTop: '2px' }}>Operational Excellence (Est. 1997)</div>
-                </div>
-                <div style={{ backgroundColor: '#09131f', padding: '0.85rem', borderRadius: '10px', border: '1px solid #1e293b' }}>
-                  <div style={{ fontSize: '1.6rem', fontWeight: 900, color: '#38bdf8' }}>1,200+</div>
-                  <div style={{ fontSize: '0.75rem', color: '#94a3b8', marginTop: '2px' }}>Hospitals, Metros &amp; Data Centers</div>
-                </div>
-                <div style={{ backgroundColor: '#09131f', padding: '0.85rem', borderRadius: '10px', border: '1px solid #1e293b' }}>
-                  <div style={{ fontSize: '1.6rem', fontWeight: 900, color: '#4ade80' }}>&lt; 4 Hours</div>
-                  <div style={{ fontSize: '0.75rem', color: '#94a3b8', marginTop: '2px' }}>Emergency Breakdown On-Site SLA</div>
-                </div>
-                <div style={{ backgroundColor: '#09131f', padding: '0.85rem', borderRadius: '10px', border: '1px solid #1e293b' }}>
-                  <div style={{ fontSize: '1.6rem', fontWeight: 900, color: '#f59e0b' }}>100%</div>
-                  <div style={{ fontSize: '0.75rem', color: '#94a3b8', marginTop: '2px' }}>Fire NOC &amp; Statutory Pass Rate</div>
-                </div>
-              </div>
-
-              {/* Direct helpline bar */}
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', backgroundColor: '#09131f', padding: '0.75rem 1rem', borderRadius: '8px', border: '1px solid #1e293b' }}>
-                <div>
-                  <span style={{ display: 'block', fontSize: '0.7rem', color: '#64748b', textTransform: 'uppercase' }}>Direct Support / Dispatch</span>
-                  <span style={{ fontSize: '0.88rem', fontWeight: 700, color: '#e2e8f0' }}>+91 98719 36847 / 85273 78555</span>
-                </div>
-                <Link href="/help" style={{ fontSize: '0.78rem', color: '#38bdf8', textDecoration: 'none', fontWeight: 600 }}>
-                  Help Center &rarr;
-                </Link>
-              </div>
-            </div>
-
+          {/* Clean Key Metrics Bar */}
+          <div style={{ display: 'inline-flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1.5rem', borderTop: '1px solid #1e293b', paddingTop: '1.5rem', color: '#cbd5e1', fontSize: '0.85rem' }}>
+            {heroMetrics.map((metric, mIdx) => (
+              <span key={mIdx}>{metric.icon} <strong>{metric.value}</strong> {metric.label}</span>
+            ))}
           </div>
         </div>
       </section>

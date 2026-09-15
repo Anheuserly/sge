@@ -1,14 +1,20 @@
+import { helpContent } from "@/lib/content";
+
 export const metadata = {
   title: "File a Complaint | SGE Platform Support",
   description: "File a grievance or service complaint for SGE services.",
 };
 
 export default function FileComplaint() {
+  const complaints = helpContent.complaints;
+
   return (
     <main className="container mx-auto px-4 py-16" style={{ maxWidth: '800px' }}>
-      <h1 style={{ fontSize: '2.5rem', marginBottom: '1rem', fontFamily: 'var(--font-heading)' }}>File a Grievance or Complaint</h1>
+      <h1 style={{ fontSize: '2.5rem', marginBottom: '1rem', fontFamily: 'var(--font-heading)' }}>
+        {complaints.title}
+      </h1>
       <p style={{ fontSize: '1.1rem', color: 'var(--muted)', marginBottom: '2.5rem' }}>
-        SGE takes service quality and engineering standards seriously. If you have experienced an issue with our AMC deployment, platform, or engineers, please detail it below. Our escalation team will review it within 24 hours.
+        {complaints.description}
       </p>
       
       <form style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
@@ -33,7 +39,7 @@ export default function FileComplaint() {
         
         <div style={{ gridColumn: '1 / -1' }}>
           <button type="button" style={{ padding: '1rem 2.5rem', backgroundColor: 'var(--brand)', color: 'white', fontWeight: 'bold', borderRadius: '8px', border: 'none', cursor: 'pointer', fontSize: '1.1rem' }}>
-            Submit Complaint
+            {complaints.buttonText}
           </button>
         </div>
       </form>
