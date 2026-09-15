@@ -595,7 +595,7 @@ export const teamMembers: TeamMember[] = [
     name: "Manoj",
     designation: "Project Handling & Site Execution Manager",
     roleCategory: "Site Engineering & Delivery",
-    image: "/team-members/manoj.jpg",
+    image: "/team-members/manoj.png",
     bio: "Supervises on-site installation, contractor workflows, testing & commissioning timelines, and procurement logistics across commercial sites.",
     focus: "On-Site Execution, Vendor Coordination, Quality Assurance"
   },
