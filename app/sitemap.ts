@@ -17,6 +17,7 @@ const routes = [
   "/help/account-recovery",
   "/help/password-reset",
   "/help/complaints",
+  "/delete-account",
   "/privacy",
   "/terms",
   "/bucket",

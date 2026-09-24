@@ -58,6 +58,7 @@ export default function Footer() {
             <li><Link href="/help" style={{ color: '#94a3b8', textDecoration: 'none', fontSize: '0.9rem', transition: 'color 0.2s' }}>Help Center</Link></li>
             <li><Link href="/help/account-recovery" style={{ color: '#94a3b8', textDecoration: 'none', fontSize: '0.9rem', transition: 'color 0.2s' }}>Account Recovery</Link></li>
             <li><Link href="/help/password-reset" style={{ color: '#94a3b8', textDecoration: 'none', fontSize: '0.9rem', transition: 'color 0.2s' }}>Password Reset</Link></li>
+            <li><Link href="/delete-account" style={{ color: '#94a3b8', textDecoration: 'none', fontSize: '0.9rem', transition: 'color 0.2s' }}>Delete Account</Link></li>
             <li><Link href="/help/complaints" style={{ color: '#94a3b8', textDecoration: 'none', fontSize: '0.9rem', transition: 'color 0.2s' }}>File a Complaint</Link></li>
           </ul>
         </div>
@@ -81,6 +82,7 @@ export default function Footer() {
         </p>
         <div style={{ display: 'flex', gap: '2rem' }}>
           <Link href="/privacy" style={{ color: '#64748b', fontSize: '0.85rem', textDecoration: 'none' }}>Privacy Policy</Link>
+          <Link href="/delete-account" style={{ color: '#64748b', fontSize: '0.85rem', textDecoration: 'none' }}>Delete Account</Link>
           <Link href="/terms" style={{ color: '#64748b', fontSize: '0.85rem', textDecoration: 'none' }}>Terms of Service</Link>
         </div>
       </div>

@@ -104,7 +104,7 @@ export default function PrivacyPolicy() {
             <h4 style={{ color: '#9f1239', margin: '0 0 0.5rem 0', fontSize: '1.1rem' }}>How to Delete Your Account:</h4>
             <ol style={{ paddingLeft: '1.25rem', margin: 0, display: 'flex', flexDirection: 'column', gap: '0.5rem', color: '#881337' }}>
               <li><strong>Inside the Mobile App:</strong> Open AMC MEP 24x7 &rarr; Navigate to <em>Profile / Settings</em> &rarr; Tap <em>Security</em> &rarr; Select <strong>Delete Account &amp; Data</strong> and confirm via OTP.</li>
-              <li><strong>Online / Support Request:</strong> You can submit a deletion request directly by visiting our <a href="/help/account-recovery" style={{ color: '#9f1239', fontWeight: 'bold', textDecoration: 'underline' }}>Account Portal</a> or emailing <code>support@sge.org.in</code> with the subject "Account Deletion Request".</li>
+              <li><strong>Online / Support Request:</strong> Read the complete deletion instructions at our <a href="/delete-account" style={{ color: '#9f1239', fontWeight: 'bold', textDecoration: 'underline' }}>Delete Account page</a>, or email <code>admin@amcmep.in</code> with the subject "Account Deletion Request".</li>
             </ol>
             <p style={{ marginTop: '0.75rem', marginBottom: 0, fontSize: '0.9rem', color: '#9f1239' }}>
               Upon confirmation, all personally identifiable information, login credentials, and personal profiles are purged from our live databases within 30 business days.
