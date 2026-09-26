@@ -1,6 +1,7 @@
 import Link from "next/link";
 import SectionHeading from "@/components/SectionHeading";
 import { listingsContent } from "@/lib/content";
+import { createProductJsonLd } from "@/lib/merchant-schema";
 
 export const metadata = {
   title: "Service Listings | SGE",
@@ -36,8 +37,14 @@ export default async function ListingsPage() {
       l.business_name?.toLowerCase().includes("ganesh")
   );
 
+  const jsonLdProducts = myListings.map((listing: any) => createProductJsonLd(listing));
+
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdProducts) }}
+      />
       <section className="page-hero">
         <div className="container">
           <SectionHeading
@@ -84,7 +91,7 @@ export default async function ListingsPage() {
                   </div>
                   
                   <div style={{ marginTop: 'auto', paddingTop: '1rem' }}>
-                    <Link className="button ghost" href={`https://amcmep.in/listing/${listing.id}`} target="_blank" rel="noopener noreferrer" style={{ width: '100%', textAlign: 'center', display: 'block' }}>
+                    <Link className="button ghost" href={`/product/${listing.id}`} style={{ width: '100%', textAlign: 'center', display: 'block' }}>
                       {listingsContent.viewDetailsText}
                     </Link>
                   </div>

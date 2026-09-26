@@ -5,6 +5,7 @@ import CatalogSlider from "@/components/CatalogSlider";
 import ClientMarquee from "@/components/ClientMarquee";
 
 import { company, appLinks, homeContent, heroMetrics } from "@/lib/content";
+import { createProductJsonLd } from "@/lib/merchant-schema";
 
 async function getListings() {
   try {
@@ -33,28 +34,7 @@ export default async function HomePage() {
 
   const categories = Array.from(new Set(myListings.map((l: any) => l.category || "General"))) as string[];
 
-  const jsonLdProducts = myListings.map((listing: any) => ({
-    "@context": "https://schema.org/",
-    "@type": "Product",
-    "name": listing.title,
-    "image": listing.media_url ? [listing.media_url] : [],
-    "description": listing.description || "Premium MEP service and products by SGE.",
-    "brand": {
-      "@type": "Brand",
-      "name": "Shree Ganesh Enterprises"
-    },
-    "offers": {
-      "@type": "Offer",
-      "url": `https://sge.org.in/product/${listing.id}`,
-      "priceCurrency": listing.currency || "INR",
-      "price": listing.price || "0",
-      "availability": listing.availability === "in_stock" ? "https://schema.org/InStock" : "https://schema.org/PreOrder",
-      "seller": {
-        "@type": "Organization",
-        "name": "Shree Ganesh Enterprises"
-      }
-    }
-  }));
+  const jsonLdProducts = myListings.map((listing: any) => createProductJsonLd(listing));
 
   return (
     <main>

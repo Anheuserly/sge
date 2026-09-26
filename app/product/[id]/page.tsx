@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import AddToBucketButton from "@/components/AddToBucketButton";
+import { createProductJsonLd } from "@/lib/merchant-schema";
 
 async function getListing(id: string) {
   try {
@@ -36,28 +37,7 @@ export default async function ProductPage({ params }: { params: { id: string } }
     ? `${listing.currency || 'INR'} ${listing.price}` 
     : "Custom Quote on Request";
 
-  const jsonLd = {
-    "@context": "https://schema.org/",
-    "@type": "Product",
-    "name": listing.title,
-    "image": listing.media_url ? [listing.media_url] : [],
-    "description": listing.description || "Certified MEP engineering services and maintenance contracts.",
-    "brand": {
-      "@type": "Brand",
-      "name": "Shree Ganesh Enterprises"
-    },
-    "offers": {
-      "@type": "Offer",
-      "url": `https://sge.org.in/product/${listing.id}`,
-      "priceCurrency": listing.currency || "INR",
-      "price": listing.price || "0",
-      "availability": "https://schema.org/InStock",
-      "seller": {
-        "@type": "Organization",
-        "name": "Shree Ganesh Enterprises"
-      }
-    }
-  };
+  const jsonLd = createProductJsonLd(listing);
 
   return (
     <main style={{ backgroundColor: "#f8fafc", minHeight: "85vh", padding: "1.5rem 0 3.5rem 0" }}>
@@ -217,6 +197,153 @@ export default async function ProductPage({ params }: { params: { id: string } }
             </div>
 
           </div>
+        </div>
+
+        {/* Specifications & Merchant Policies Tables */}
+        <div style={{ marginTop: "2rem", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(360px, 1fr))", gap: "1.5rem" }}>
+          
+          {/* Table 1: Technical & Product Specifications */}
+          <div style={{ backgroundColor: "white", borderRadius: "16px", border: "1px solid #e2e8f0", padding: "1.75rem", boxShadow: "0 2px 12px rgba(0,0,0,0.03)" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "1.25rem", borderBottom: "1px solid #f1f5f9", paddingBottom: "0.75rem" }}>
+              <div style={{ width: "8px", height: "8px", borderRadius: "50%", backgroundColor: "var(--brand)" }}></div>
+              <h2 style={{ fontSize: "1.1rem", fontWeight: 800, color: "var(--navy)", margin: 0 }}>
+                Product & Engineering Specifications
+              </h2>
+            </div>
+
+            <div style={{ overflowX: "auto" }}>
+              <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.88rem" }}>
+                <tbody>
+                  <tr style={{ borderBottom: "1px solid #f1f5f9" }}>
+                    <th style={{ textAlign: "left", padding: "0.7rem 0.5rem", color: "#64748b", fontWeight: 600, width: "40%" }}>Product SKU</th>
+                    <td style={{ padding: "0.7rem 0.5rem", color: "var(--navy)", fontWeight: 700 }}>
+                      {listing.specifications?.sku || `SGE-${listing.id.substring(0, 8).toUpperCase()}`}
+                    </td>
+                  </tr>
+                  <tr style={{ borderBottom: "1px solid #f1f5f9" }}>
+                    <th style={{ textAlign: "left", padding: "0.7rem 0.5rem", color: "#64748b", fontWeight: 600 }}>Model / MPN</th>
+                    <td style={{ padding: "0.7rem 0.5rem", color: "var(--navy)", fontWeight: 600 }}>
+                      {listing.specifications?.modelNumber || listing.specifications?.sku || "SGE-CERT-01"}
+                    </td>
+                  </tr>
+                  <tr style={{ borderBottom: "1px solid #f1f5f9" }}>
+                    <th style={{ textAlign: "left", padding: "0.7rem 0.5rem", color: "#64748b", fontWeight: 600 }}>Manufacturer / Brand</th>
+                    <td style={{ padding: "0.7rem 0.5rem", color: "var(--navy)", fontWeight: 700 }}>
+                      {listing.specifications?.brand || "Shree Ganesh Enterprises"}
+                    </td>
+                  </tr>
+                  <tr style={{ borderBottom: "1px solid #f1f5f9" }}>
+                    <th style={{ textAlign: "left", padding: "0.7rem 0.5rem", color: "#64748b", fontWeight: 600 }}>System Category</th>
+                    <td style={{ padding: "0.7rem 0.5rem", color: "var(--navy)", fontWeight: 600 }}>
+                      {listing.category || "Fire Fighting & MEP Services"}
+                    </td>
+                  </tr>
+                  <tr style={{ borderBottom: "1px solid #f1f5f9" }}>
+                    <th style={{ textAlign: "left", padding: "0.7rem 0.5rem", color: "#64748b", fontWeight: 600 }}>Contract Unit</th>
+                    <td style={{ padding: "0.7rem 0.5rem", color: "var(--navy)", fontWeight: 600 }}>
+                      {listing.specifications?.unit || listing.unit || "Annual Service / Unit"}
+                    </td>
+                  </tr>
+                  <tr style={{ borderBottom: "1px solid #f1f5f9" }}>
+                    <th style={{ textAlign: "left", padding: "0.7rem 0.5rem", color: "#64748b", fontWeight: 600 }}>Warranty & AMC</th>
+                    <td style={{ padding: "0.7rem 0.5rem", color: "var(--navy)", fontWeight: 600 }}>
+                      {listing.specifications?.warranty || "12 Months Comprehensive Coverage"}
+                    </td>
+                  </tr>
+                  <tr style={{ borderBottom: "1px solid #f1f5f9" }}>
+                    <th style={{ textAlign: "left", padding: "0.7rem 0.5rem", color: "#64748b", fontWeight: 600 }}>Coverage Scope</th>
+                    <td style={{ padding: "0.7rem 0.5rem", color: "var(--navy)", fontWeight: 600 }}>
+                      {listing.specifications?.coverage || "Commercial & Industrial Plant Facilities"}
+                    </td>
+                  </tr>
+                  <tr style={{ borderBottom: "1px solid #f1f5f9" }}>
+                    <th style={{ textAlign: "left", padding: "0.7rem 0.5rem", color: "#64748b", fontWeight: 600 }}>Compliance Norms</th>
+                    <td style={{ padding: "0.7rem 0.5rem", color: "#16a34a", fontWeight: 700 }}>
+                      NBC 2016, IS 15683, NFPA Compliant
+                    </td>
+                  </tr>
+                  <tr>
+                    <th style={{ textAlign: "left", padding: "0.7rem 0.5rem", color: "#64748b", fontWeight: 600 }}>Availability</th>
+                    <td style={{ padding: "0.7rem 0.5rem", color: "#16a34a", fontWeight: 700 }}>
+                      {listing.availability === "in_stock" ? "In Stock (Immediate Dispatch)" : "Available on Schedule"}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          {/* Table 2: Merchant Shipping, Delivery & Return Policy */}
+          <div style={{ backgroundColor: "white", borderRadius: "16px", border: "1px solid #e2e8f0", padding: "1.75rem", boxShadow: "0 2px 12px rgba(0,0,0,0.03)" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "1.25rem", borderBottom: "1px solid #f1f5f9", paddingBottom: "0.75rem" }}>
+              <div style={{ width: "8px", height: "8px", borderRadius: "50%", backgroundColor: "#16a34a" }}></div>
+              <h2 style={{ fontSize: "1.1rem", fontWeight: 800, color: "var(--navy)", margin: 0 }}>
+                Merchant Delivery & Return Policies
+              </h2>
+            </div>
+
+            <div style={{ overflowX: "auto" }}>
+              <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.88rem" }}>
+                <tbody>
+                  <tr style={{ borderBottom: "1px solid #f1f5f9" }}>
+                    <th style={{ textAlign: "left", padding: "0.7rem 0.5rem", color: "#64748b", fontWeight: 600, width: "40%" }}>Shipping Rate</th>
+                    <td style={{ padding: "0.7rem 0.5rem", color: "#16a34a", fontWeight: 700 }}>
+                      Free Delivery across Delhi NCR & Northern India (₹0.00)
+                    </td>
+                  </tr>
+                  <tr style={{ borderBottom: "1px solid #f1f5f9" }}>
+                    <th style={{ textAlign: "left", padding: "0.7rem 0.5rem", color: "#64748b", fontWeight: 600 }}>Dispatch Handling</th>
+                    <td style={{ padding: "0.7rem 0.5rem", color: "var(--navy)", fontWeight: 600 }}>
+                      0 - 2 Business Days (Same-day dispatch for emergency equipment)
+                    </td>
+                  </tr>
+                  <tr style={{ borderBottom: "1px solid #f1f5f9" }}>
+                    <th style={{ textAlign: "left", padding: "0.7rem 0.5rem", color: "#64748b", fontWeight: 600 }}>Transit Time</th>
+                    <td style={{ padding: "0.7rem 0.5rem", color: "var(--navy)", fontWeight: 600 }}>
+                      1 - 5 Business Days via SGE Logistics & Dedicated Technicians
+                    </td>
+                  </tr>
+                  <tr style={{ borderBottom: "1px solid #f1f5f9" }}>
+                    <th style={{ textAlign: "left", padding: "0.7rem 0.5rem", color: "#64748b", fontWeight: 600 }}>Return Policy</th>
+                    <td style={{ padding: "0.7rem 0.5rem", color: "var(--navy)", fontWeight: 700 }}>
+                      14-Day Free Replacement Policy
+                    </td>
+                  </tr>
+                  <tr style={{ borderBottom: "1px solid #f1f5f9" }}>
+                    <th style={{ textAlign: "left", padding: "0.7rem 0.5rem", color: "#64748b", fontWeight: 600 }}>Return Fees</th>
+                    <td style={{ padding: "0.7rem 0.5rem", color: "#16a34a", fontWeight: 700 }}>
+                      Free Return & Replacement (Zero restocking fees)
+                    </td>
+                  </tr>
+                  <tr style={{ borderBottom: "1px solid #f1f5f9" }}>
+                    <th style={{ textAlign: "left", padding: "0.7rem 0.5rem", color: "#64748b", fontWeight: 600 }}>Return Method</th>
+                    <td style={{ padding: "0.7rem 0.5rem", color: "var(--navy)", fontWeight: 600 }}>
+                      On-site Technician Inspection & Free Pickup
+                    </td>
+                  </tr>
+                  <tr style={{ borderBottom: "1px solid #f1f5f9" }}>
+                    <th style={{ textAlign: "left", padding: "0.7rem 0.5rem", color: "#64748b", fontWeight: 600 }}>Item Condition</th>
+                    <td style={{ padding: "0.7rem 0.5rem", color: "var(--navy)", fontWeight: 600 }}>
+                      100% Brand New, Factory Calibrated & Certified (NewCondition)
+                    </td>
+                  </tr>
+                  <tr style={{ borderBottom: "1px solid #f1f5f9" }}>
+                    <th style={{ textAlign: "left", padding: "0.7rem 0.5rem", color: "#64748b", fontWeight: 600 }}>GST Tax Invoice</th>
+                    <td style={{ padding: "0.7rem 0.5rem", color: "var(--navy)", fontWeight: 600 }}>
+                      Official Tax Invoice with HSN/SAC & ITC Included
+                    </td>
+                  </tr>
+                  <tr>
+                    <th style={{ textAlign: "left", padding: "0.7rem 0.5rem", color: "#64748b", fontWeight: 600 }}>Direct Fulfillment</th>
+                    <td style={{ padding: "0.7rem 0.5rem", color: "var(--navy)", fontWeight: 700 }}>
+                      Shree Ganesh Enterprises (Authorized MEP Contractor)
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
         </div>
       </div>
     </main>
