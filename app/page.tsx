@@ -21,13 +21,14 @@ async function getListings() {
 
 export default async function HomePage() {
   const listings = await getListings();
-  const businessId = process.env.NEXT_PUBLIC_BUSINESS_ID || "";
+  const businessId = process.env.NEXT_PUBLIC_BUSINESS_ID || "c8327498-66ae-4867-be53-90e644653f5c";
   
   const myListings = listings.filter(
     (l: any) => 
       l.business_id === businessId || 
-      l.business_name === "SHREE GANESH ENTERPRISES" ||
-      l.business_id === "hln5dfpt1l_6o9og00k9q63faez"
+      l.business_id === "c8327498-66ae-4867-be53-90e644653f5c" ||
+      l.business_id === "hmjzdn40ym_rkva9098szah9a4i" ||
+      l.business_name?.toLowerCase().includes("ganesh")
   );
 
   const categories = Array.from(new Set(myListings.map((l: any) => l.category || "General"))) as string[];

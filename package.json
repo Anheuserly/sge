@@ -1,3 +1,4 @@
+
 {
   "name": "sge",
   "version": "0.1.0",
@@ -6,7 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint ."
   },
   "dependencies": {
     "next": "16.1.6",
@@ -14,11 +15,12 @@
     "react-dom": "19.2.3"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
+    "@types/node": "^20.19.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "eslint": "^9.39.5",
     "eslint-config-next": "16.1.6",
-    "typescript": "^5"
+    "typescript": "^5.9.0"
   }
 }
+

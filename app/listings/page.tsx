@@ -26,15 +26,14 @@ export default async function ListingsPage() {
   const listings = await getListings();
 
   // Filter listings by the business ID configured in env
-  const businessId = process.env.NEXT_PUBLIC_BUSINESS_ID || "3bc9edf1-68df-4dcf-98be-fc3295651c28";
+  const businessId = process.env.NEXT_PUBLIC_BUSINESS_ID || "c8327498-66ae-4867-be53-90e644653f5c";
   
-  // NOTE: For now, we show all listings if filtering is too strict or the ID mismatches, 
-  // but ideally we filter by business_id or business_name.
   const myListings = listings.filter(
     (l: any) => 
       l.business_id === businessId || 
-      l.business_name === "SHREE GANESH ENTERPRISES" ||
-      l.business_id === "hln5dfpt1l_6o9og00k9q63faez" // the ID from API
+      l.business_id === "c8327498-66ae-4867-be53-90e644653f5c" ||
+      l.business_id === "hmjzdn40ym_rkva9098szah9a4i" ||
+      l.business_name?.toLowerCase().includes("ganesh")
   );
 
   return (

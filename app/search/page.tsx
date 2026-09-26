@@ -15,11 +15,15 @@ async function searchListings(query: string) {
     const data = await res.json();
     const rows = data.rows || [];
     
-    const businessId = process.env.NEXT_PUBLIC_BUSINESS_ID || "3bc9edf1-68df-4dcf-98be-fc3295651c28";
+    const businessId = process.env.NEXT_PUBLIC_BUSINESS_ID || "c8327498-66ae-4867-be53-90e644653f5c";
     
     // Filter by business and then by search query
     return rows.filter((l: any) => {
-      const isMyListing = l.business_id === businessId || l.business_name === "SHREE GANESH ENTERPRISES" || l.business_id === "hln5dfpt1l_6o9og00k9q63faez";
+      const isMyListing = 
+        l.business_id === businessId || 
+        l.business_id === "c8327498-66ae-4867-be53-90e644653f5c" ||
+        l.business_id === "hmjzdn40ym_rkva9098szah9a4i" ||
+        l.business_name?.toLowerCase().includes("ganesh");
       if (!isMyListing) return false;
       
       const searchStr = `${l.title} ${l.description} ${l.category}`.toLowerCase();
