@@ -34,8 +34,8 @@ export default function Footer() {
         <div>
           <h4 style={{ color: 'white', fontSize: '0.95rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '1.25rem' }}>Platform</h4>
           <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-            <li><Link href="/pricing" style={{ color: '#94a3b8', textDecoration: 'none', fontSize: '0.9rem', transition: 'color 0.2s' }}>Pricing &amp; Plans</Link></li>
-            <li><Link href="/partner" style={{ color: '#94a3b8', textDecoration: 'none', fontSize: '0.9rem', transition: 'color 0.2s' }}>Become a Partner</Link></li>
+            <li><Link href="/pricing" style={{ color: '#94a3b8', textDecoration: 'none', fontSize: '0.9rem', transition: 'color 0.2s' }}>Client &amp; Business Plans</Link></li>
+            <li><a href="https://amcmep.in/login" target="_blank" rel="noreferrer" style={{ color: '#94a3b8', textDecoration: 'none', fontSize: '0.9rem', transition: 'color 0.2s' }}>One App Login</a></li>
             <li><Link href="/capabilities" style={{ color: '#94a3b8', textDecoration: 'none', fontSize: '0.9rem', transition: 'color 0.2s' }}>Platform Capabilities</Link></li>
           </ul>
         </div>
@@ -44,8 +44,9 @@ export default function Footer() {
         <div>
           <h4 style={{ color: 'white', fontSize: '0.95rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '1.25rem' }}>Education</h4>
           <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+            <li><Link href="/activity" style={{ color: '#f87171', fontWeight: 700, textDecoration: 'none', fontSize: '0.9rem', transition: 'color 0.2s' }}>▶ Activity &amp; Video Gallery</Link></li>
             <li><Link href="/academy" style={{ color: '#94a3b8', textDecoration: 'none', fontSize: '0.9rem', transition: 'color 0.2s' }}>Anil Saini Fire Academy</Link></li>
-            <li><a href="https://www.youtube.com/@AnilSainiFireAcamedy" target="_blank" rel="noreferrer" style={{ color: '#94a3b8', textDecoration: 'none', fontSize: '0.9rem', transition: 'color 0.2s' }}>Fire Safety Tutorials</a></li>
+            <li><a href="https://www.youtube.com/@AnilSainiFireAcademy" target="_blank" rel="noreferrer" style={{ color: '#94a3b8', textDecoration: 'none', fontSize: '0.9rem', transition: 'color 0.2s' }}>Fire Safety YouTube</a></li>
             <li><Link href="/compliance" style={{ color: '#94a3b8', textDecoration: 'none', fontSize: '0.9rem', transition: 'color 0.2s' }}>Compliance Norms</Link></li>
             <li><Link href="/blog" style={{ color: '#94a3b8', textDecoration: 'none', fontSize: '0.9rem', transition: 'color 0.2s' }}>Industry Insights</Link></li>
           </ul>

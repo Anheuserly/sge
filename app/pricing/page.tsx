@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { pricingPlans } from "@/lib/content";
+import { appLinks, pricingPlans } from "@/lib/content";
 
 export default function PricingPage() {
   const [currency, setCurrency] = useState<"INR" | "USD">("INR");
@@ -33,13 +33,13 @@ export default function PricingPage() {
       {/* Title & Description */}
       <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
         <span style={{ backgroundColor: 'rgba(200, 24, 29, 0.08)', color: 'var(--brand)', padding: '0.35rem 0.9rem', borderRadius: '30px', fontSize: '0.75rem', fontWeight: 800, letterSpacing: '0.5px', textTransform: 'uppercase', display: 'inline-block', marginBottom: '0.75rem' }}>
-          Partner Plans &amp; Client Access
+          Client Access &amp; Business Plans
         </span>
         <h1 style={{ fontSize: 'clamp(1.6rem, 2.8vw, 2.2rem)', fontWeight: 800, marginBottom: '0.5rem', fontFamily: 'var(--font-heading)', color: 'var(--navy)' }}>
           Transparent Platform Pricing
         </h1>
         <p style={{ color: '#64748b', fontSize: '0.92rem', maxWidth: '680px', margin: '0 auto 1.75rem', lineHeight: 1.5 }}>
-          100% Free for normal users, property owners, and architects to request service and review designs. Direct business partner membership for contractors, studios, and agencies with a 10% annual discount.
+          Clients can raise and track service requests free. Businesses create their profile and choose the right workspace plan inside the AMC MEP 24x7 One App, with 10% off annual billing.
         </p>
 
         {/* Currency & Billing Switchers */}
@@ -224,7 +224,7 @@ export default function PricingPage() {
                           </span>
                         </div>
                         <p style={{ margin: '0.2rem 0 0 0', fontSize: '0.75rem', color: '#64748b' }}>
-                          Direct membership • Billed monthly
+                          Managed in One App • Billed monthly
                         </p>
                       </div>
                     )}
@@ -284,11 +284,14 @@ export default function PricingPage() {
             AMC MEP 24x7 One App Ecosystem
           </h3>
           <p style={{ color: '#94a3b8', fontSize: '0.82rem', lineHeight: 1.5, margin: 0 }}>
-            Normal clients raise repair tickets completely free. Business partners manage their team (5, 10, or 15 users) with internal chats, calls, automated work order dispatch, and invoice generation inside the app.
+            Clients raise repair tickets free. Businesses create a profile, choose a workspace plan, and manage their team, work orders, conversations, and invoices in the app.
           </p>
         </div>
 
         <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
+          <Link href={appLinks.login} target="_blank" rel="noreferrer" style={{ alignSelf: 'center', color: 'white', fontWeight: 800, textDecoration: 'none', fontSize: '0.85rem' }}>
+            Open One App login &rarr;
+          </Link>
           <Link href="https://apps.apple.com/app/amc-mep-24x7-one-app/id6792257571" target="_blank" rel="noreferrer">
             <Image src="/badges/app-store.svg" alt="App Store" width={130} height={38} />
           </Link>

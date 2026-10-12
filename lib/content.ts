@@ -21,6 +21,7 @@ export const company = {
 
 export const appLinks = {
   name: "AMC MEP 24x7 One App",
+  login: "https://amcmep.in/login",
   appStore:
     "https://apps.apple.com/app/amc-mep-24x7-one-app/id6792257571",
   playStore:
@@ -453,7 +454,7 @@ export interface PricingTier {
 export const pricingPlans: PricingTier[] = [
   {
     id: "free",
-    name: "Normal User / Client",
+    name: "Client Access",
     badge: "100% Free Forever",
     badgeColor: "#16a34a",
     target: "For building owners, property developers, architects, RWAs, facility managers, residents & commercial clients.",
@@ -474,13 +475,13 @@ export const pricingPlans: PricingTier[] = [
       "View registered building MEP equipment & service history",
       "Push notifications for work order updates & engineer arrival"
     ],
-    ctaText: "Download Free App",
-    ctaLink: "/partner"
+    ctaText: "Open One App",
+    ctaLink: "https://amcmep.in/login"
   },
   {
     id: "silver",
-    name: "Silver Partner",
-    badge: "Essential Partner",
+    name: "Business Starter",
+    badge: "Business Workspace",
     badgeColor: "#64748b",
     target: "For independent MEP technicians, electricians, HVAC consultants & building service contractors.",
     teamCapacity: "Business Owner + 5 Users Team (6 Seats)",
@@ -499,16 +500,16 @@ export const pricingPlans: PricingTier[] = [
       "Incoming Work by Client hub with live status switcher (Pending, In Progress, Completed)",
       "Periodic PPM Service Logs & MEP Site Inspection & Health Check Reports",
       "Direct client calling, Google Maps navigation & project communication channels",
-      "Verified Partner trust badge across central marketplace directory",
+      "Verified business profile across the central service directory",
       "Standard SGE operational support (+91 93102 86848)"
     ],
-    ctaText: "Join Silver",
-    ctaLink: "/partner"
+    ctaText: "Choose in One App",
+    ctaLink: "https://amcmep.in/login"
   },
   {
     id: "gold",
-    name: "Gold Partner",
-    badge: "Growth Partner",
+    name: "Business Growth",
+    badge: "Recommended",
     badgeColor: "#0f172a",
     target: "For architecture studios, turnkey interior firms, MEP contracting agencies, HVAC specialists & fire protection firms.",
     teamCapacity: "Business Owner + 10 Users Team (11 Seats)",
@@ -519,7 +520,7 @@ export const pricingPlans: PricingTier[] = [
     description: "Expanded team collaboration workspace with priority lead distribution, live operational readings, and digital signature sign-offs.",
     features: [
       "11 Active Team Seats (Business Owner + 10 Staff Members)",
-      "All Silver Partner features included",
+      "All Business Starter features included",
       "Higher seat capacity for expanding field service teams",
       "Priority listing placement in local service directory & client inquiries",
       "MEP Plant Health Check with live electrical & pressure readings (V, A, Bar, °C)",
@@ -528,14 +529,14 @@ export const pricingPlans: PricingTier[] = [
       "Technician on-duty / off-duty field availability tracker",
       "Track incoming client repair tickets with priority dispatch",
       "Digital document archive with exportable service records",
-      "Dedicated partner support desk with priority query resolution"
+      "Priority business support desk for operational queries"
     ],
-    ctaText: "Join Gold",
-    ctaLink: "/partner"
+    ctaText: "Choose in One App",
+    ctaLink: "https://amcmep.in/login"
   },
   {
     id: "platinum",
-    name: "Platinum Partner",
+    name: "Business Enterprise",
     badge: "Enterprise Grade",
     badgeColor: "#09131f",
     target: "For large construction & MEP contracting enterprises, multi-city architectural studios & facility management corporations.",
@@ -546,18 +547,18 @@ export const pricingPlans: PricingTier[] = [
     description: "Full enterprise power with 16 team seats, multi-branch tracking, custom co-branding, and dedicated account manager.",
     features: [
       "16 Active Team Seats (Business Owner + 15 Staff Members)",
-      "All Gold Partner features included",
+      "All Business Growth features included",
       "Maximum team capacity for multi-team contractors & MEP enterprises",
       "Priority allocation for commercial complexes, industrial plants & IT parks",
       "Multi-site facility asset registry across multiple properties",
       "Custom company branding (Business name, logo & GSTIN on all A4 PDFs)",
       "Custom SLA response time templates for AMC contracts (e.g. 45-min emergency response)",
       "Exportable client billing, service log & revenue records (CSV/Excel)",
-      "Dedicated SGE Partner Account Manager for onboarding and operational assistance",
+      "Dedicated SGE business account manager for onboarding and operational assistance",
       "24x7 VIP operational escalation helpline"
     ],
-    ctaText: "Join Platinum",
-    ctaLink: "/partner"
+    ctaText: "Choose in One App",
+    ctaLink: "https://amcmep.in/login"
   }
 ];
 
@@ -688,7 +689,7 @@ export const homeContent = {
     title: "Ready to Upgrade Your Facility Infrastructure?",
     description: "Get in touch with our engineering directors for turnkey MEP contracting, statutory Fire NOC compliance, or custom Annual Maintenance Contracts.",
     contactButtonText: "Contact Us",
-    partnerButtonText: "Join as Business Partner",
+    partnerButtonText: "Open Business Workspace",
   },
 };
 
@@ -709,8 +710,8 @@ export const aboutContent = {
     p2: "Today, SGE bridges deep mechanical discipline with software innovation. Through our flagship AMC MEP 24x7 digital platform, we provide asset managers with real-time equipment telemetry, instant technician dispatching, transparent SLA enforcement, and statutory safety audit compliance.",
     ctaExploreText: "Explore AMC Plans",
     ctaExploreLink: "/pricing",
-    ctaPartnerText: "Partner Ecosystem",
-    ctaPartnerLink: "/partner",
+    ctaPartnerText: "Business Workspace",
+    ctaPartnerLink: "/pricing",
   },
   stats: [
     {
@@ -757,7 +758,7 @@ export const aboutContent = {
   ] as AboutPillar[],
 };
 
-// --- Partner Page Content ---
+// --- Legacy individual-specialist content retained for app compatibility ---
 export interface PartnerStep {
   step: string;
   title: string;
@@ -1138,5 +1139,3 @@ export const bucketContent = {
   readyDescription: "Submit your bucket to our engineering team to receive a formal AMC quotation and deployment schedule.",
   requestQuoteButtonText: "Request Official Quote",
 };
-
-

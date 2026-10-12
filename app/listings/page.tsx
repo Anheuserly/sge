@@ -102,7 +102,7 @@ export default async function ListingsPage() {
             <div className="panel" style={{ textAlign: 'center', padding: '4rem 2rem' }}>
               <h3>{listingsContent.emptyTitle}</h3>
               <p className="muted">{listingsContent.emptySubtitle}</p>
-              <Link className="button" href="/partner" style={{ marginTop: '1.5rem', display: 'inline-block' }}>
+              <Link className="button" href="/contact" style={{ marginTop: '1.5rem', display: 'inline-block' }}>
                 {listingsContent.contactButtonText}
               </Link>
             </div>
