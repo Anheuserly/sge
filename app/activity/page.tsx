@@ -1,9 +1,10 @@
 import Link from "next/link";
 import ActivityVideoGallery from "@/components/ActivityVideoGallery";
+import SmartActivityHub from "@/components/SmartActivityHub";
 
 export const metadata = {
-  title: "On-Site Activity & Video Gallery | Shree Ganesh Enterprises (SGE)",
-  description: "Explore on-site MEP execution activities, fire protection demonstrations, NBC 2016 tutorials, and pump house masterclasses by Anil Saini Fire Academy.",
+  title: "Engineering Activity, App Platform & Video Hub | Shree Ganesh Enterprises (SGE)",
+  description: "Explore on-site MEP execution activities, AMC MEP One App integration, NBC 2016 compliance standards, and technical masterclasses by Anil Saini Fire Academy.",
 };
 
 export default function ActivityPage() {
@@ -25,7 +26,7 @@ export default function ActivityPage() {
             marginBottom: "0.85rem",
           }}
         >
-          Ground Execution & Field Masterclasses
+          App-Driven Engineering &amp; Field Knowledge Hub
         </span>
         <h1
           style={{
@@ -37,18 +38,47 @@ export default function ActivityPage() {
             lineHeight: 1.2,
           }}
         >
-          Engineering Activity & Video Gallery
+          SGE Activity &amp; Digital Engineering Hub
         </h1>
         <p
           style={{
             color: "#64748b",
             fontSize: "1.15rem",
-            maxWidth: "780px",
+            maxWidth: "800px",
             margin: "0 auto",
             lineHeight: 1.6,
           }}
         >
-          Real site inspections, fire NOC compliance tutorials, gas suppression walk-throughs, and active MEP plant room operations curated from the official Anil Saini Fire Academy channel.
+          Connect real plant room execution directly with our <strong>AMC MEP 24x7 One App</strong>, explore statutory NBC 2016 compliance standards, discover who we are, and watch practical video demonstrations from Anil Saini Fire Academy.
+        </p>
+      </div>
+
+      {/* Smart Hub: App Platform, Stakeholder Matrix, NBC Selector, Team & Network */}
+      <SmartActivityHub />
+
+      {/* Section Divider & Heading for Video Gallery */}
+      <div style={{ textAlign: "center", margin: "4rem 0 2rem" }}>
+        <span
+          style={{
+            backgroundColor: "rgba(220, 38, 38, 0.08)",
+            color: "#dc2626",
+            padding: "0.4rem 1.1rem",
+            borderRadius: "30px",
+            fontSize: "0.8rem",
+            fontWeight: 800,
+            letterSpacing: "1px",
+            textTransform: "uppercase",
+            display: "inline-block",
+            marginBottom: "0.6rem",
+          }}
+        >
+          Hands-On Masterclasses
+        </span>
+        <h2 style={{ fontSize: "clamp(1.8rem, 3.2vw, 2.5rem)", color: "var(--navy)", margin: 0, fontFamily: "var(--font-heading)" }}>
+          Anil Saini Fire Academy Video Masterclasses
+        </h2>
+        <p style={{ color: "#64748b", maxWidth: "700px", margin: "0.5rem auto 0", fontSize: "1rem" }}>
+          In-depth video tutorials covering National Building Code (NBC 2016 Part 4), gas suppression, pump house operations, and Indian Standards.
         </p>
       </div>
 
